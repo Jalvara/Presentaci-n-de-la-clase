@@ -1,0 +1,11 @@
+\frametitle{Ejercicios}
+\begin{block}{Ejercicios (Método de Newton-Raphson,Examen I, PACI2023)}
+Una partícula parte del reposo sobre un plano inclinado uniforme, cuyo ángulo $\theta$ cambia con una rapidez constante de $\dfrac{d\theta}{dt}=\omega<0$.\\
+Al final de $t$ segundos, la posición del objeto está dada por:
+$$x(t)=-\dfrac{g}{2\omega^2}\bigg(\dfrac{e^{\omega t}-e^{-\omega t}}{2}-\sin(\omega t)\bigg)$$
+Suponga que la partícula se desplazó 60 pies en 2s. Encuentre la rapidez $\omega$ con que cambia $\theta$. Asuma que $g=32.17 pies/s^2$. Para calcular dicha rapidez realice lo siguiente:
+\end{block}
+\begin{itemize}
+\item\action<+->{Plantee la ecuación y determine el intervalo con extremos enteros de menor valor absoluto que contenga la solución de la ecuación.\\}
+\action<+->{\textcolor{red}{Dado que $x(2)=60$, se sustituye esto en la ecuación ofrecida.}}
+\end{itemize}

@@ -1,0 +1,18 @@
+\boolfalse {citerequest}\boolfalse {citetracker}\boolfalse {pagetracker}\boolfalse {backtracker}\relax 
+\babel@toc {spanish}{}
+\defcounter {refsection}{0}\relax 
+\beamer@sectionintoc {1}{Preliminares del cálculo}{3}{0}{1}
+\defcounter {refsection}{0}\relax 
+\beamer@sectionintoc {2}{Raíces de ecuaciones}{8}{0}{2}
+\defcounter {refsection}{0}\relax 
+\beamer@sectionintoc {3}{Aproximación de funciones}{12}{0}{3}
+\defcounter {refsection}{0}\relax 
+\beamer@sectionintoc {4}{Derivación Numérica}{18}{0}{4}
+\defcounter {refsection}{0}\relax 
+\beamer@sectionintoc {5}{Integración Numérica}{18}{0}{5}
+\defcounter {refsection}{0}\relax 
+\beamer@sectionintoc {6}{Problemas de valor inicial}{18}{0}{6}
+\defcounter {refsection}{0}\relax 
+\beamer@sectionintoc {7}{Problemas de valores en la frontera}{18}{0}{7}
+\defcounter {refsection}{0}\relax 
+\beamer@sectionintoc {8}{Ejercicios}{18}{0}{8}

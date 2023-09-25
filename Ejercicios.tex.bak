@@ -1,0 +1,227 @@
+\begin{frame}{Ejercicios}
+\label{CriterioLimite}
+\action<+->{
+\begin{block}{Ejercicio (Criterio de límite)}
+Encontrar el límite de la sucesión $\bigg\{n\sin\bigg(\dfrac{1}{n}\bigg)\bigg\}$
+\end{block}}
+\textcolor{red}{
+\action<+->{Usando el criterio del límite:
+\begin{align*}
+\lim_{n\rightarrow \infty}n\sin(1/n)=&\lim_{n\rightarrow \infty}\dfrac{\sin(1/n)}{(1/n)}\\}
+\action<+->{=&\lim_{n\rightarrow \infty}\dfrac{\cos(1/n)(-1/n^2)}{(-1/n^2)}\\}
+\action<+->{=&\lim_{n\rightarrow \infty}\cos(1/n)\\}
+\action<+->{=&1\\}
+\end{align*}
+\action<+->{Entonces el límite buscado es 1.\\}
+}
+\hyperlink{RetornoTeoremaPreliminares}{\textcolor{cyan}{Teoremas Preliminares.}}
+\end{frame}
+\begin{frame}{Ejercicios}
+\label{Sandwich}
+\begin{block}{Ejercicio (Teorema del Sandwich)}
+Determine el límite de la sucesión $\bigg\{\dfrac{\cos(n)}{n}\bigg\}$.
+\end{block}
+\pause
+\textcolor{red}{
+\begin{flalign*}
+\action<+->{&-1\leq \cos(n) \leq 1\\}
+\action<+->{\Rightarrow &\dfrac{-1}{n}\leq \dfrac{\cos(n)}{n} \leq \dfrac{1}{n}\\}
+\action<+->{\Rightarrow &\lim_{n\rightarrow \infty}\dfrac{-1}{n}\leq \lim_{n\rightarrow \infty}\dfrac{\cos(n)}{n} \leq \lim_{n\rightarrow \infty}\dfrac{1}{n}\\}
+\action<+->{\Rightarrow &0\leq \lim_{n\rightarrow \infty}\dfrac{\cos(n)}{n} \leq 0\\}
+\end{flalign*}
+\action<+->{Por lo tanto, el límite de la sucesión en cuestión es 0.\\}}
+\hyperlink{RetornoTeoremaPreliminares}{\textcolor{cyan}{Teoremas Preliminares.}}
+\end{frame}
+\begin{frame}{Ejercicios}
+\label{ConvergenciaMonotona}
+\begin{block}{Ejercicio (Teorema de la sucesión monótona)}
+Encuentre el límite de la sucesión definida recursivamente por $a_n=\sqrt{1+a_{n-1}}$ con $a_1=1$, asumiendo que $\{a_n\}$ es acotada superiormente y es estrictamente creciente. 
+\end{block}
+\textcolor{red}{
+\action<+->{Por el teorema de convergencia monótona existe el límite; sea $L$ tal límite, entonces:}
+\begin{align*}
+\action<+->{&a_n=\sqrt{1+a_{n-1}}\\}
+\action<+->{\Rightarrow  \lim_{n\rightarrow \infty} &a_n=\lim_{n\rightarrow \infty}\sqrt{1+a_{n-1}}\\}
+\action<+->{\Rightarrow  L=\ &\sqrt{1+L}\\}
+\end{align*}
+\action<+->{Resolviendo la última ecuación se obtiene que:
+$$L=\dfrac{1+\sqrt{5}}{2}$$}
+}
+\hyperlink{RetornoTeoremaPreliminares}{\textcolor{cyan}{Teoremas Preliminares.}}
+\end{frame}
+\begin{frame}{Ejercicios}
+\label{EjercicioExtremos}
+\begin{block}{Ejercicio(Teorema de valores extremos)}
+Encuentre $\displaystyle\max_{x\in[2,5]}|f(x)|$ donde $f(x)=1-\exp(-\cos(x-1))$.
+\end{block}
+\textcolor{red}{
+\begin{itemize}
+\item \action<+->{$f$ es continua y diferenciable en [2,5].}
+\item \action<+->{Por el teorema de valores extremos, existen $c_1$, $c_2$ tales que $$f(c_1)\leq f(x)\leq f(c_2),$$
+para todo $x\in[2,5]$ y entonces $\displaystyle\max_{x\in[2,5]}|f(x)|= \max(|f(c_1)|,|f(c_2)|)$.}
+\item \action<+->{Además dado que la función es diferenciable, se sabe que los posibles valores extremos se alcanzan en 2, 5 o donde la derivada se hace cero.$$f'(x)=\exp(-\cos(x-1))(\sin(x-1))=0.$$
+Las soluciones de esta ecuación son $x=1+n\pi.$, $n\in\mathbb{Z}$. La única solución que se encuentra en el intervalo [2,5] es $x=1+\pi$. }
+\end{itemize}
+}
+\end{frame}
+\begin{frame}{Ejercicios}
+\begin{itemize}
+\item \action<+->{Al evaluar en los candidatos, se obtiene:
+\begin{itemize}
+\item $f(2)\approx 0.42$.
+\item $f(5)\approx -0.92$.
+\item $f(1+\pi)\approx -1.72$.
+\end{itemize}
+Entonces $c_1=1+\pi$ y $c_2=2$.
+}
+\item \action<+->{De lo anterior se obtiene que $\displaystyle\max_{x\in[2,5]}|f(x)|= \max(|f(2)|,|f(1+\pi)|)=e-1.$}
+\end{itemize}
+\action<+->{
+\begin{figure}[H]
+\begin{center}
+\includegraphics[scale=0.5]{Imagen16}
+\end{center}
+\caption{Gráfica de $f(x)$ en [2,5].}
+\end{figure}}
+\hyperlink{RetornoTeoremaPreliminares}{\textcolor{cyan}{Teoremas Preliminares.}}
+\end{frame}
+\begin{frame}{Ejercicios}
+\label{EjercicioIntermedio}
+\action<+->{
+\begin{block}{Ejercicio (Teorema del valor intermedio)}
+Determine si la siguiente ecuación tiene una solución
+$$\sin(x)/\log(x)=0,$$
+en el intervalo $[2,4]$.
+\end{block}}
+\textcolor{red}{
+\action<+->{
+Elija $f(x)=\sin(x)/\log(x)$.\\ 
+\indent Dado que $f(2)>0$, $f(4)<0$, $f$ es continua en [2,4] y $f(4)<0<f(2)$, entonces (tomando $K=0$) por el teorema del valor intermedio existe un $c$ tal que $f(c)=K=0$.\\}
+}
+\hyperlink{RetornoTeoremaPreliminares}{\textcolor{cyan}{Teoremas Preliminares.}}
+\end{frame}
+\begin{frame}[fragile]{Ejercicios}
+\label{EjercicioBiseccion}
+\begin{block}{Ejercicio(Método de bisección)}
+Encuentre la aproximación para la solución del problema anterior usando el método de bisección. Además determine cual es el valor de $n$ para conseguir un error de a lo mucho $10^{-5}$. ($f(x)=\sin(x)/\log(x)$, $x\in[2,5].$)
+\end{block}
+\small
+\begin{lstlisting}[style=mystyle,backgroundcolor=\color{gray!30}]
+n     a       b       p       f(p)            |p-p*|
+0     2       4       *       *               *
+1     3       4       3       1.284530e-01    1.415927e-01
+2     3       3.5     3.5     -2.800077e-01   3.584073e-01
+3     3       3.25    3.25    -9.179542e-02   1.084073e-01
+...
+16    3.1416  3.1416  3.1416  1.887677e-05    2.160867e-05
+17    3.1416  3.1416  3.1416  5.547064e-06    6.349879e-06
+18    3.1416  3.1416  3.1416  -1.117744e-06   1.279516e-06
+19    3.1416  3.1416  3.1416  2.214656e-06    2.535182e-06
+\end{lstlisting}
+\normalsize
+\pause
+\textcolor{red}{Se necesita garantizar que $|p-\pi|<=10^{-5}$. Por el teorema de bisección, se tiene $$|p-\pi|\leq \dfrac{b-a}{2^n}=\dfrac{5-2}{2^n}=\dfrac{3}{2^n}\leq 10^{-5}$$
+Si se resuleve la última desigualdad, se obtiene que $n\geq 18.19$, es decir que se puede escoger $n=19$.}\hyperlink{RetornoTeoremaPreliminares}{\textcolor{cyan}{Teoremas Preliminares.}}
+\end{frame}
+\begin{frame}{Ejercicios}
+\action<+->{
+\begin{block}{Ejercicio (Teorema de Taylor)}
+Considere la función $f(x)=\ln(\ln(x))$. Determine lo siguiente:
+\begin{itemize}
+\item Calcule $P_3(x)$ centrada en $x_0=3$.
+\item Aproxime $P_3(1.5).$
+\item Encuentre la expresión para $R_3(x)$.
+\item Calcule el error absoluto y relativo de la aproximación anterior.
+\item Aproxime $\displaystyle \int_{2}^{4}f(x)dx$ usando $P_3(x)$.
+\end{itemize}
+\end{block}
+}
+\label{EjercicioTaylor}
+\textcolor{red}{
+\begin{align*}
+\action<+->{P_3(x)=&\displaystyle \sum_{k=0}^{3}\dfrac{f^{(k)}(x_0)}{k!}(x-x_0)^k\\}
+\action<+->{=&\dfrac{f(3)}{0!}(x-3)^0+\dfrac{f'(3)}{1!}(x-3)^1+\dfrac{f''(3)}{2!}(x-3)^2+\dfrac{f'''(3)}{3!}(x-3)^3.}
+\end{align*}}
+\end{frame}
+\begin{frame}{Ejercicios}
+\textcolor{red}{
+\begin{align*}
+\action<+->{=&\ln(\ln(3))+\dfrac{(x-3)}{3\ln(3)}-\bigg(\dfrac{1}{18\ln(3)}+\dfrac{1}{18\ln^2(3)}\bigg)(x-3)^2\\
+&+\dfrac{1}{162}\bigg(\dfrac{2}{\ln(3)}+\dfrac{3}{\ln^2(3)}+\dfrac{2}{\ln^3(3)}\bigg)(x-2)^3}
+\end{align*}
+}
+\textcolor{blue}{
+\begin{align*}
+\action<+->{P_3(1.5)=&\ln(\ln(3))+\dfrac{(1.5-3)}{3\ln(3)}-\bigg(\dfrac{1}{18\ln(3)}+\dfrac{1}{18\ln^2(3)}\bigg)(1.5-3)^2\\
+&+\dfrac{1}{162}\bigg(\dfrac{2}{\ln(3)}+\dfrac{3}{\ln^2(3)}+\dfrac{2}{\ln^3(3)}\bigg)(1.5-3)^3\\
+\approx & -0.69955228}
+\end{align*}
+}
+\textcolor{red}{
+\begin{align*}
+\action<+->{R_3(x)=&\dfrac{f^{(4)}(\xi(x))}{(4)!}(x-3)^{4}\\
+=&-{{6\,\left(\log \xi\left(x\right)\right)^3+11\,\left(\log \xi
+ \left(x\right)\right)^2+12\,\log \xi\left(x\right)+6}\over{\xi\left(
+ x\right)^4\,\left(\log \xi\left(x\right)\right)^4}}(x-3)^4.
+}
+\end{align*}
+}
+\end{frame}
+\begin{frame}{Ejercicios}
+Observación: Si $p^*$ es una aproximación de $p$, entonces se definen los errores:
+\begin{itemize}
+\item Error absoluto: $|p-p^*|$.
+\item Error relativo: $\dfrac{|p-p^*|}{p}$.
+\end{itemize}
+\textcolor{blue}{Error absoluto:
+\begin{align*}
+\action<+->{|f(1.5)-P_3(1.5)|\approx & 0.20316817}
+\end{align*}
+}
+\textcolor{red}{Error relativo:
+\begin{align*}
+\action<+->{\dfrac{|f(1.5)-P_3(1.5)|}{|f(1.5)|}\approx &  0.22506211}
+\end{align*}
+}
+\end{frame}
+\begin{frame}{Ejercicios}
+\textcolor{blue}{
+\begin{align*}
+\action<+->{\displaystyle \int_{2}^{4}f(x)dx\approx &\displaystyle \int_{2}^{4}P_3(x)dx\\}
+\action<+->{=&\displaystyle \int_{2}^{4}\ln(\ln(3))+\dfrac{(x-3)}{3\ln(3)}-\bigg(\dfrac{1}{18\ln(3)}+\dfrac{1}{18\ln^2(3)}\bigg)(x-3)^2\\
+&+\dfrac{1}{162}\bigg(\dfrac{2}{\ln(3)}+\dfrac{3}{\ln^2(3)}+\dfrac{2}{\ln^3(3)}\bigg)(x-2)^3 dx\\}
+\action<+->{=&\bigg[\displaystyle \ln(\ln(3))(x-3)+\dfrac{(x-3)^2}{6\ln(3)}-\bigg(\dfrac{1}{54\ln(3)}+\dfrac{1}{54\ln^2(3)}\bigg)(x-3)^3\\
+&+\dfrac{1}{162}\bigg(\dfrac{2}{4\ln(3)}+\dfrac{3}{4\ln^2(3)}+\dfrac{2}{4\ln^3(3)}\bigg)(x-2)^4\bigg]_{2}^{4}\\}
+\action<+->{&\approx 0.1242167}
+\end{align*}
+}
+\hyperlink{RetornoTeoremaPreliminares}{\textcolor{cyan}{Teoremas Preliminares.}}
+\end{frame}
+\begin{frame}[fragile]{Ejercicios}
+\begin{block}{Ejercicios (Método de Newton-Raphson,Examen I, PACI2023)}
+Una partícula parte del reposo sobre un plano inclinado uniforme, cuyo ángulo $\theta$ cambia con una rapidez constante de $\dfrac{d\theta}{dt}=\omega<0$.\\
+Al final de $t$ segundos, la posición del objeto está dada por:
+$$x(t)=-\dfrac{g}{2\omega^2}\bigg(\dfrac{e^{\omega t}-e^{-\omega t}}{2}-\sin(\omega t)\bigg)$$
+Suponga que la partícula se desplazó 60 pies en 2s. Encuentre la rapidez $\omega$ con que cambia $\theta$. Asuma que $g=32.17 pies/s^2$. Para calcular dicha rapidez realice lo siguiente:
+\end{block}
+\begin{itemize}
+\item\action<+->{Plantee la ecuación y determine el intervalo con extremos enteros de menor valor absoluto que contenga la solución de la ecuación.\\}
+\action<+->{\textcolor{red}{Dado que $x(2)=60$, se sustituye esto en la ecuación ofrecida.}}
+\end{itemize}
+\end{frame}
+\begin{frame}{Ejercicios}
+\action<+->{\textcolor{red}{$$60=-\dfrac{g}{2\omega^2}(\sinh(2\omega)-\sin(2\omega))$$
+$$120+\dfrac{g}{\omega^2}(\sinh(2\omega)-\sin(2\omega))=0$$
+Defina entonces:
+$$f(\omega)=120+\dfrac{g}{\omega^2}(\sinh(2\omega)-\sin(2\omega)).$$}}
+\action<+->{\textcolor{red}{Dado que $\omega<0$, entonces rápidamente se puede ver que $f(-1)>0$ y $f(-2)<0$. Con esto se escoge el intervalo $[-2,-1]$.}}
+\begin{itemize}
+\item \action<+->{¿Cuántas iteraciones son suficientes para alcanzar una exactitud de $10^{-12}$ mediante el método de bisección?}\\
+\action<+->{\textcolor{blues}{Usando el teorema de cota de error del método de bisección se plantea:
+\begin{align*}
+|p_n-p|\leq & \dfrac{b-a}{2^n}\\
+=&\dfrac{-1-(-2)}{2^n}\leq 10^{-12}
+\end{align*}
+}}
+\end{itemize}
+\end{frame}
