@@ -1,11 +1,22 @@
 \frametitle{Ejercicios}
-\begin{block}{Ejercicios (Método de Newton-Raphson,Examen I, PACI2023)}
-Una partícula parte del reposo sobre un plano inclinado uniforme, cuyo ángulo $\theta$ cambia con una rapidez constante de $\dfrac{d\theta}{dt}=\omega<0$.\\
-Al final de $t$ segundos, la posición del objeto está dada por:
-$$x(t)=-\dfrac{g}{2\omega^2}\bigg(\dfrac{e^{\omega t}-e^{-\omega t}}{2}-\sin(\omega t)\bigg)$$
-Suponga que la partícula se desplazó 60 pies en 2s. Encuentre la rapidez $\omega$ con que cambia $\theta$. Asuma que $g=32.17 pies/s^2$. Para calcular dicha rapidez realice lo siguiente:
-\end{block}
 \begin{itemize}
-\item\action<+->{Plantee la ecuación y determine el intervalo con extremos enteros de menor valor absoluto que contenga la solución de la ecuación.\\}
-\action<+->{\textcolor{red}{Dado que $x(2)=60$, se sustituye esto en la ecuación ofrecida.}}
+\action<+->{\item Realice tres iteraciones del método de bisección, calcule el error relativo en cada iteración.\\}
+\action<+->{\textcolor{red}{Cuando no conocemos el valor de la raíz, el error relativo se calcula de la siguiente forma:
+$$\dfrac{|p_{n+1}-p_n|}{|p_{n+1}|}$$
+De esta forma se puede generar la siguiente tabla:
+}
+}
+\end{itemize}
+\pause
+\small
+\begin{lstlisting}[style=mystyle,backgroundcolor=\color{gray!30}]
+n     a       b       p      f(p)          Error relativo
+0     -2      -1      *      *             *
+1     -1.5    -1      -1.5   -2.121565e+01 *
+2     -1.5    -1.25   -1.25  7.755373e+00  2.000000e-01
+3     -1.375  -1.25   -1.375 -6.045842e+00 9.090909e-02
+\end{lstlisting}
+\normalsize
+\begin{itemize}
+\action<+->{\item Aplique el método de Newton-Raphson para obtener una aproximación con una exactitud de $10^{-5}$. Utilice como aproximación inicial la aproximación encontrada en el iniciso anterior.}
 \end{itemize}

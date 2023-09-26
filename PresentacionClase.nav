@@ -59,129 +59,99 @@
 \defcounter {refsection}{0}\relax 
 \headcommand {\beamer@subsectionpages {8}{11}}
 \defcounter {refsection}{0}\relax 
-\headcommand {\sectionentry {3}{Aproximación de funciones}{12}{Aproximación de funciones}{0}}
+\headcommand {\sectionentry {3}{Derivación Numérica}{12}{Derivación Numérica}{0}}
 \defcounter {refsection}{0}\relax 
-\headcommand {\slideentry {3}{0}{1}{12/12}{}{0}}
+\headcommand {\beamer@sectionpages {12}{11}}
 \defcounter {refsection}{0}\relax 
-\headcommand {\beamer@framepages {12}{12}}
+\headcommand {\beamer@subsectionpages {12}{11}}
 \defcounter {refsection}{0}\relax 
-\headcommand {\slideentry {3}{0}{1}{12/13}{}{0}}
+\headcommand {\sectionentry {4}{Integración Numérica}{12}{Integración Numérica}{0}}
 \defcounter {refsection}{0}\relax 
-\headcommand {\beamer@framepages {12}{13}}
+\headcommand {\beamer@sectionpages {12}{11}}
 \defcounter {refsection}{0}\relax 
-\headcommand {\slideentry {3}{0}{2}{14/14}{}{0}}
+\headcommand {\beamer@subsectionpages {12}{11}}
 \defcounter {refsection}{0}\relax 
-\headcommand {\beamer@framepages {14}{14}}
+\headcommand {\sectionentry {5}{Problemas de valor inicial}{12}{Problemas de valor inicial}{0}}
 \defcounter {refsection}{0}\relax 
-\headcommand {\slideentry {3}{0}{3}{15/15}{}{0}}
+\headcommand {\beamer@sectionpages {12}{11}}
 \defcounter {refsection}{0}\relax 
-\headcommand {\beamer@framepages {15}{15}}
+\headcommand {\beamer@subsectionpages {12}{11}}
 \defcounter {refsection}{0}\relax 
-\headcommand {\slideentry {3}{0}{4}{16/16}{}{0}}
+\headcommand {\sectionentry {6}{Problemas de valores en la frontera}{12}{Problemas de valores en la frontera}{0}}
 \defcounter {refsection}{0}\relax 
-\headcommand {\beamer@framepages {16}{16}}
+\headcommand {\beamer@sectionpages {12}{11}}
 \defcounter {refsection}{0}\relax 
-\headcommand {\slideentry {3}{0}{5}{17/17}{}{0}}
+\headcommand {\beamer@subsectionpages {12}{11}}
 \defcounter {refsection}{0}\relax 
-\headcommand {\beamer@framepages {17}{17}}
+\headcommand {\sectionentry {7}{Ejercicios}{12}{Ejercicios}{0}}
 \defcounter {refsection}{0}\relax 
-\headcommand {\beamer@sectionpages {12}{17}}
+\headcommand {\slideentry {7}{0}{1}{12/17}{}{0}}
 \defcounter {refsection}{0}\relax 
-\headcommand {\beamer@subsectionpages {12}{17}}
+\headcommand {\beamer@framepages {12}{17}}
 \defcounter {refsection}{0}\relax 
-\headcommand {\sectionentry {4}{Derivación Numérica}{18}{Derivación Numérica}{0}}
-\defcounter {refsection}{0}\relax 
-\headcommand {\beamer@sectionpages {18}{17}}
-\defcounter {refsection}{0}\relax 
-\headcommand {\beamer@subsectionpages {18}{17}}
-\defcounter {refsection}{0}\relax 
-\headcommand {\sectionentry {5}{Integración Numérica}{18}{Integración Numérica}{0}}
-\defcounter {refsection}{0}\relax 
-\headcommand {\beamer@sectionpages {18}{17}}
-\defcounter {refsection}{0}\relax 
-\headcommand {\beamer@subsectionpages {18}{17}}
-\defcounter {refsection}{0}\relax 
-\headcommand {\sectionentry {6}{Problemas de valor inicial}{18}{Problemas de valor inicial}{0}}
-\defcounter {refsection}{0}\relax 
-\headcommand {\beamer@sectionpages {18}{17}}
-\defcounter {refsection}{0}\relax 
-\headcommand {\beamer@subsectionpages {18}{17}}
-\defcounter {refsection}{0}\relax 
-\headcommand {\sectionentry {7}{Problemas de valores en la frontera}{18}{Problemas de valores en la frontera}{0}}
-\defcounter {refsection}{0}\relax 
-\headcommand {\beamer@sectionpages {18}{17}}
-\defcounter {refsection}{0}\relax 
-\headcommand {\beamer@subsectionpages {18}{17}}
-\defcounter {refsection}{0}\relax 
-\headcommand {\sectionentry {8}{Ejercicios}{18}{Ejercicios}{0}}
-\defcounter {refsection}{0}\relax 
-\headcommand {\slideentry {8}{0}{1}{18/23}{}{0}}
+\headcommand {\slideentry {7}{0}{2}{18/23}{}{0}}
 \defcounter {refsection}{0}\relax 
 \headcommand {\beamer@framepages {18}{23}}
 \defcounter {refsection}{0}\relax 
-\headcommand {\slideentry {8}{0}{2}{24/29}{}{0}}
+\headcommand {\slideentry {7}{0}{3}{24/28}{}{0}}
 \defcounter {refsection}{0}\relax 
-\headcommand {\beamer@framepages {24}{29}}
+\headcommand {\beamer@framepages {24}{28}}
 \defcounter {refsection}{0}\relax 
-\headcommand {\slideentry {8}{0}{3}{30/34}{}{0}}
+\headcommand {\slideentry {7}{0}{4}{29/31}{}{0}}
 \defcounter {refsection}{0}\relax 
-\headcommand {\beamer@framepages {30}{34}}
+\headcommand {\beamer@framepages {29}{31}}
 \defcounter {refsection}{0}\relax 
-\headcommand {\slideentry {8}{0}{4}{35/37}{}{0}}
+\headcommand {\slideentry {7}{0}{5}{32/34}{}{0}}
 \defcounter {refsection}{0}\relax 
-\headcommand {\beamer@framepages {35}{37}}
+\headcommand {\beamer@framepages {32}{34}}
 \defcounter {refsection}{0}\relax 
-\headcommand {\slideentry {8}{0}{5}{38/40}{}{0}}
+\headcommand {\slideentry {7}{0}{6}{35/36}{}{0}}
 \defcounter {refsection}{0}\relax 
-\headcommand {\beamer@framepages {38}{40}}
+\headcommand {\beamer@framepages {35}{36}}
 \defcounter {refsection}{0}\relax 
-\headcommand {\slideentry {8}{0}{6}{41/42}{}{0}}
+\headcommand {\slideentry {7}{0}{7}{37/38}{}{0}}
 \defcounter {refsection}{0}\relax 
-\headcommand {\beamer@framepages {41}{42}}
+\headcommand {\beamer@framepages {37}{38}}
 \defcounter {refsection}{0}\relax 
-\headcommand {\slideentry {8}{0}{7}{43/44}{}{0}}
+\headcommand {\slideentry {7}{0}{8}{39/41}{}{0}}
 \defcounter {refsection}{0}\relax 
-\headcommand {\beamer@framepages {43}{44}}
+\headcommand {\beamer@framepages {39}{41}}
 \defcounter {refsection}{0}\relax 
-\headcommand {\slideentry {8}{0}{8}{45/47}{}{0}}
+\headcommand {\slideentry {7}{0}{9}{42/44}{}{0}}
 \defcounter {refsection}{0}\relax 
-\headcommand {\beamer@framepages {45}{47}}
+\headcommand {\beamer@framepages {42}{44}}
 \defcounter {refsection}{0}\relax 
-\headcommand {\slideentry {8}{0}{9}{48/50}{}{0}}
+\headcommand {\slideentry {7}{0}{10}{45/46}{}{0}}
 \defcounter {refsection}{0}\relax 
-\headcommand {\beamer@framepages {48}{50}}
+\headcommand {\beamer@framepages {45}{46}}
 \defcounter {refsection}{0}\relax 
-\headcommand {\slideentry {8}{0}{10}{51/52}{}{0}}
+\headcommand {\slideentry {7}{0}{11}{47/50}{}{0}}
+\defcounter {refsection}{0}\relax 
+\headcommand {\beamer@framepages {47}{50}}
+\defcounter {refsection}{0}\relax 
+\headcommand {\slideentry {7}{0}{12}{51/52}{}{0}}
 \defcounter {refsection}{0}\relax 
 \headcommand {\beamer@framepages {51}{52}}
 \defcounter {refsection}{0}\relax 
-\headcommand {\slideentry {8}{0}{11}{53/56}{}{0}}
+\headcommand {\slideentry {7}{0}{13}{53/56}{}{0}}
 \defcounter {refsection}{0}\relax 
 \headcommand {\beamer@framepages {53}{56}}
 \defcounter {refsection}{0}\relax 
-\headcommand {\slideentry {8}{0}{12}{57/58}{}{0}}
+\headcommand {\slideentry {7}{0}{14}{57/60}{}{0}}
 \defcounter {refsection}{0}\relax 
-\headcommand {\beamer@framepages {57}{58}}
+\headcommand {\beamer@framepages {57}{60}}
 \defcounter {refsection}{0}\relax 
-\headcommand {\slideentry {8}{0}{13}{59/62}{}{0}}
+\headcommand {\beamer@sectionpages {12}{60}}
 \defcounter {refsection}{0}\relax 
-\headcommand {\beamer@framepages {59}{62}}
+\headcommand {\beamer@subsectionpages {12}{60}}
 \defcounter {refsection}{0}\relax 
-\headcommand {\slideentry {8}{0}{14}{63/64}{}{0}}
+\headcommand {\sectionentry {8}{Referencias}{61}{Referencias}{0}}
 \defcounter {refsection}{0}\relax 
-\headcommand {\beamer@framepages {63}{64}}
+\headcommand {\slideentry {8}{0}{0}{61/61}{}{0}}
 \defcounter {refsection}{0}\relax 
-\headcommand {\beamer@sectionpages {18}{64}}
-\defcounter {refsection}{0}\relax 
-\headcommand {\beamer@subsectionpages {18}{64}}
-\defcounter {refsection}{0}\relax 
-\headcommand {\sectionentry {9}{Referencias}{65}{Referencias}{0}}
-\defcounter {refsection}{0}\relax 
-\headcommand {\slideentry {9}{0}{0}{65/65}{}{0}}
-\defcounter {refsection}{0}\relax 
-\headcommand {\beamer@framepages {65}{65}}
-\headcommand {\beamer@partpages {1}{65}}
-\headcommand {\beamer@subsectionpages {18}{65}}
-\headcommand {\beamer@sectionpages {18}{65}}
-\headcommand {\beamer@documentpages {65}}
-\headcommand {\gdef \inserttotalframenumber {32}}
+\headcommand {\beamer@framepages {61}{61}}
+\headcommand {\beamer@partpages {1}{61}}
+\headcommand {\beamer@subsectionpages {12}{61}}
+\headcommand {\beamer@sectionpages {12}{61}}
+\headcommand {\beamer@documentpages {61}}
+\headcommand {\gdef \inserttotalframenumber {26}}

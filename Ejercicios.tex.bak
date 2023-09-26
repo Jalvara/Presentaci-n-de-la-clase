@@ -217,11 +217,35 @@ $$f(\omega)=120+\dfrac{g}{\omega^2}(\sinh(2\omega)-\sin(2\omega)).$$}}
 \action<+->{\textcolor{red}{Dado que $\omega<0$, entonces rápidamente se puede ver que $f(-1)>0$ y $f(-2)<0$. Con esto se escoge el intervalo $[-2,-1]$.}}
 \begin{itemize}
 \item \action<+->{¿Cuántas iteraciones son suficientes para alcanzar una exactitud de $10^{-12}$ mediante el método de bisección?}\\
-\action<+->{\textcolor{blues}{Usando el teorema de cota de error del método de bisección se plantea:
+\action<+->{\textcolor{blue}{Usando el teorema de cota de error del método de bisección se plantea:
 \begin{align*}
-|p_n-p|\leq & \dfrac{b-a}{2^n}\\
-=&\dfrac{-1-(-2)}{2^n}\leq 10^{-12}
+|p_n-p|\leq & \dfrac{b-a}{2^n}=\dfrac{-1-(-2)}{2^n}=\dfrac{1}{2^n}\leq 10^{-12}.\\
+10^{12}\leq & 2^n.
 \end{align*}
+Resolviendo la inecuación se obtiene $n\geq 40$.
 }}
+\end{itemize}
+\end{frame}
+\begin{frame}[fragile]{Ejercicios}
+\begin{itemize}
+\action<+->{\item Realice tres iteraciones del método de bisección, calcule el error relativo en cada iteración.\\}
+\action<+->{\textcolor{red}{Cuando no conocemos el valor de la raíz, el error relativo se calcula de la siguiente forma:
+$$\dfrac{|p_{n+1}-p_n|}{|p_{n+1}|}$$
+De esta forma se puede generar la siguiente tabla:
+}
+}
+\end{itemize}
+\pause
+\small
+\begin{lstlisting}[style=mystyle,backgroundcolor=\color{gray!30}]
+n     a       b       p      f(p)          Error relativo
+0     -2      -1      *      *             *
+1     -1.5    -1      -1.5   -2.121565e+01 *
+2     -1.5    -1.25   -1.25  7.755373e+00  2.000000e-01
+3     -1.375  -1.25   -1.375 -6.045842e+00 9.090909e-02
+\end{lstlisting}
+\normalsize
+\begin{itemize}
+\action<+->{\item Aplique el método de Newton-Raphson para obtener una aproximación con una exactitud de $10^{-5}$. Utilice como aproximación inicial la aproximación encontrada en el iniciso anterior.}
 \end{itemize}
 \end{frame}
