@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/W32TeX) (preloaded format=pdflatex 2020.3.17)  26 SEP 2023 16:42
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/W32TeX) (preloaded format=pdflatex 2020.3.17)  26 SEP 2023 19:57
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -142,12 +142,25 @@ Missing character: There is no t in font nullfont!
 Missing character: There is no o in font nullfont!
 Missing character: There is no d in font nullfont!
 Missing character: There is no e in font nullfont!
+! Undefined control sequence.
+l.4 ...ción esta basada en el texto de \textcolor
+                                                  {gray}{\cite{burden2017an�...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+Missing character: There is no g in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no y in font nullfont!
 Missing character: There is no [ in font nullfont!
 ! Undefined control sequence.
 \UseTextAccent  ...p \@firstofone \let \@curr@enc 
                                                   \cf@encoding \@use@text@en...
-l.4 ...a en el texto de \cite{burden2017análisis}
-                                                  .
+l.4 ...\textcolor{gray}{\cite{burden2017análisis}
+                                                  }.
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
 misspelled it (e.g., `\hobx'), type `I' and the correct
@@ -157,8 +170,8 @@ and I'll forget about whatever was undefined.
 ! Undefined control sequence.
 \GenericError  ...                                
                                                     #4  \errhelp \@err@     ...
-l.4 ...a en el texto de \cite{burden2017análisis}
-                                                  .
+l.4 ...\textcolor{gray}{\cite{burden2017análisis}
+                                                  }.
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
 misspelled it (e.g., `\hobx'), type `I' and the correct
@@ -168,8 +181,8 @@ and I'll forget about whatever was undefined.
 ! Undefined control sequence.
 \GenericError  ...                                
                                                   \let \@err@               ...
-l.4 ...a en el texto de \cite{burden2017análisis}
-                                                  .
+l.4 ...\textcolor{gray}{\cite{burden2017análisis}
+                                                  }.
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
 misspelled it (e.g., `\hobx'), type `I' and the correct
@@ -179,8 +192,8 @@ and I'll forget about whatever was undefined.
 ! Undefined control sequence.
 \GenericError  ...                                
                                                   \@empty \def \MessageBreak...
-l.4 ...a en el texto de \cite{burden2017análisis}
-                                                  .
+l.4 ...\textcolor{gray}{\cite{burden2017análisis}
+                                                  }.
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
 misspelled it (e.g., `\hobx'), type `I' and the correct
@@ -190,8 +203,8 @@ and I'll forget about whatever was undefined.
 ! Undefined control sequence.
 \GenericError  ...                                
                                                      \endgroup 
-l.4 ...a en el texto de \cite{burden2017análisis}
-                                                  .
+l.4 ...\textcolor{gray}{\cite{burden2017análisis}
+                                                  }.
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
 misspelled it (e.g., `\hobx'), type `I' and the correct
@@ -201,8 +214,8 @@ and I'll forget about whatever was undefined.
 ! Undefined control sequence.
 \GenericError  ...                                
                                                     #4  \errhelp \@err@     ...
-l.4 ...a en el texto de \cite{burden2017análisis}
-                                                  .
+l.4 ...\textcolor{gray}{\cite{burden2017análisis}
+                                                  }.
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
 misspelled it (e.g., `\hobx'), type `I' and the correct
@@ -212,8 +225,8 @@ and I'll forget about whatever was undefined.
 ! Undefined control sequence.
 \GenericError  ...                                
                                                   \let \@err@               ...
-l.4 ...a en el texto de \cite{burden2017análisis}
-                                                  .
+l.4 ...\textcolor{gray}{\cite{burden2017análisis}
+                                                  }.
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
 misspelled it (e.g., `\hobx'), type `I' and the correct
@@ -223,8 +236,8 @@ and I'll forget about whatever was undefined.
 ! Undefined control sequence.
 \GenericError  ...                                
                                                   \@empty \def \MessageBreak...
-l.4 ...a en el texto de \cite{burden2017análisis}
-                                                  .
+l.4 ...\textcolor{gray}{\cite{burden2017análisis}
+                                                  }.
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
 misspelled it (e.g., `\hobx'), type `I' and the correct
@@ -234,8 +247,8 @@ and I'll forget about whatever was undefined.
 ! Undefined control sequence.
 \GenericError  ...                                
                                                      \endgroup 
-l.4 ...a en el texto de \cite{burden2017análisis}
-                                                  .
+l.4 ...\textcolor{gray}{\cite{burden2017análisis}
+                                                  }.
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
 misspelled it (e.g., `\hobx'), type `I' and the correct
@@ -245,8 +258,8 @@ and I'll forget about whatever was undefined.
 ! Undefined control sequence.
 \GenericError  ...                                
                                                     #4  \errhelp \@err@     ...
-l.4 ...a en el texto de \cite{burden2017análisis}
-                                                  .
+l.4 ...\textcolor{gray}{\cite{burden2017análisis}
+                                                  }.
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
 misspelled it (e.g., `\hobx'), type `I' and the correct
@@ -256,8 +269,8 @@ and I'll forget about whatever was undefined.
 ! Undefined control sequence.
 \GenericError  ...                                
                                                   \let \@err@               ...
-l.4 ...a en el texto de \cite{burden2017análisis}
-                                                  .
+l.4 ...\textcolor{gray}{\cite{burden2017análisis}
+                                                  }.
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
 misspelled it (e.g., `\hobx'), type `I' and the correct
@@ -267,8 +280,8 @@ and I'll forget about whatever was undefined.
 ! Undefined control sequence.
 \GenericError  ...                                
                                                   \@empty \def \MessageBreak...
-l.4 ...a en el texto de \cite{burden2017análisis}
-                                                  .
+l.4 ...\textcolor{gray}{\cite{burden2017análisis}
+                                                  }.
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
 misspelled it (e.g., `\hobx'), type `I' and the correct
@@ -278,8 +291,8 @@ and I'll forget about whatever was undefined.
 ! Undefined control sequence.
 \GenericError  ...                                
                                                      \endgroup 
-l.4 ...a en el texto de \cite{burden2017análisis}
-                                                  .
+l.4 ...\textcolor{gray}{\cite{burden2017análisis}
+                                                  }.
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
 misspelled it (e.g., `\hobx'), type `I' and the correct
@@ -289,8 +302,8 @@ and I'll forget about whatever was undefined.
 ! Undefined control sequence.
 \GenericError  ...                                
                                                     #4  \errhelp \@err@     ...
-l.4 ...a en el texto de \cite{burden2017análisis}
-                                                  .
+l.4 ...\textcolor{gray}{\cite{burden2017análisis}
+                                                  }.
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
 misspelled it (e.g., `\hobx'), type `I' and the correct
@@ -300,8 +313,8 @@ and I'll forget about whatever was undefined.
 ! Undefined control sequence.
 \GenericError  ...                                
                                                   \let \@err@               ...
-l.4 ...a en el texto de \cite{burden2017análisis}
-                                                  .
+l.4 ...\textcolor{gray}{\cite{burden2017análisis}
+                                                  }.
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
 misspelled it (e.g., `\hobx'), type `I' and the correct
@@ -311,8 +324,8 @@ and I'll forget about whatever was undefined.
 ! Undefined control sequence.
 \GenericError  ...                                
                                                   \@empty \def \MessageBreak...
-l.4 ...a en el texto de \cite{burden2017análisis}
-                                                  .
+l.4 ...\textcolor{gray}{\cite{burden2017análisis}
+                                                  }.
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
 misspelled it (e.g., `\hobx'), type `I' and the correct
@@ -322,8 +335,8 @@ and I'll forget about whatever was undefined.
 ! Undefined control sequence.
 \GenericError  ...                                
                                                      \endgroup 
-l.4 ...a en el texto de \cite{burden2017análisis}
-                                                  .
+l.4 ...\textcolor{gray}{\cite{burden2017análisis}
+                                                  }.
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
 misspelled it (e.g., `\hobx'), type `I' and the correct
@@ -333,8 +346,8 @@ and I'll forget about whatever was undefined.
 ! Undefined control sequence.
 \GenericError  ...                                
                                                     #4  \errhelp \@err@     ...
-l.4 ...a en el texto de \cite{burden2017análisis}
-                                                  .
+l.4 ...\textcolor{gray}{\cite{burden2017análisis}
+                                                  }.
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
 misspelled it (e.g., `\hobx'), type `I' and the correct
@@ -344,8 +357,8 @@ and I'll forget about whatever was undefined.
 ! Undefined control sequence.
 \GenericError  ...                                
                                                   \let \@err@               ...
-l.4 ...a en el texto de \cite{burden2017análisis}
-                                                  .
+l.4 ...\textcolor{gray}{\cite{burden2017análisis}
+                                                  }.
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
 misspelled it (e.g., `\hobx'), type `I' and the correct
@@ -355,8 +368,8 @@ and I'll forget about whatever was undefined.
 ! Undefined control sequence.
 \GenericError  ...                                
                                                   \@empty \def \MessageBreak...
-l.4 ...a en el texto de \cite{burden2017análisis}
-                                                  .
+l.4 ...\textcolor{gray}{\cite{burden2017análisis}
+                                                  }.
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
 misspelled it (e.g., `\hobx'), type `I' and the correct
@@ -366,8 +379,8 @@ and I'll forget about whatever was undefined.
 ! Undefined control sequence.
 \GenericError  ...                                
                                                      \endgroup 
-l.4 ...a en el texto de \cite{burden2017análisis}
-                                                  .
+l.4 ...\textcolor{gray}{\cite{burden2017análisis}
+                                                  }.
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
 misspelled it (e.g., `\hobx'), type `I' and the correct
@@ -377,8 +390,8 @@ and I'll forget about whatever was undefined.
 ! Undefined control sequence.
 \GenericError  ...                                
                                                     #4  \errhelp \@err@     ...
-l.4 ...a en el texto de \cite{burden2017análisis}
-                                                  .
+l.4 ...\textcolor{gray}{\cite{burden2017análisis}
+                                                  }.
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
 misspelled it (e.g., `\hobx'), type `I' and the correct
@@ -388,8 +401,8 @@ and I'll forget about whatever was undefined.
 ! Undefined control sequence.
 \GenericError  ...                                
                                                   \let \@err@               ...
-l.4 ...a en el texto de \cite{burden2017análisis}
-                                                  .
+l.4 ...\textcolor{gray}{\cite{burden2017análisis}
+                                                  }.
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
 misspelled it (e.g., `\hobx'), type `I' and the correct
@@ -399,8 +412,8 @@ and I'll forget about whatever was undefined.
 ! Undefined control sequence.
 \GenericError  ...                                
                                                   \@empty \def \MessageBreak...
-l.4 ...a en el texto de \cite{burden2017análisis}
-                                                  .
+l.4 ...\textcolor{gray}{\cite{burden2017análisis}
+                                                  }.
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
 misspelled it (e.g., `\hobx'), type `I' and the correct
@@ -410,8 +423,8 @@ and I'll forget about whatever was undefined.
 ! Undefined control sequence.
 \GenericError  ...                                
                                                      \endgroup 
-l.4 ...a en el texto de \cite{burden2017análisis}
-                                                  .
+l.4 ...\textcolor{gray}{\cite{burden2017análisis}
+                                                  }.
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
 misspelled it (e.g., `\hobx'), type `I' and the correct
@@ -421,8 +434,8 @@ and I'll forget about whatever was undefined.
 ! Undefined control sequence.
 \GenericError  ...                                
                                                     #4  \errhelp \@err@     ...
-l.4 ...a en el texto de \cite{burden2017análisis}
-                                                  .
+l.4 ...\textcolor{gray}{\cite{burden2017análisis}
+                                                  }.
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
 misspelled it (e.g., `\hobx'), type `I' and the correct
@@ -432,8 +445,8 @@ and I'll forget about whatever was undefined.
 ! Undefined control sequence.
 \GenericError  ...                                
                                                   \let \@err@               ...
-l.4 ...a en el texto de \cite{burden2017análisis}
-                                                  .
+l.4 ...\textcolor{gray}{\cite{burden2017análisis}
+                                                  }.
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
 misspelled it (e.g., `\hobx'), type `I' and the correct
@@ -443,8 +456,8 @@ and I'll forget about whatever was undefined.
 ! Undefined control sequence.
 \GenericError  ...                                
                                                   \@empty \def \MessageBreak...
-l.4 ...a en el texto de \cite{burden2017análisis}
-                                                  .
+l.4 ...\textcolor{gray}{\cite{burden2017análisis}
+                                                  }.
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
 misspelled it (e.g., `\hobx'), type `I' and the correct
@@ -454,8 +467,8 @@ and I'll forget about whatever was undefined.
 ! Undefined control sequence.
 \GenericError  ...                                
                                                      \endgroup 
-l.4 ...a en el texto de \cite{burden2017análisis}
-                                                  .
+l.4 ...\textcolor{gray}{\cite{burden2017análisis}
+                                                  }.
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
 misspelled it (e.g., `\hobx'), type `I' and the correct
@@ -465,8 +478,8 @@ and I'll forget about whatever was undefined.
 ! Undefined control sequence.
 \GenericError  ...                                
                                                     #4  \errhelp \@err@     ...
-l.4 ...a en el texto de \cite{burden2017análisis}
-                                                  .
+l.4 ...\textcolor{gray}{\cite{burden2017análisis}
+                                                  }.
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
 misspelled it (e.g., `\hobx'), type `I' and the correct
@@ -476,8 +489,8 @@ and I'll forget about whatever was undefined.
 ! Undefined control sequence.
 \GenericError  ...                                
                                                   \let \@err@               ...
-l.4 ...a en el texto de \cite{burden2017análisis}
-                                                  .
+l.4 ...\textcolor{gray}{\cite{burden2017análisis}
+                                                  }.
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
 misspelled it (e.g., `\hobx'), type `I' and the correct
@@ -487,8 +500,8 @@ and I'll forget about whatever was undefined.
 ! Undefined control sequence.
 \GenericError  ...                                
                                                   \@empty \def \MessageBreak...
-l.4 ...a en el texto de \cite{burden2017análisis}
-                                                  .
+l.4 ...\textcolor{gray}{\cite{burden2017análisis}
+                                                  }.
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
 misspelled it (e.g., `\hobx'), type `I' and the correct
@@ -498,8 +511,8 @@ and I'll forget about whatever was undefined.
 ! Undefined control sequence.
 \GenericError  ...                                
                                                      \endgroup 
-l.4 ...a en el texto de \cite{burden2017análisis}
-                                                  .
+l.4 ...\textcolor{gray}{\cite{burden2017análisis}
+                                                  }.
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
 misspelled it (e.g., `\hobx'), type `I' and the correct
@@ -509,8 +522,8 @@ and I'll forget about whatever was undefined.
 ! Undefined control sequence.
 \GenericError  ...                                
                                                     #4  \errhelp \@err@     ...
-l.4 ...a en el texto de \cite{burden2017análisis}
-                                                  .
+l.4 ...\textcolor{gray}{\cite{burden2017análisis}
+                                                  }.
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
 misspelled it (e.g., `\hobx'), type `I' and the correct
@@ -520,8 +533,8 @@ and I'll forget about whatever was undefined.
 ! Undefined control sequence.
 \GenericError  ...                                
                                                   \let \@err@               ...
-l.4 ...a en el texto de \cite{burden2017análisis}
-                                                  .
+l.4 ...\textcolor{gray}{\cite{burden2017análisis}
+                                                  }.
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
 misspelled it (e.g., `\hobx'), type `I' and the correct
@@ -531,8 +544,8 @@ and I'll forget about whatever was undefined.
 ! Undefined control sequence.
 \GenericError  ...                                
                                                   \@empty \def \MessageBreak...
-l.4 ...a en el texto de \cite{burden2017análisis}
-                                                  .
+l.4 ...\textcolor{gray}{\cite{burden2017análisis}
+                                                  }.
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
 misspelled it (e.g., `\hobx'), type `I' and the correct
@@ -542,8 +555,8 @@ and I'll forget about whatever was undefined.
 ! Undefined control sequence.
 \GenericError  ...                                
                                                      \endgroup 
-l.4 ...a en el texto de \cite{burden2017análisis}
-                                                  .
+l.4 ...\textcolor{gray}{\cite{burden2017análisis}
+                                                  }.
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
 misspelled it (e.g., `\hobx'), type `I' and the correct
@@ -553,8 +566,8 @@ and I'll forget about whatever was undefined.
 ! Undefined control sequence.
 \GenericError  ...                                
                                                     #4  \errhelp \@err@     ...
-l.4 ...a en el texto de \cite{burden2017análisis}
-                                                  .
+l.4 ...\textcolor{gray}{\cite{burden2017análisis}
+                                                  }.
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
 misspelled it (e.g., `\hobx'), type `I' and the correct
@@ -564,8 +577,8 @@ and I'll forget about whatever was undefined.
 ! Undefined control sequence.
 \GenericError  ...                                
                                                   \let \@err@               ...
-l.4 ...a en el texto de \cite{burden2017análisis}
-                                                  .
+l.4 ...\textcolor{gray}{\cite{burden2017análisis}
+                                                  }.
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
 misspelled it (e.g., `\hobx'), type `I' and the correct
@@ -575,8 +588,8 @@ and I'll forget about whatever was undefined.
 ! Undefined control sequence.
 \GenericError  ...                                
                                                   \@empty \def \MessageBreak...
-l.4 ...a en el texto de \cite{burden2017análisis}
-                                                  .
+l.4 ...\textcolor{gray}{\cite{burden2017análisis}
+                                                  }.
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
 misspelled it (e.g., `\hobx'), type `I' and the correct
@@ -586,8 +599,8 @@ and I'll forget about whatever was undefined.
 ! Undefined control sequence.
 \GenericError  ...                                
                                                      \endgroup 
-l.4 ...a en el texto de \cite{burden2017análisis}
-                                                  .
+l.4 ...\textcolor{gray}{\cite{burden2017análisis}
+                                                  }.
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
 misspelled it (e.g., `\hobx'), type `I' and the correct
@@ -597,8 +610,8 @@ and I'll forget about whatever was undefined.
 ! Undefined control sequence.
 \GenericError  ...                                
                                                     #4  \errhelp \@err@     ...
-l.4 ...a en el texto de \cite{burden2017análisis}
-                                                  .
+l.4 ...\textcolor{gray}{\cite{burden2017análisis}
+                                                  }.
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
 misspelled it (e.g., `\hobx'), type `I' and the correct
@@ -608,8 +621,8 @@ and I'll forget about whatever was undefined.
 ! Undefined control sequence.
 \GenericError  ...                                
                                                   \let \@err@               ...
-l.4 ...a en el texto de \cite{burden2017análisis}
-                                                  .
+l.4 ...\textcolor{gray}{\cite{burden2017análisis}
+                                                  }.
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
 misspelled it (e.g., `\hobx'), type `I' and the correct
@@ -619,8 +632,8 @@ and I'll forget about whatever was undefined.
 ! Undefined control sequence.
 \GenericError  ...                                
                                                   \@empty \def \MessageBreak...
-l.4 ...a en el texto de \cite{burden2017análisis}
-                                                  .
+l.4 ...\textcolor{gray}{\cite{burden2017análisis}
+                                                  }.
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
 misspelled it (e.g., `\hobx'), type `I' and the correct
@@ -630,8 +643,8 @@ and I'll forget about whatever was undefined.
 ! Undefined control sequence.
 \GenericError  ...                                
                                                      \endgroup 
-l.4 ...a en el texto de \cite{burden2017análisis}
-                                                  .
+l.4 ...\textcolor{gray}{\cite{burden2017análisis}
+                                                  }.
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
 misspelled it (e.g., `\hobx'), type `I' and the correct
@@ -641,8 +654,8 @@ and I'll forget about whatever was undefined.
 ! Undefined control sequence.
 \GenericError  ...                                
                                                     #4  \errhelp \@err@     ...
-l.4 ...a en el texto de \cite{burden2017análisis}
-                                                  .
+l.4 ...\textcolor{gray}{\cite{burden2017análisis}
+                                                  }.
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
 misspelled it (e.g., `\hobx'), type `I' and the correct
@@ -652,8 +665,8 @@ and I'll forget about whatever was undefined.
 ! Undefined control sequence.
 \GenericError  ...                                
                                                   \let \@err@               ...
-l.4 ...a en el texto de \cite{burden2017análisis}
-                                                  .
+l.4 ...\textcolor{gray}{\cite{burden2017análisis}
+                                                  }.
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
 misspelled it (e.g., `\hobx'), type `I' and the correct
@@ -663,8 +676,8 @@ and I'll forget about whatever was undefined.
 ! Undefined control sequence.
 \GenericError  ...                                
                                                   \@empty \def \MessageBreak...
-l.4 ...a en el texto de \cite{burden2017análisis}
-                                                  .
+l.4 ...\textcolor{gray}{\cite{burden2017análisis}
+                                                  }.
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
 misspelled it (e.g., `\hobx'), type `I' and the correct
@@ -674,8 +687,8 @@ and I'll forget about whatever was undefined.
 ! Undefined control sequence.
 \GenericError  ...                                
                                                      \endgroup 
-l.4 ...a en el texto de \cite{burden2017análisis}
-                                                  .
+l.4 ...\textcolor{gray}{\cite{burden2017análisis}
+                                                  }.
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
 misspelled it (e.g., `\hobx'), type `I' and the correct
@@ -685,8 +698,8 @@ and I'll forget about whatever was undefined.
 ! Undefined control sequence.
 \GenericError  ...                                
                                                     #4  \errhelp \@err@     ...
-l.4 ...a en el texto de \cite{burden2017análisis}
-                                                  .
+l.4 ...\textcolor{gray}{\cite{burden2017análisis}
+                                                  }.
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
 misspelled it (e.g., `\hobx'), type `I' and the correct
@@ -696,8 +709,8 @@ and I'll forget about whatever was undefined.
 ! Undefined control sequence.
 \GenericError  ...                                
                                                   \let \@err@               ...
-l.4 ...a en el texto de \cite{burden2017análisis}
-                                                  .
+l.4 ...\textcolor{gray}{\cite{burden2017análisis}
+                                                  }.
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
 misspelled it (e.g., `\hobx'), type `I' and the correct
@@ -707,8 +720,8 @@ and I'll forget about whatever was undefined.
 ! Undefined control sequence.
 \GenericError  ...                                
                                                   \@empty \def \MessageBreak...
-l.4 ...a en el texto de \cite{burden2017análisis}
-                                                  .
+l.4 ...\textcolor{gray}{\cite{burden2017análisis}
+                                                  }.
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
 misspelled it (e.g., `\hobx'), type `I' and the correct
@@ -718,8 +731,8 @@ and I'll forget about whatever was undefined.
 ! Undefined control sequence.
 \GenericError  ...                                
                                                      \endgroup 
-l.4 ...a en el texto de \cite{burden2017análisis}
-                                                  .
+l.4 ...\textcolor{gray}{\cite{burden2017análisis}
+                                                  }.
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
 misspelled it (e.g., `\hobx'), type `I' and the correct
@@ -729,8 +742,8 @@ and I'll forget about whatever was undefined.
 ! Undefined control sequence.
 \GenericError  ...                                
                                                     #4  \errhelp \@err@     ...
-l.4 ...a en el texto de \cite{burden2017análisis}
-                                                  .
+l.4 ...\textcolor{gray}{\cite{burden2017análisis}
+                                                  }.
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
 misspelled it (e.g., `\hobx'), type `I' and the correct
@@ -740,8 +753,8 @@ and I'll forget about whatever was undefined.
 ! Undefined control sequence.
 \GenericError  ...                                
                                                   \let \@err@               ...
-l.4 ...a en el texto de \cite{burden2017análisis}
-                                                  .
+l.4 ...\textcolor{gray}{\cite{burden2017análisis}
+                                                  }.
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
 misspelled it (e.g., `\hobx'), type `I' and the correct
@@ -751,8 +764,8 @@ and I'll forget about whatever was undefined.
 ! Undefined control sequence.
 \GenericError  ...                                
                                                   \@empty \def \MessageBreak...
-l.4 ...a en el texto de \cite{burden2017análisis}
-                                                  .
+l.4 ...\textcolor{gray}{\cite{burden2017análisis}
+                                                  }.
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
 misspelled it (e.g., `\hobx'), type `I' and the correct
@@ -762,8 +775,8 @@ and I'll forget about whatever was undefined.
 ! Undefined control sequence.
 \GenericError  ...                                
                                                      \endgroup 
-l.4 ...a en el texto de \cite{burden2017análisis}
-                                                  .
+l.4 ...\textcolor{gray}{\cite{burden2017análisis}
+                                                  }.
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
 misspelled it (e.g., `\hobx'), type `I' and the correct
@@ -773,8 +786,8 @@ and I'll forget about whatever was undefined.
 ! Undefined control sequence.
 \GenericError  ...                                
                                                     #4  \errhelp \@err@     ...
-l.4 ...a en el texto de \cite{burden2017análisis}
-                                                  .
+l.4 ...\textcolor{gray}{\cite{burden2017análisis}
+                                                  }.
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
 misspelled it (e.g., `\hobx'), type `I' and the correct
@@ -784,8 +797,8 @@ and I'll forget about whatever was undefined.
 ! Undefined control sequence.
 \GenericError  ...                                
                                                   \let \@err@               ...
-l.4 ...a en el texto de \cite{burden2017análisis}
-                                                  .
+l.4 ...\textcolor{gray}{\cite{burden2017análisis}
+                                                  }.
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
 misspelled it (e.g., `\hobx'), type `I' and the correct
@@ -795,8 +808,8 @@ and I'll forget about whatever was undefined.
 ! Undefined control sequence.
 \GenericError  ...                                
                                                   \@empty \def \MessageBreak...
-l.4 ...a en el texto de \cite{burden2017análisis}
-                                                  .
+l.4 ...\textcolor{gray}{\cite{burden2017análisis}
+                                                  }.
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
 misspelled it (e.g., `\hobx'), type `I' and the correct
@@ -806,8 +819,8 @@ and I'll forget about whatever was undefined.
 ! Undefined control sequence.
 \GenericError  ...                                
                                                      \endgroup 
-l.4 ...a en el texto de \cite{burden2017análisis}
-                                                  .
+l.4 ...\textcolor{gray}{\cite{burden2017análisis}
+                                                  }.
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
 misspelled it (e.g., `\hobx'), type `I' and the correct
@@ -817,8 +830,8 @@ and I'll forget about whatever was undefined.
 ! Undefined control sequence.
 \GenericError  ...                                
                                                     #4  \errhelp \@err@     ...
-l.4 ...a en el texto de \cite{burden2017análisis}
-                                                  .
+l.4 ...\textcolor{gray}{\cite{burden2017análisis}
+                                                  }.
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
 misspelled it (e.g., `\hobx'), type `I' and the correct
@@ -828,8 +841,8 @@ and I'll forget about whatever was undefined.
 ! Undefined control sequence.
 \GenericError  ...                                
                                                   \let \@err@               ...
-l.4 ...a en el texto de \cite{burden2017análisis}
-                                                  .
+l.4 ...\textcolor{gray}{\cite{burden2017análisis}
+                                                  }.
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
 misspelled it (e.g., `\hobx'), type `I' and the correct
@@ -839,8 +852,8 @@ and I'll forget about whatever was undefined.
 ! Undefined control sequence.
 \GenericError  ...                                
                                                   \@empty \def \MessageBreak...
-l.4 ...a en el texto de \cite{burden2017análisis}
-                                                  .
+l.4 ...\textcolor{gray}{\cite{burden2017análisis}
+                                                  }.
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
 misspelled it (e.g., `\hobx'), type `I' and the correct
@@ -850,8 +863,8 @@ and I'll forget about whatever was undefined.
 ! Undefined control sequence.
 \GenericError  ...                                
                                                      \endgroup 
-l.4 ...a en el texto de \cite{burden2017análisis}
-                                                  .
+l.4 ...\textcolor{gray}{\cite{burden2017análisis}
+                                                  }.
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
 misspelled it (e.g., `\hobx'), type `I' and the correct
@@ -861,8 +874,8 @@ and I'll forget about whatever was undefined.
 ! Undefined control sequence.
 \GenericError  ...                                
                                                     #4  \errhelp \@err@     ...
-l.4 ...a en el texto de \cite{burden2017análisis}
-                                                  .
+l.4 ...\textcolor{gray}{\cite{burden2017análisis}
+                                                  }.
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
 misspelled it (e.g., `\hobx'), type `I' and the correct
@@ -872,8 +885,8 @@ and I'll forget about whatever was undefined.
 ! Undefined control sequence.
 \GenericError  ...                                
                                                   \let \@err@               ...
-l.4 ...a en el texto de \cite{burden2017análisis}
-                                                  .
+l.4 ...\textcolor{gray}{\cite{burden2017análisis}
+                                                  }.
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
 misspelled it (e.g., `\hobx'), type `I' and the correct
@@ -883,8 +896,8 @@ and I'll forget about whatever was undefined.
 ! Undefined control sequence.
 \GenericError  ...                                
                                                   \@empty \def \MessageBreak...
-l.4 ...a en el texto de \cite{burden2017análisis}
-                                                  .
+l.4 ...\textcolor{gray}{\cite{burden2017análisis}
+                                                  }.
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
 misspelled it (e.g., `\hobx'), type `I' and the correct
@@ -894,8 +907,8 @@ and I'll forget about whatever was undefined.
 ! Undefined control sequence.
 \GenericError  ...                                
                                                      \endgroup 
-l.4 ...a en el texto de \cite{burden2017análisis}
-                                                  .
+l.4 ...\textcolor{gray}{\cite{burden2017análisis}
+                                                  }.
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
 misspelled it (e.g., `\hobx'), type `I' and the correct
@@ -905,8 +918,8 @@ and I'll forget about whatever was undefined.
 ! Undefined control sequence.
 \GenericError  ...                                
                                                     #4  \errhelp \@err@     ...
-l.4 ...a en el texto de \cite{burden2017análisis}
-                                                  .
+l.4 ...\textcolor{gray}{\cite{burden2017análisis}
+                                                  }.
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
 misspelled it (e.g., `\hobx'), type `I' and the correct
@@ -916,8 +929,8 @@ and I'll forget about whatever was undefined.
 ! Undefined control sequence.
 \GenericError  ...                                
                                                   \let \@err@               ...
-l.4 ...a en el texto de \cite{burden2017análisis}
-                                                  .
+l.4 ...\textcolor{gray}{\cite{burden2017análisis}
+                                                  }.
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
 misspelled it (e.g., `\hobx'), type `I' and the correct
@@ -927,8 +940,8 @@ and I'll forget about whatever was undefined.
 ! Undefined control sequence.
 \GenericError  ...                                
                                                   \@empty \def \MessageBreak...
-l.4 ...a en el texto de \cite{burden2017análisis}
-                                                  .
+l.4 ...\textcolor{gray}{\cite{burden2017análisis}
+                                                  }.
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
 misspelled it (e.g., `\hobx'), type `I' and the correct
@@ -938,8 +951,8 @@ and I'll forget about whatever was undefined.
 ! Undefined control sequence.
 \GenericError  ...                                
                                                      \endgroup 
-l.4 ...a en el texto de \cite{burden2017análisis}
-                                                  .
+l.4 ...\textcolor{gray}{\cite{burden2017análisis}
+                                                  }.
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
 misspelled it (e.g., `\hobx'), type `I' and the correct
@@ -949,8 +962,8 @@ and I'll forget about whatever was undefined.
 ! Undefined control sequence.
 \GenericError  ...                                
                                                     #4  \errhelp \@err@     ...
-l.4 ...a en el texto de \cite{burden2017análisis}
-                                                  .
+l.4 ...\textcolor{gray}{\cite{burden2017análisis}
+                                                  }.
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
 misspelled it (e.g., `\hobx'), type `I' and the correct
@@ -960,8 +973,8 @@ and I'll forget about whatever was undefined.
 ! Undefined control sequence.
 \GenericError  ...                                
                                                   \let \@err@               ...
-l.4 ...a en el texto de \cite{burden2017análisis}
-                                                  .
+l.4 ...\textcolor{gray}{\cite{burden2017análisis}
+                                                  }.
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
 misspelled it (e.g., `\hobx'), type `I' and the correct
@@ -971,8 +984,8 @@ and I'll forget about whatever was undefined.
 ! Undefined control sequence.
 \GenericError  ...                                
                                                   \@empty \def \MessageBreak...
-l.4 ...a en el texto de \cite{burden2017análisis}
-                                                  .
+l.4 ...\textcolor{gray}{\cite{burden2017análisis}
+                                                  }.
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
 misspelled it (e.g., `\hobx'), type `I' and the correct
@@ -982,8 +995,8 @@ and I'll forget about whatever was undefined.
 ! Undefined control sequence.
 \GenericError  ...                                
                                                      \endgroup 
-l.4 ...a en el texto de \cite{burden2017análisis}
-                                                  .
+l.4 ...\textcolor{gray}{\cite{burden2017análisis}
+                                                  }.
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
 misspelled it (e.g., `\hobx'), type `I' and the correct
@@ -993,8 +1006,8 @@ and I'll forget about whatever was undefined.
 ! Undefined control sequence.
 \GenericError  ...                                
                                                     #4  \errhelp \@err@     ...
-l.4 ...a en el texto de \cite{burden2017análisis}
-                                                  .
+l.4 ...\textcolor{gray}{\cite{burden2017análisis}
+                                                  }.
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
 misspelled it (e.g., `\hobx'), type `I' and the correct
@@ -1004,8 +1017,8 @@ and I'll forget about whatever was undefined.
 ! Undefined control sequence.
 \GenericError  ...                                
                                                   \let \@err@               ...
-l.4 ...a en el texto de \cite{burden2017análisis}
-                                                  .
+l.4 ...\textcolor{gray}{\cite{burden2017análisis}
+                                                  }.
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
 misspelled it (e.g., `\hobx'), type `I' and the correct
@@ -1015,8 +1028,8 @@ and I'll forget about whatever was undefined.
 ! Undefined control sequence.
 \GenericError  ...                                
                                                   \@empty \def \MessageBreak...
-l.4 ...a en el texto de \cite{burden2017análisis}
-                                                  .
+l.4 ...\textcolor{gray}{\cite{burden2017análisis}
+                                                  }.
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
 misspelled it (e.g., `\hobx'), type `I' and the correct
@@ -1026,8 +1039,8 @@ and I'll forget about whatever was undefined.
 ! Undefined control sequence.
 \GenericError  ...                                
                                                      \endgroup 
-l.4 ...a en el texto de \cite{burden2017análisis}
-                                                  .
+l.4 ...\textcolor{gray}{\cite{burden2017análisis}
+                                                  }.
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
 misspelled it (e.g., `\hobx'), type `I' and the correct
@@ -1037,8 +1050,8 @@ and I'll forget about whatever was undefined.
 ! Undefined control sequence.
 \GenericError  ...                                
                                                     #4  \errhelp \@err@     ...
-l.4 ...a en el texto de \cite{burden2017análisis}
-                                                  .
+l.4 ...\textcolor{gray}{\cite{burden2017análisis}
+                                                  }.
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
 misspelled it (e.g., `\hobx'), type `I' and the correct
@@ -1048,8 +1061,8 @@ and I'll forget about whatever was undefined.
 ! Undefined control sequence.
 \GenericError  ...                                
                                                   \let \@err@               ...
-l.4 ...a en el texto de \cite{burden2017análisis}
-                                                  .
+l.4 ...\textcolor{gray}{\cite{burden2017análisis}
+                                                  }.
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
 misspelled it (e.g., `\hobx'), type `I' and the correct
@@ -1059,8 +1072,8 @@ and I'll forget about whatever was undefined.
 ! Undefined control sequence.
 \GenericError  ...                                
                                                   \@empty \def \MessageBreak...
-l.4 ...a en el texto de \cite{burden2017análisis}
-                                                  .
+l.4 ...\textcolor{gray}{\cite{burden2017análisis}
+                                                  }.
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
 misspelled it (e.g., `\hobx'), type `I' and the correct
@@ -1070,8 +1083,8 @@ and I'll forget about whatever was undefined.
 ! Undefined control sequence.
 \GenericError  ...                                
                                                      \endgroup 
-l.4 ...a en el texto de \cite{burden2017análisis}
-                                                  .
+l.4 ...\textcolor{gray}{\cite{burden2017análisis}
+                                                  }.
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
 misspelled it (e.g., `\hobx'), type `I' and the correct
@@ -1081,8 +1094,8 @@ and I'll forget about whatever was undefined.
 ! Undefined control sequence.
 \GenericError  ...                                
                                                     #4  \errhelp \@err@     ...
-l.4 ...a en el texto de \cite{burden2017análisis}
-                                                  .
+l.4 ...\textcolor{gray}{\cite{burden2017análisis}
+                                                  }.
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
 misspelled it (e.g., `\hobx'), type `I' and the correct
@@ -1092,8 +1105,8 @@ and I'll forget about whatever was undefined.
 ! Undefined control sequence.
 \GenericError  ...                                
                                                   \let \@err@               ...
-l.4 ...a en el texto de \cite{burden2017análisis}
-                                                  .
+l.4 ...\textcolor{gray}{\cite{burden2017análisis}
+                                                  }.
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
 misspelled it (e.g., `\hobx'), type `I' and the correct
@@ -1103,8 +1116,8 @@ and I'll forget about whatever was undefined.
 ! Undefined control sequence.
 \GenericError  ...                                
                                                   \@empty \def \MessageBreak...
-l.4 ...a en el texto de \cite{burden2017análisis}
-                                                  .
+l.4 ...\textcolor{gray}{\cite{burden2017análisis}
+                                                  }.
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
 misspelled it (e.g., `\hobx'), type `I' and the correct
@@ -1114,8 +1127,8 @@ and I'll forget about whatever was undefined.
 ! Undefined control sequence.
 \GenericError  ...                                
                                                      \endgroup 
-l.4 ...a en el texto de \cite{burden2017análisis}
-                                                  .
+l.4 ...\textcolor{gray}{\cite{burden2017análisis}
+                                                  }.
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
 misspelled it (e.g., `\hobx'), type `I' and the correct
@@ -1125,8 +1138,8 @@ and I'll forget about whatever was undefined.
 ! Undefined control sequence.
 \GenericError  ...                                
                                                     #4  \errhelp \@err@     ...
-l.4 ...a en el texto de \cite{burden2017análisis}
-                                                  .
+l.4 ...\textcolor{gray}{\cite{burden2017análisis}
+                                                  }.
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
 misspelled it (e.g., `\hobx'), type `I' and the correct
@@ -1136,8 +1149,8 @@ and I'll forget about whatever was undefined.
 ! Undefined control sequence.
 \GenericError  ...                                
                                                   \let \@err@               ...
-l.4 ...a en el texto de \cite{burden2017análisis}
-                                                  .
+l.4 ...\textcolor{gray}{\cite{burden2017análisis}
+                                                  }.
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
 misspelled it (e.g., `\hobx'), type `I' and the correct
@@ -1147,8 +1160,8 @@ and I'll forget about whatever was undefined.
 ! Undefined control sequence.
 \GenericError  ...                                
                                                   \@empty \def \MessageBreak...
-l.4 ...a en el texto de \cite{burden2017análisis}
-                                                  .
+l.4 ...\textcolor{gray}{\cite{burden2017análisis}
+                                                  }.
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
 misspelled it (e.g., `\hobx'), type `I' and the correct
@@ -1158,8 +1171,8 @@ and I'll forget about whatever was undefined.
 ! Undefined control sequence.
 \GenericError  ...                                
                                                      \endgroup 
-l.4 ...a en el texto de \cite{burden2017análisis}
-                                                  .
+l.4 ...\textcolor{gray}{\cite{burden2017análisis}
+                                                  }.
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
 misspelled it (e.g., `\hobx'), type `I' and the correct
@@ -1169,8 +1182,8 @@ and I'll forget about whatever was undefined.
 ! Undefined control sequence.
 \GenericError  ...                                
                                                     #4  \errhelp \@err@     ...
-l.4 ...a en el texto de \cite{burden2017análisis}
-                                                  .
+l.4 ...\textcolor{gray}{\cite{burden2017análisis}
+                                                  }.
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
 misspelled it (e.g., `\hobx'), type `I' and the correct
@@ -1180,8 +1193,8 @@ and I'll forget about whatever was undefined.
 ! Undefined control sequence.
 \GenericError  ...                                
                                                   \let \@err@               ...
-l.4 ...a en el texto de \cite{burden2017análisis}
-                                                  .
+l.4 ...\textcolor{gray}{\cite{burden2017análisis}
+                                                  }.
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
 misspelled it (e.g., `\hobx'), type `I' and the correct
@@ -1191,27 +1204,16 @@ and I'll forget about whatever was undefined.
 ! Undefined control sequence.
 \GenericError  ...                                
                                                   \@empty \def \MessageBreak...
-l.4 ...a en el texto de \cite{burden2017análisis}
-                                                  .
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Undefined control sequence.
-\GenericError  ...                                
-                                                     \endgroup 
-l.4 ...a en el texto de \cite{burden2017análisis}
-                                                  .
+l.4 ...\textcolor{gray}{\cite{burden2017análisis}
+                                                  }.
 (That makes 100 errors; please try again.) 
 Here is how much of TeX's memory you used:
  30 strings out of 480994
  533 string characters out of 5916032
- 238612 words of memory out of 5000000
+ 238446 words of memory out of 5000000
  15642 multiletter control sequences out of 15000+600000
  532338 words of font info for 24 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 24i,3n,21p,120b,91s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 23i,3n,21p,138b,91s stack positions out of 5000i,500n,10000p,200000b,80000s
 
 !  ==> Fatal error occurred, no output PDF file produced!

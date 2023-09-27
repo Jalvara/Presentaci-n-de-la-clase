@@ -1,7 +1,7 @@
 %Primera Unidad
 \section{Preliminares del cálculo}
 \begin{frame}[allowframebreaks]{Teoremas Preliminares}
-Esta presentación esta basada en el texto de \cite{burden2017análisis}.
+Esta presentación esta basada en el texto de \textcolor{gray}{\cite{burden2017análisis}}.
 \label{RetornoTeoremaPreliminares}
 \begin{block}{Criterio del límite}
 Sea $f:\mathbb{R}:\rightarrow \mathbb{R}$. Asuma que $\lim_{x\rightarrow \infty}f(x)$ existe y es igual a $L$. Entonces la sucesión $\{a_n\}=\{f(n)\}$ converge a $L$ también.  
@@ -120,7 +120,7 @@ $$|p_n-p|\leq \dfrac{b-a}{2^n}.$$
 }
 \begin{block}{Iteración de Newton Raphson}
 La iteración de Newton Rapshon se define como:
-$$p_{n+1}=p_n-\dfrac{f(p_n)}{f(p_n)}.$$
+$$p_{n+1}=p_n-\dfrac{f(p_n)}{f'(p_n)}.$$
 La sucesión $\{p_n\}$ intenta resolver el problema:
 $$f(x)=0.$$
 \end{block}
@@ -129,10 +129,11 @@ $$f(x)=0.$$
 $$f(x)=0$$
 \indent Supogan además que la raíz a esta ecuación sucede en $x=p.$ Por el teorema de Taylor bajo algunas suposiciones tenemos que:
 $$0=f(p)=f(x)+(p-x)f'(x)+\dfrac{(p-x)^2}{2}f''(\xi)$$
-\indent Si se asume que $x$ está cerca de $p$ entonces:
-$$p\approx x-\dfrac{f(x)}{f'(x)}.$$
+\indent Si se asume que $x$ está cerca de $p$ entonces, después de despejar arriba se tiene:
+$$p\approx x-\dfrac{f(x)}{f'(x)},\ (p-x)^2\approx 0.$$
+\indent Esto último, como se puede notar, tiene la estructura de la iteración del método de Newton presentada al inicio.\\
+\indent El método iterativo de Newton se puede analizar desde el teorema de punto fijo; para ello considere primero el enunciado de dicho teorema:
 \framebreak
-\indent Si ahora se usa el teorema de punto fijo:
 \begin{block}{Teorema de punto fijo}
 Suponga lo siguiente:
 \begin{itemize}
@@ -147,7 +148,8 @@ Entonces para cualquier $p_0\in[a,b]$ la sucesión definida por $p_n=g(p_{n-1})$
 \indent En la iteración de Newton, $g(x)=x-\dfrac{f(x)}{f'(x)}$; si se asume que $f'(p)\neq 0$ y cumple con todas las condiciones del teorema de punto fijo, entonces la conclusión de este es que la sucesión converge a $p$ y
 $$p=g(p)=p-\dfrac{f(p)}{f'(p)},$$
 esto deriva en que $f(p)=0$; lo que justamente se anda buscando.\\
-\indent Para que se garantice el teorema de punto fijo, se tiene el siguiente teorema sobre el método de Newton:
+\indent Para que se garantice el teorema de punto fijo, se tiene el siguiente teorema sobre el método de Newton:\\
+\hyperlink{EjercicioNewton}{\textcolor{cyan}{Enlace a ejercicio}}
 \begin{block}{Teorema de convergencia del método de Newton}
 Suponga que:
 \begin{itemize}
@@ -155,6 +157,53 @@ Suponga que:
 \item $p\in [a,b]$.
 \item $f(p)=0$, $f'(p)\neq 0.$
 \end{itemize}
-Entonces existe un $\delta>0$ tal que la sucesión $\{p_n\}$ converge a $p$ para cualquier aproximación inicial 
+Entonces existe un $\delta>0$ tal que la sucesión $\{p_n\}$ converge a $p$ para cualquier aproximación inicial $p_0\in [p-\delta,p+\delta].$
 \end{block}
+\indent La demostración del teorema se puede encontrar en \textcolor{gray}{\cite{burden2017análisis}}. En el podrás observar que se usa el teorema de punto fijo.\\ 
+\indent Para apreciar la importancia del método de Newton, se necesita la siguiente definición:
+\framebreak
+\begin{block}{Orden de convergencia}
+Suponga que $\{p_n\}$ es una sucesión que converge a $p$ y que $p\neq p_n$ para toda $n$. Además asuma que existen constantes positivas $\lambda$ y $\alpha$ tales que:
+$$\lim_{n\rightarrow \infty}\dfrac{|p_{n+1}-p|}{|p_n-p|^\alpha}=\lambda.$$
+entonces se dice que $\{p_n\}$ converge a $p$ con orden $\alpha$ y una constante asintótica $\gamma$.
+\end{block}
+\indent Bajo ciertos supuestos razonables, se puede probar que el método de Newton posee una convergencia de al menos $\alpha=2$ (esto se denomina convergencia  cuadrática); es por este detalle que se considera un buen método, puesto que su orden de convergencia es mayor que $\alpha=1$. Además hay otros métodos con ordendes de convergencia más altos que se inspiran en el método de Newton, para esto puede revisarse \textcolor{gray}{\cite{xiao2015simple}}.\\
+\indent El algoritmo de Bisección por ejemplo, tiene un orden de convergencia $\alpha=1$, lo cual se denomina como convergencia lineal. En este sentido siempre se preferirá el método de Newton sobre el método de bisección; sin embargo hay que notar que la desventaja del método de Newton es la escogencia del valor inicial y una combinación de ambos métodos es en general la mejor opción.\\
+\begin{block}{Sistema de ecuaciones}
+Un sistema de ecuaciones, en general tiene la siguiente forma:
+\begin{displaymath}
+\begin{bmatrix}
+f_1(x_1,\cdots ,x_n)=0\\
+f_2(x_1,\cdots ,x_n)=0\\
+\vdots\\
+f_n(x_1,\cdots ,x_n)=0
+\end{bmatrix}
+\end{displaymath}
+El cual se puede expresar de forma compacta como:
+$$F(X)=0,$$
+donde $X=[x_1,\cdots,x_n]$ y $F(X)=[f_1(X),\cdots,f_n(X)].$
+\end{block}
+\indent Todo el análisis que se hizo antes en el caso de una variable, se puede hacer para el caso en el que queremos resolver un sistema de ecuaciones.
+\framebreak
+\begin{block}{Iteración del método de Newton para sistemas}
+Se define la iteración de Newton para sistemas como:
+$$p_{n+1}=p_{n}-J^{-1}(p_{n})F(p_{n}),$$
+donde:
+\begin{align*}
+J(x)=&
+\begin{pmatrix}
+\dfrac{\partial f_1(X)}{\partial x_1} & \cdots & \dfrac{\partial f_1(X)}{\partial x_n}\\
+\vdots &\vdots &\vdots\\
+\dfrac{\partial f_n(X)}{\partial x_1} & \cdots & \dfrac{\partial f_n(X)}{\partial x_n}\\
+\end{pmatrix}\\
+=&
+\begin{pmatrix}
+\bigtriangledown f_1(X)\\
+\vdots\\
+\bigtriangledown f_n(X)
+\end{pmatrix}\\
+p_{n}\in &\mathbb{R}^n
+\end{align*}
+\end{block}
+\indent A $J$ se le conoce como el jacobiano en la literatura.
 \end{frame}

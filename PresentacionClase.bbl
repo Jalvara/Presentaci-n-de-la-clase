@@ -38,5 +38,40 @@
     \field{title}{Analisis numerico}
     \field{year}{2017}
   \endentry
+
+  \entry{xiao2015simple}{article}{}
+    \name{author}{2}{}{%
+      {{hash=XX}{%
+         family={Xiao},
+         familyi={X\bibinitperiod},
+         given={Xiaoyong},
+         giveni={X\bibinitperiod},
+      }}%
+      {{hash=YH}{%
+         family={Yin},
+         familyi={Y\bibinitperiod},
+         given={Hongwei},
+         giveni={H\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {Elsevier}%
+    }
+    \strng{namehash}{XXYH1}
+    \strng{fullhash}{XXYH1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{2015}
+    \field{labeldatesource}{}
+    \field{sortinit}{X}
+    \field{sortinithash}{X}
+    \field{number}{10}
+    \field{pages}{1220\bibrangedash 1231}
+    \field{title}{A simple and efficient method with high order convergence for
+  solving systems of nonlinear equations}
+    \field{volume}{69}
+    \field{journaltitle}{Computers \& Mathematics with Applications}
+    \field{year}{2015}
+  \endentry
 \enddatalist
 \endinput
