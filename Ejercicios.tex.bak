@@ -103,7 +103,7 @@ Elija $f(x)=\sin(x)/\log(x)$.\\
 \begin{frame}[fragile]{Ejercicios}
 \label{EjercicioBiseccion}
 \begin{block}{Ejercicio(Método de bisección)}
-Encuentre la aproximación para la solución del problema anterior usando el método de bisección. Además determine cual es el valor de $n$ para conseguir un error de a lo mucho $10^{-5}$. ($f(x)=\sin(x)/\log(x)$, $x\in[2,5].$)
+Encuentre la aproximación para la solución del problema anterior usando el método de bisección. Además determine cuál es el valor de $n$ para conseguir un error de a lo mucho $10^{-5}$; calcule el error asumiendo que la solución exacta es $\pi$. ($f(x)=\sin(x)/\log(x)$, $x\in[2,4].$)
 \end{block}
 \small
 \begin{lstlisting}[style=mystyle,backgroundcolor=\color{gray!30}]
@@ -120,8 +120,8 @@ n     a       b       p       f(p)            |p-p*|
 \end{lstlisting}
 \normalsize
 \pause
-\textcolor{red}{Se necesita garantizar que $|p-\pi|<=10^{-5}$. Por el teorema de bisección, se tiene $$|p-\pi|\leq \dfrac{b-a}{2^n}=\dfrac{5-2}{2^n}=\dfrac{3}{2^n}\leq 10^{-5}$$
-Si se resuleve la última desigualdad, se obtiene que $n\geq 18.19$, es decir que se puede escoger $n=19$.}\hyperlink{RetornoTeoremaPreliminares}{\textcolor{cyan}{Teoremas Preliminares.}}
+\textcolor{red}{Se necesita garantizar que $|p-\pi|<=10^{-5}$. Por el teorema de bisección, se tiene $$|p-\pi|\leq \dfrac{b-a}{2^n}=\dfrac{4-2}{2^n}=\dfrac{1}{2^{n-1}}\leq 10^{-5}$$
+Si se resuleve la última desigualdad, se obtiene que $n\geq 17.61$, es decir que se puede escoger $n=18$.}\hyperlink{RetornoTeoremaPreliminares}{\textcolor{cyan}{Teoremas Preliminares.}}
 \end{frame}
 \begin{frame}{Ejercicios}
 \action<+->{
@@ -147,7 +147,7 @@ Considere la función $f(x)=\ln(\ln(x))$. Determine lo siguiente:
 \textcolor{red}{
 \begin{align*}
 \action<+->{=&\ln(\ln(3))+\dfrac{(x-3)}{3\ln(3)}-\bigg(\dfrac{1}{18\ln(3)}+\dfrac{1}{18\ln^2(3)}\bigg)(x-3)^2\\
-&+\dfrac{1}{162}\bigg(\dfrac{2}{\ln(3)}+\dfrac{3}{\ln^2(3)}+\dfrac{2}{\ln^3(3)}\bigg)(x-2)^3}
+&+\dfrac{1}{162}\bigg(\dfrac{2}{\ln(3)}+\dfrac{3}{\ln^2(3)}+\dfrac{2}{\ln^3(3)}\bigg)(x-3)^3}
 \end{align*}
 }
 \textcolor{blue}{
@@ -191,7 +191,7 @@ Observación: Si $p^*$ es una aproximación de $p$, entonces se definen los erro
 \action<+->{=&\displaystyle \int_{2}^{4}\ln(\ln(3))+\dfrac{(x-3)}{3\ln(3)}-\bigg(\dfrac{1}{18\ln(3)}+\dfrac{1}{18\ln^2(3)}\bigg)(x-3)^2\\
 &+\dfrac{1}{162}\bigg(\dfrac{2}{\ln(3)}+\dfrac{3}{\ln^2(3)}+\dfrac{2}{\ln^3(3)}\bigg)(x-2)^3 dx\\}
 \action<+->{=&\bigg[\displaystyle \ln(\ln(3))(x-3)+\dfrac{(x-3)^2}{6\ln(3)}-\bigg(\dfrac{1}{54\ln(3)}+\dfrac{1}{54\ln^2(3)}\bigg)(x-3)^3\\
-&+\dfrac{1}{162}\bigg(\dfrac{2}{4\ln(3)}+\dfrac{3}{4\ln^2(3)}+\dfrac{2}{4\ln^3(3)}\bigg)(x-2)^4\bigg]_{2}^{4}\\}
+&+\dfrac{1}{162}\bigg(\dfrac{2}{4\ln(3)}+\dfrac{3}{4\ln^2(3)}+\dfrac{2}{4\ln^3(3)}\bigg)(x-3)^4\bigg]_{2}^{4}\\}
 \action<+->{&\approx 0.1242167}
 \end{align*}
 }
@@ -248,4 +248,96 @@ n     a       b       p      f(p)          Error relativo
 \begin{itemize}
 \action<+->{\item Aplique el método de Newton-Raphson para obtener una aproximación con una exactitud de $10^{-5}$. Utilice como aproximación inicial la aproximación encontrada en el iniciso anterior.}
 \end{itemize}
+\end{frame}
+\begin{frame}[fragile]{Ejercicios}
+\small
+\begin{lstlisting}[style=mystyle,backgroundcolor=\color{gray!30}]
+n      p_n     f(p_n)         Error relativo
+0      -1.375  -6.0458        *
+1      -1.3226 -1.150768e-01  3.962162e-02
+2      -1.3216 -4.145716e-05  7.840103e-04
+3      -1.3216 -5.371703e-12  2.826484e-07
+\end{lstlisting}
+\normalsize
+\textcolor{blue}{Primero se requiere calcular la derivada de la función analizada:
+$$f'(\omega)={{32.17\,\left(2\,\cosh \left(2\,\omega\right)-2\,\cos \left(2\,\omega\right)
+ \right)}\over{\omega^2}}-{{64.34\,\left(\sinh \left(2\,\omega\right)-\sin
+ \left(2\,\omega\right)\right)}\over{\omega^3}}$$
+ Con esto la iteración del método de Newton queda expresado como:
+ \small
+ \begin{align*}
+ p_{n+1}=&p_{n}-\dfrac{f(p_n)}{f'(p_n)}\\
+ =&p_n+\\
+ &{{3217\,p_{n}\,\sinh \left(2\,p_{n}\right)-3217\,p_{n}\,\sin
+ \left(2\,p_{n}\right)+12000\,p_{n}^3}\over{6434\,\sinh \left(2\,p_{n
+ }\right)-6434\,\sin \left(2\,p_{n}\right)-6434\,p_{n}\,\cosh \left(2
+ \,p_{n}\right)+6434\,p_{n}\,\cos \left(2\,p_{n}\right)}}
+ \end{align*}
+ \normalsize
+ Para los resultados se uso el error relativo, es decir $\dfrac{|p_{n+1}-p_{n}|}{|p_{n+1}|}$.\\
+ }
+\end{frame}
+\begin{frame}[fragile]{Ejercicios}
+\begin{block}{Ejercicio (Ecuaciones no lineales, Ejercicio IIPAC2023)}
+Sea el sistema de ecuaciones no lineales:
+\begin{displaymath}
+\begin{bmatrix}
+\ln(x^2+y^2)-\sin(xy) &=& \ln(2)-\ln(\pi)\\
+x^2+4y^2\cos(x) &=&4
+\end{bmatrix}
+\end{displaymath}
+Realice una iteración del método de Newton Raphson para sistemas con la aproximación inicial:
+\begin{displaymath}
+X_0=\begin{bmatrix}
+-1.5\\
+-2.5
+\end{bmatrix}
+\end{displaymath}
+Además calcule $\parallel X_k-X_{k-1}\parallel_{\infty}$ y $\parallel X_k-X_{k-1}\parallel_2$.
+\end{block}\pause
+\textcolor{red}{
+Primero se definirán la función y el jacobiano para usar el método de Newton:
+\small
+\begin{displaymath}
+F(x,y)=\begin{pmatrix}
+\ln(x^2+y^2)-\sin(xy)+\ln(\pi)-\ln(2)\\
+4\cos(x)y^2+x^2-4\\
+\end{pmatrix}
+\end{displaymath}
+}
+\end{frame}
+\begin{frame}[fragile]{Ejercicios}
+\small
+\textcolor{red}{
+\begin{align*}
+J(x,y)=&\begin{pmatrix}
+\dfrac{2x}{x^2+y^2}-y\cos(xy) & \dfrac{2y}{x^2+y^2}-x\cos(xy)\\
+2x-4\sin(x)y^2 & 8 \cos(x)y 
+\end{pmatrix}\\
+J(-1.5,-2.5)=&
+\begin{pmatrix}
+ - 2.40433956981949  & - 1.819074330126988\\
+ 21.93737466510136   & - 1.414744033354058
+\end{pmatrix}\\
+J^{-1}(-1.5,-2.5)=&
+\begin{pmatrix}
+-0.03266761001938535 &  0.04200393103760224\\
+-0.5065521278147188 &  - 0.05551818955887632
+\end{pmatrix}\\
+p_1=&
+\begin{pmatrix}
+-1.5\\
+2.5
+\end{pmatrix}
+-J^{-1}(-1.5,-2.5)
+\end{align*}}
+\small
+\begin{lstlisting}[style=mystyle,backgroundcolor=\color{gray!30}]
+n  p_n(1)  p_n(2)  f(p_n)        Norma 2       Norma inf
+0  -1.5    -2.5    0.87375       *             *
+1  -1.4722 -2.0564 -9.606503e-02 4.444916e-01  4.436233e-01
+2  -1.4663 -2.1091 -1.654021e-04 5.303760e-02  5.270221e-02
+3  -1.4667 -2.1087 -1.031003e-07 5.406173e-04  3.834635e-04
+\end{lstlisting}
+\normalsize
 \end{frame}

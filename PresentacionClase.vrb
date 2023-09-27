@@ -1,22 +1,43 @@
 \frametitle{Ejercicios}
-\begin{itemize}
-\action<+->{\item Realice tres iteraciones del método de bisección, calcule el error relativo en cada iteración.\\}
-\action<+->{\textcolor{red}{Cuando no conocemos el valor de la raíz, el error relativo se calcula de la siguiente forma:
-$$\dfrac{|p_{n+1}-p_n|}{|p_{n+1}|}$$
-De esta forma se puede generar la siguiente tabla:
-}
-}
-\end{itemize}
-\pause
+\small
+\textcolor{red}{
+\begin{align*}
+J(x,y)=&\begin{pmatrix}
+\dfrac{2x}{x^2+y^2}-y\cos(xy) & \dfrac{2y}{x^2+y^2}-x\cos(xy)\\
+2x-4\sin(x)y^2 & 8 \cos(x)y
+\end{pmatrix}\\
+J(-1.5,-2.5)=&
+\begin{pmatrix}
+ - 2.40433956981949  & - 1.819074330126988\\
+ 21.93737466510136   & - 1.414744033354058
+\end{pmatrix}\\
+J^{-1}(-1.5,-2.5)=&
+\begin{pmatrix}
+-0.03266761001938535 &  0.04200393103760224\\
+-0.5065521278147188 &  - 0.05551818955887632
+\end{pmatrix}\\
+F(-1.5,-2.5)=&
+\begin{pmatrix}
+0.873750\\
+0.018430
+\end{pmatrix}\\
+p_1=&
+\begin{pmatrix}
+-1.5\\
+2.5
+\end{pmatrix}
+-J^{-1}(-1.5,-2.5)F(-1.5,-2.5)=
+\begin{pmatrix}
+-1.472231\\
+-2.056377
+\end{pmatrix}
+\end{align*}}
 \small
 \begin{lstlisting}[style=mystyle,backgroundcolor=\color{gray!30}]
-n     a       b       p      f(p)          Error relativo
-0     -2      -1      *      *             *
-1     -1.5    -1      -1.5   -2.121565e+01 *
-2     -1.5    -1.25   -1.25  7.755373e+00  2.000000e-01
-3     -1.375  -1.25   -1.375 -6.045842e+00 9.090909e-02
+n  p_n(1)  p_n(2)  f(p_n)        Norma 2       Norma inf
+0  -1.5    -2.5    0.87375       *             *
+1  -1.4722 -2.0564 -9.606503e-02 4.444916e-01  4.436233e-01
+2  -1.4663 -2.1091 -1.654021e-04 5.303760e-02  5.270221e-02
+3  -1.4667 -2.1087 -1.031003e-07 5.406173e-04  3.834635e-04
 \end{lstlisting}
 \normalsize
-\begin{itemize}
-\action<+->{\item Aplique el método de Newton-Raphson para obtener una aproximación con una exactitud de $10^{-5}$. Utilice como aproximación inicial la aproximación encontrada en el iniciso anterior.}
-\end{itemize}

@@ -5,12 +5,12 @@
 \defcounter {refsection}{0}\relax 
 \beamer@sectionintoc {2}{Raíces de ecuaciones}{8}{0}{2}
 \defcounter {refsection}{0}\relax 
-\beamer@sectionintoc {3}{Derivación Numérica}{12}{0}{3}
+\beamer@sectionintoc {3}{Derivación Numérica}{15}{0}{3}
 \defcounter {refsection}{0}\relax 
-\beamer@sectionintoc {4}{Integración Numérica}{12}{0}{4}
+\beamer@sectionintoc {4}{Integración Numérica}{15}{0}{4}
 \defcounter {refsection}{0}\relax 
-\beamer@sectionintoc {5}{Problemas de valor inicial}{12}{0}{5}
+\beamer@sectionintoc {5}{Problemas de valor inicial}{15}{0}{5}
 \defcounter {refsection}{0}\relax 
-\beamer@sectionintoc {6}{Problemas de valores en la frontera}{12}{0}{6}
+\beamer@sectionintoc {6}{Problemas de valores en la frontera}{15}{0}{6}
 \defcounter {refsection}{0}\relax 
-\beamer@sectionintoc {7}{Ejercicios}{12}{0}{7}
+\beamer@sectionintoc {7}{Ejercicios}{15}{0}{7}

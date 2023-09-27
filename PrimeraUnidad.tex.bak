@@ -147,8 +147,7 @@ Entonces para cualquier $p_0\in[a,b]$ la sucesión definida por $p_n=g(p_{n-1})$
 \indent En la iteración de Newton, $g(x)=x-\dfrac{f(x)}{f'(x)}$; si se asume que $f'(p)\neq 0$ y cumple con todas las condiciones del teorema de punto fijo, entonces la conclusión de este es que la sucesión converge a $p$ y
 $$p=g(p)=p-\dfrac{f(p)}{f'(p)},$$
 esto deriva en que $f(p)=0$; lo que justamente se anda buscando.\\
-\indent Para que se garantice el teorema de punto fijo, se tiene el siguiente teorema sobre el método de Newton:\\
-\hyperlink{EjercicioNewton}{\textcolor{cyan}{Enlace a ejercicio}}
+\indent Para que se garantice el teorema de punto fijo, se tiene el siguiente teorema sobre el método de Newton:
 \begin{block}{Teorema de convergencia del método de Newton}
 Suponga que:
 \begin{itemize}
@@ -156,7 +155,6 @@ Suponga que:
 \item $p\in [a,b]$.
 \item $f(p)=0$, $f'(p)\neq 0.$
 \end{itemize}
-Entonces existe un $\delta>0$ tal que la sucesión $\{p_n\}$ converge a $p$ para cualquier aproximación inicial $p_0\in [p-\delta,p+\delta].$
+Entonces existe un $\delta>0$ tal que la sucesión $\{p_n\}$ converge a $p$ para cualquier aproximación inicial 
 \end{block}
-\indent La demostración del teorema se puede encontrar en \cite{burden2017análisis}. En el podrás observar que se usa el teorema de punto fijo. 
 \end{frame}
