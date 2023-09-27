@@ -21,7 +21,8 @@ F(-1.5,-2.5)=&
 0.873750\\
 0.018430
 \end{pmatrix}\\
-p_1=&
+p_1=&p_0-J^{-1}(p_0)F(p_0)\\
+=&
 \begin{pmatrix}
 -1.5\\
 2.5
@@ -41,4 +42,4 @@ n  p_n(1)  p_n(2)  f(p_n)        Norma 2       Norma inf
 3  -1.4667 -2.1087 -1.031003e-07 5.406173e-04  3.834635e-04
 \end{lstlisting}
 \normalsize
-\hyperlink{RetornoTeoremaPreliminares}{\textcolor{cyan}{Teoremas Preliminares.}}
+\hyperlink{RetornoTeoremaRaices10}{\textcolor{cyan}{Raices de ecuaciones.}}

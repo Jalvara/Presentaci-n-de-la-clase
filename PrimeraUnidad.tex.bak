@@ -2,7 +2,7 @@
 \section{Preliminares del cálculo}
 \begin{frame}[allowframebreaks]{Teoremas Preliminares}
 Esta presentación esta basada en el texto de \textcolor{gray}{\cite{burden2017análisis}}.
-\label{RetornoTeoremaPreliminares}
+\label{RetornoTeoremaPreliminares1}
 \begin{block}{Criterio del límite}
 Sea $f:\mathbb{R}:\rightarrow \mathbb{R}$. Asuma que $\lim_{x\rightarrow \infty}f(x)$ existe y es igual a $L$. Entonces la sucesión $\{a_n\}=\{f(n)\}$ converge a $L$ también.  
 \end{block}
@@ -18,6 +18,7 @@ para $n>N$ para algún $N$ fijo; entonces $\{x_n\}$ converge a $L$.
 \end{block}
 \hyperlink{Sandwich}{\textcolor{cyan}{Enlace a ejercicio.}}
 \framebreak
+\label{RetornoTeoremaPreliminares2}
 \begin{block}{Teorema del valor medio}
 Si $f\in C[a,b]$ y $f$ es diferenciable en $(a,b),$ entonces existe un número $c$ en $(a,b)$ con
 $$f'(c)=\dfrac{f(b)-f(a)}{b-a}.$$
@@ -30,6 +31,7 @@ $$f'(c)=\dfrac{f(b)-f(a)}{b-a}.$$
 \end{figure}
 \framebreak
 \vspace*{-0.7cm}
+\label{RetornoTeoremaPreliminares3}
 \begin{block}{Teorema del valo extremo}
 \begin{itemize}
 \item Si $f\in C[a,b]$, entonces existe $c_1,c_2\in [a,b]$ con
@@ -46,6 +48,7 @@ para $x\in[a,b]$.
 \caption{Se puede apreciar en el ejemplo, que el máximo de la función se alcanza en un lugar donde la derivada es cero y el mínimo en el extremo derecho.}
 \end{figure}
 \framebreak
+\label{RetornoTeoremaPreliminares4}
 \begin{block}{Teorema del valor intermedio}
 Si $f\in C[a,b]$ y $K$ es cualquier número entre $f(a)$ y $f(b)$, entonces existe un número $c$ en $(a,b)$ para el cual $f(c)=K$.
 \end{block}
@@ -57,6 +60,7 @@ Si $f\in C[a,b]$ y $K$ es cualquier número entre $f(a)$ y $f(b)$, entonces exis
 \end{figure}
 \framebreak
 Se define $C^n[a,b]=\{f:[a,b]\rightarrow \mathbb{R}| f,f',\cdots,f^{(n)}\text{ son continuas en }[a,b]\}.$
+\label{RetornoTeoremaPreliminares5}
 \begin{block}{Teorema de Taylor}
 Supong que:
 \begin{itemize}
@@ -75,6 +79,7 @@ Entonces, para cada $x\in[a,b]$, existe $\xi(x)\in (x_0,x)$ (si $x>x_0$ y $\xi(x
 \end{frame}
 \section{Raíces de ecuaciones}
 \begin{frame}[allowframebreaks,fragile]{Raíces de ecuaciones}
+\label{RetornoTeoremaPreliminares6}
 \begin{figure}[H]
 \begin{center}
 \includegraphics[scale=0.7]{Imagen20}
@@ -148,8 +153,7 @@ Entonces para cualquier $p_0\in[a,b]$ la sucesión definida por $p_n=g(p_{n-1})$
 \indent En la iteración de Newton, $g(x)=x-\dfrac{f(x)}{f'(x)}$; si se asume que $f'(p)\neq 0$ y cumple con todas las condiciones del teorema de punto fijo, entonces la conclusión de este es que la sucesión converge a $p$ y
 $$p=g(p)=p-\dfrac{f(p)}{f'(p)},$$
 esto deriva en que $f(p)=0$; lo que justamente se anda buscando.\\
-\indent Para que se garantice el teorema de punto fijo, se tiene el siguiente teorema sobre el método de Newton:\\
-\hyperlink{EjercicioNewton}{\textcolor{cyan}{Enlace a ejercicio}}
+\indent Para que se garantice el teorema de punto fijo, se tiene el siguiente teorema sobre el método de Newton:
 \begin{block}{Teorema de convergencia del método de Newton}
 Suponga que:
 \begin{itemize}
@@ -165,10 +169,21 @@ Entonces existe un $\delta>0$ tal que la sucesión $\{p_n\}$ converge a $p$ para
 \begin{block}{Orden de convergencia}
 Suponga que $\{p_n\}$ es una sucesión que converge a $p$ y que $p\neq p_n$ para toda $n$. Además asuma que existen constantes positivas $\lambda$ y $\alpha$ tales que:
 $$\lim_{n\rightarrow \infty}\dfrac{|p_{n+1}-p|}{|p_n-p|^\alpha}=\lambda.$$
-entonces se dice que $\{p_n\}$ converge a $p$ con orden $\alpha$ y una constante asintótica $\gamma$.
+entonces se dice que:
+\begin{itemize}
+\item $\alpha$ es le orden de convergencia de la sucesión $\{p_n\}$.
+\item $\gamma$ es la constante de error asintótica.
+\end{itemize} 
 \end{block}
-\indent Bajo ciertos supuestos razonables, se puede probar que el método de Newton posee una convergencia de al menos $\alpha=2$ (esto se denomina convergencia  cuadrática); es por este detalle que se considera un buen método, puesto que su orden de convergencia es mayor que $\alpha=1$. Además hay otros métodos con ordendes de convergencia más altos que se inspiran en el método de Newton, para esto puede revisarse \textcolor{gray}{\cite{xiao2015simple}}.\\
-\indent El algoritmo de Bisección por ejemplo, tiene un orden de convergencia $\alpha=1$, lo cual se denomina como convergencia lineal. En este sentido siempre se preferirá el método de Newton sobre el método de bisección; sin embargo hay que notar que la desventaja del método de Newton es la escogencia del valor inicial y una combinación de ambos métodos es en general la mejor opción.\\
+\indent A conitinuación se hacen algunas observaciones:
+\begin{itemize}
+\item La parte más relevante en la definición anterior es el orden de convergencia $\alpha$; entre más grande sea este, el método convergerá con mayor rapidez.
+\item El método de bisección tiene un orden de convergencia $\alpha=1$ (esto se denomina convergencia  lineal).
+\item Bajo ciertos supuestos razonables, el método de Newton posee una convergencia de al menos $\alpha=2$ (esto se denomina convergencia  cuadrática). Debido a su valor en el orden de convergencia, a este método se le considera de rápida convergencia.
+\item Usualemente se preferirá el método de Newton sobre el método de bisección; sin embargo hay que notar que la desventaja del método de Newton es la escogencia del valor inicial y una combinación de ambos métodos es en general la mejor opción.
+\end{itemize}
+\hyperlink{EjercicioNewton}{\textcolor{cyan}{Enlace a ejercicio}}
+\framebreak
 \begin{block}{Sistema de ecuaciones}
 Un sistema de ecuaciones, en general tiene la siguiente forma:
 \begin{displaymath}
@@ -183,8 +198,8 @@ El cual se puede expresar de forma compacta como:
 $$F(X)=0,$$
 donde $X=[x_1,\cdots,x_n]$ y $F(X)=[f_1(X),\cdots,f_n(X)].$
 \end{block}
-\indent Todo el análisis que se hizo antes en el caso de una variable, se puede hacer para el caso en el que queremos resolver un sistema de ecuaciones.
-\framebreak
+\indent Todo el análisis que se hizo antes en el caso de una variable, se puede hacer para el caso en el que queremos resolver un sistema de ecuaciones.\\[2cm]
+\small
 \begin{block}{Iteración del método de Newton para sistemas}
 Se define la iteración de Newton para sistemas como:
 $$p_{n+1}=p_{n}-J^{-1}(p_{n})F(p_{n}),$$
@@ -205,5 +220,22 @@ J(x)=&
 p_{n}\in &\mathbb{R}^n
 \end{align*}
 \end{block}
-\indent A $J$ se le conoce como el jacobiano en la literatura.
+\indent A $J$ se le conoce como el jacobiano en la literatura.\\
+\indent Para medir los errores en el caso de sistemas, en lugar del valor absoluto se usa su equivalente, las normas. Las normas que se suelen usar son las siguientes:
+\begin{itemize}
+\item Norma 2: $\parallel x\parallel_2=\sqrt{x_1^2+\cdots +x_n^2}$.
+\item Norma 1: $\parallel x\parallel_1=|x_1|+\cdots +|x_n|$.
+\item Norma infinito: $\displaystyle \parallel x\parallel_\infty=\max_{1\leq i\leq n}|x_i|$.
+\end{itemize}
+\indent Por ejemplo, si se quiere medir el error entre la aproximación $p_n$ de $p$, donde estos son vectores, entonces:
+\begin{itemize}
+\item Error absoluto en la norma infinito: $\displaystyle \parallel p-p_n\parallel_\infty$
+\item Error relativo en la norma 1: $\displaystyle \dfrac{\parallel p-p_n\parallel_1}{\parallel p \parallel_1}$
+\end{itemize}
+\indent Cuando no se conoce el valor exacto entonces se suelen usar medidas para estimar el valor relativo o absoluto; para ello suponga que se quiere estimar el error para una suceción $\{p_n\}$ vectorial:
+\begin{itemize}
+\item Estimación error absoluto en la norma 2: $\displaystyle \parallel p_{n+1}-p_n\parallel_2$
+\item Estimación del error relativo en la norma infinito: $\displaystyle \dfrac{\parallel p_{n+1}-p_n\parallel_\infty}{\parallel p_{n+1} \parallel_\infty}$
+\end{itemize}
+\hyperlink{EjercicioNewtonSistemas}{\textcolor{cyan}{Enlace a ejercicio}}
 \end{frame}
