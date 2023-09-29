@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/W32TeX) (preloaded format=pdflatex 2020.3.17)  27 SEP 2023 07:41
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/W32TeX) (preloaded format=pdflatex 2020.3.17)  28 SEP 2023 19:21
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1224,7 +1224,7 @@ LaTeX Info: Redefining \sptext on input line 8.
 LaTeX Info: Redefining \. on input line 8.
 LaTeX Info: Redefining \% on input line 8.
  (./PresentacionClase.nav)
-<FondoUNAH.png, id=45, 1204.5pt x 632.3625pt>
+<FondoUNAH.png, id=29, 1204.5pt x 632.3625pt>
 File: FondoUNAH.png Graphic file (type png)
 <use FondoUNAH.png>
 Package pdftex.def Info: FondoUNAH.png  used on input line 12.
@@ -1257,17 +1257,17 @@ LaTeX Font Info:    Trying to load font information for U+msb on input line 79.
 (c:/texlive/2019/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-<Imagen17.png, id=120, 258.10715pt x 215.08928pt>
+<Imagen17.png, id=100, 258.10715pt x 215.08928pt>
 File: Imagen17.png Graphic file (type png)
 <use Imagen17.png>
 Package pdftex.def Info: Imagen17.png  used on input line 79.
 (pdftex.def)             Requested size: 129.05325pt x 107.54437pt.
-<Imagen18.png, id=122, 258.10715pt x 215.08928pt>
+<Imagen18.png, id=102, 258.10715pt x 215.08928pt>
 File: Imagen18.png Graphic file (type png)
 <use Imagen18.png>
 Package pdftex.def Info: Imagen18.png  used on input line 79.
 (pdftex.def)             Requested size: 103.24101pt x 86.03418pt.
-<Imagen19.png, id=124, 258.10715pt x 215.08928pt>
+<Imagen19.png, id=104, 258.10715pt x 215.08928pt>
 File: Imagen19.png Graphic file (type png)
 <use Imagen19.png>
 Package pdftex.def Info: Imagen19.png  used on input line 79.
@@ -1314,7 +1314,7 @@ Package pdftex.def Info: FondoUNAH.png  used on input line 79.
 \openout4 = `PresentacionClase.vrb'.
 
  (./PresentacionClase.vrb
-<Imagen20.png, id=277, 258.10715pt x 215.08928pt>
+<Imagen20.png, id=256, 258.10715pt x 215.08928pt>
 File: Imagen20.png Graphic file (type png)
 <use Imagen20.png>
 Package pdftex.def Info: Imagen20.png  used on input line 5.
@@ -1608,7 +1608,7 @@ Package pdftex.def Info: FondoUNAH.png  used on input line 66.
  [39
 
 ]
-<Imagen16.png, id=1125, 258.10715pt x 215.08928pt>
+<Imagen16.png, id=1104, 258.10715pt x 215.08928pt>
 File: Imagen16.png Graphic file (type png)
 <use Imagen16.png>
 Package pdftex.def Info: Imagen16.png  used on input line 87.
@@ -1946,20 +1946,16 @@ LaTeX Info: Redefining \% on input line 31.
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 27.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 27.
 Package rerunfilecheck Info: File `PresentacionClase.out' has not changed.
-(rerunfilecheck)             Checksum: 8D5707B4AC6068E768A0177DE7E83C73;463.
-
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
+(rerunfilecheck)             Checksum: BD7C1885A4F645A2AE4E50C60BBC2B1D;211.
 Package logreq Info: Writing requests to 'PresentacionClase.run.xml'.
 \openout1 = `PresentacionClase.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 30345 strings out of 480994
- 556638 string characters out of 5916032
- 1229592 words of memory out of 5000000
- 45051 multiletter control sequences out of 15000+600000
+ 30324 strings out of 480994
+ 556422 string characters out of 5916032
+ 1229653 words of memory out of 5000000
+ 45034 multiletter control sequences out of 15000+600000
  541199 words of font info for 58 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  58i,18n,88p,822b,2356s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1984,10 +1980,10 @@ ist/fonts/type1/public/amsfonts/cm/cmti10.pfb><c:/texlive/2019/texmf-dist/fonts
 /type1/public/amsfonts/symbols/msbm10.pfb><c:/texlive/2019/texmf-dist/fonts/typ
 e1/public/cm-super/sfrm0900.pfb><c:/texlive/2019/texmf-dist/fonts/type1/public/
 cm-super/sfrm1000.pfb>
-Output written on PresentacionClase.pdf (73 pages, 1037505 bytes).
+Output written on PresentacionClase.pdf (73 pages, 1036521 bytes).
 PDF statistics:
- 2124 PDF objects out of 2487 (max. 8388607)
- 1986 compressed objects within 20 object streams
- 176 named destinations out of 1000 (max. 500000)
- 137 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 2103 PDF objects out of 2487 (max. 8388607)
+ 1965 compressed objects within 20 object streams
+ 172 named destinations out of 1000 (max. 500000)
+ 105 words of extra memory for PDF output out of 10000 (max. 10000000)
 

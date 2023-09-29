@@ -79,13 +79,14 @@ Entonces, para cada $x\in[a,b]$, existe $\xi(x)\in (x_0,x)$ (si $x>x_0$ y $\xi(x
 \end{frame}
 \section{Raíces de ecuaciones}
 \begin{frame}[allowframebreaks,fragile]{Raíces de ecuaciones}
-\label{RetornoTeoremaPreliminares6}
+\label{RetornoTeoremaRaices1}
 \begin{figure}[H]
 \begin{center}
 \includegraphics[scale=0.7]{Imagen20}
 \end{center}
 \caption{\textbf{Método de Bisección: }En la figura se muestra el mécanismo de la bisección.}
 \end{figure}
+\label{RetornoTeoremaRaices2}
 \begin{lstlisting}[caption=''Método de Bisección'',style=mystyle,language=octave,numbers=left]
 function x=Biseccion(f,a,b,TOL,N0)
   i=1;FA=f(a);
@@ -109,6 +110,7 @@ function x=Biseccion(f,a,b,TOL,N0)
   endif
 endfunction
 \end{lstlisting}
+\label{RetornoTeoremaRaices3}
 \begin{block}{Teorema de convergencia del método de bisección}
 Supongamos que $f\in C[a,b]$ y $f(a)f(b)<0$. El método de bisección genera una sucesión $\{p_n\}$ que aproxima a un cero de $p$ de $f$, tal que:
 $$|p_n-p|\leq \dfrac{b-a}{2^n}.$$
@@ -123,6 +125,7 @@ $$|p_n-p|\leq \dfrac{b-a}{2^n}.$$
 =& \dfrac{b-a}{2^n.}
 \end{align*}
 }
+\label{RetornoTeoremaRaices4}
 \begin{block}{Iteración de Newton Raphson}
 La iteración de Newton Rapshon se define como:
 $$p_{n+1}=p_n-\dfrac{f(p_n)}{f'(p_n)}.$$
@@ -133,7 +136,7 @@ $$f(x)=0.$$
 \indent Idea detrás del método: Suponga que se quiere investigar como resolver la ecuación:
 $$f(x)=0$$
 \indent Supogan además que la raíz a esta ecuación sucede en $x=p.$ Por el teorema de Taylor bajo algunas suposiciones tenemos que:
-$$0=f(p)=f(x)+(p-x)f'(x)+\dfrac{(p-x)^2}{2}f''(\xi)$$
+$$0=f(p)=f(x)+(p-x)f'(x)+\dfrac{(p-x)^2}{2}f''(\xi(x))$$
 \indent Si se asume que $x$ está cerca de $p$ entonces, después de despejar arriba se tiene:
 $$p\approx x-\dfrac{f(x)}{f'(x)},\ (p-x)^2\approx 0.$$
 \indent Esto último, como se puede notar, tiene la estructura de la iteración del método de Newton presentada al inicio.\\
@@ -172,10 +175,10 @@ $$\lim_{n\rightarrow \infty}\dfrac{|p_{n+1}-p|}{|p_n-p|^\alpha}=\lambda.$$
 entonces se dice que:
 \begin{itemize}
 \item $\alpha$ es le orden de convergencia de la sucesión $\{p_n\}$.
-\item $\gamma$ es la constante de error asintótica.
+\item $\lambda$ es la constante de error asintótica.
 \end{itemize} 
 \end{block}
-\indent A conitinuación se hacen algunas observaciones:
+\indent Observaciones:
 \begin{itemize}
 \item La parte más relevante en la definición anterior es el orden de convergencia $\alpha$; entre más grande sea este, el método convergerá con mayor rapidez.
 \item El método de bisección tiene un orden de convergencia $\alpha=1$ (esto se denomina convergencia  lineal).
@@ -184,6 +187,7 @@ entonces se dice que:
 \end{itemize}
 \hyperlink{EjercicioNewton}{\textcolor{cyan}{Enlace a ejercicio}}
 \framebreak
+\label{RetornoTeoremaRaices10}
 \begin{block}{Sistema de ecuaciones}
 Un sistema de ecuaciones, en general tiene la siguiente forma:
 \begin{displaymath}

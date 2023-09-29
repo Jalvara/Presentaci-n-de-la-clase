@@ -136,7 +136,7 @@ $$f(x)=0.$$
 \indent Idea detrás del método: Suponga que se quiere investigar como resolver la ecuación:
 $$f(x)=0$$
 \indent Supogan además que la raíz a esta ecuación sucede en $x=p.$ Por el teorema de Taylor bajo algunas suposiciones tenemos que:
-$$0=f(p)=f(x)+(p-x)f'(x)+\dfrac{(p-x)^2}{2}f''(\xi)$$
+$$0=f(p)=f(x)+(p-x)f'(x)+\dfrac{(p-x)^2}{2}f''(\xi(x))$$
 \indent Si se asume que $x$ está cerca de $p$ entonces, después de despejar arriba se tiene:
 $$p\approx x-\dfrac{f(x)}{f'(x)},\ (p-x)^2\approx 0.$$
 \indent Esto último, como se puede notar, tiene la estructura de la iteración del método de Newton presentada al inicio.\\
@@ -175,15 +175,15 @@ $$\lim_{n\rightarrow \infty}\dfrac{|p_{n+1}-p|}{|p_n-p|^\alpha}=\lambda.$$
 entonces se dice que:
 \begin{itemize}
 \item $\alpha$ es le orden de convergencia de la sucesión $\{p_n\}$.
-\item $\gamma$ es la constante de error asintótica.
+\item $\lambda$ es la constante de error asintótica.
 \end{itemize} 
 \end{block}
-\indent A conitinuación se hacen algunas observaciones:
+\indent Observaciones:
 \begin{itemize}
 \item La parte más relevante en la definición anterior es el orden de convergencia $\alpha$; entre más grande sea este, el método convergerá con mayor rapidez.
 \item El método de bisección tiene un orden de convergencia $\alpha=1$ (esto se denomina convergencia  lineal).
 \item Bajo ciertos supuestos razonables, el método de Newton posee una convergencia de al menos $\alpha=2$ (esto se denomina convergencia  cuadrática). Debido a su valor en el orden de convergencia, a este método se le considera de rápida convergencia.
-\item Usualemente se preferirá el método de Newton sobre el método de bisección; sin embargo hay que notar que la desventaja del método de Newton es la escogencia del valor inicial y una combinación de ambos métodos es en general la mejor opción.
+\item Usualmente se preferirá el método de Newton sobre el método de bisección; sin embargo hay que notar que la desventaja del método de Newton es la escogencia del valor inicial y una combinación de ambos métodos es en general la mejor opción.
 \end{itemize}
 \hyperlink{EjercicioNewton}{\textcolor{cyan}{Enlace a ejercicio}}
 \framebreak
