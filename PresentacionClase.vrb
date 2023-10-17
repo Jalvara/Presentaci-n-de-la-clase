@@ -1,45 +1,15 @@
 \frametitle{Ejercicios}
-\small
-\textcolor{red}{
+\begin{block}{Ejercicio (Cota de error interpolación de Lagrange)}
+\indent Considere la siguiente función $f(x)=\sin(\ln(x)).$ Encuentre una cota para el error de aproximación del polinomio interpolante de Lagrange en el intervalo $[2,2.6]$ con tres puntos; $x_0=2$, $x_1=2.4$ y $x_2=2.6$.
+\end{block}
+\action<+->{\ }
+\begin{itemize}
+\item \action<+->{\textcolor{red}{\indent Por el teorema relacionado con el polinomio de Lagrange, se sabe que:
+$$|f(x)-P(x)|=\bigg|\dfrac{f^{(3)}(\xi(x))}{6}(x-2)(x-2.4)(x-2.6)\bigg|,$$
+para $x\in[2,2.6]$ y $\xi(x)\in(2,2.6)$}}
+\item \action<+->{\textcolor{red}{\indent Para encontrar las cotas sobre la tercera derivada se necesitan los siguientes cálculos:
 \begin{align*}
-J(x,y)=&\begin{pmatrix}
-\dfrac{2x}{x^2+y^2}-y\cos(xy) & \dfrac{2y}{x^2+y^2}-x\cos(xy)\\
-2x-4\sin(x)y^2 & 8 \cos(x)y
-\end{pmatrix}\\
-J(-1.5,-2.5)=&
-\begin{pmatrix}
- - 2.40433956981949  & - 1.819074330126988\\
- 21.93737466510136   & - 1.414744033354058
-\end{pmatrix}\\
-J^{-1}(-1.5,-2.5)=&
-\begin{pmatrix}
--0.03266761001938535 &  0.04200393103760224\\
--0.5065521278147188 &  - 0.05551818955887632
-\end{pmatrix}\\
-F(-1.5,-2.5)=&
-\begin{pmatrix}
-0.873750\\
-0.018430
-\end{pmatrix}\\
-p_1=&p_0-J^{-1}(p_0)F(p_0)\\
-=&
-\begin{pmatrix}
--1.5\\
-2.5
-\end{pmatrix}
--J^{-1}(-1.5,-2.5)F(-1.5,-2.5)=
-\begin{pmatrix}
--1.472231\\
--2.056377
-\end{pmatrix}
-\end{align*}}
-\small
-\begin{lstlisting}[style=mystyle,backgroundcolor=\color{gray!30}]
-n  p_n(1)  p_n(2)  f(p_n)        Norma 2       Norma inf
-0  -1.5    -2.5    0.87375       *             *
-1  -1.4722 -2.0564 -9.606503e-02 4.444916e-01  4.436233e-01
-2  -1.4663 -2.1091 -1.654021e-04 5.303760e-02  5.270221e-02
-3  -1.4667 -2.1087 -1.031003e-07 5.406173e-04  3.834635e-04
-\end{lstlisting}
-\normalsize
-\hyperlink{RetornoTeoremaRaices10}{\textcolor{cyan}{Raices de ecuaciones.}}
+f^{(3)}(z)=&\dfrac{3\sin(\ln(z))+\cos(\ln(z))}{z^3}\\
+f^{(4)}(z)=&-\dfrac{10\cos(\ln(z))}{z^4}\\
+\end{align*}}}
+\end{itemize}

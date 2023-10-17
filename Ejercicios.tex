@@ -336,7 +336,7 @@ p_1=&p_0-J^{-1}(p_0)F(p_0)\\
 =&
 \begin{pmatrix}
 -1.5\\
-2.5
+-2.5
 \end{pmatrix}
 -J^{-1}(-1.5,-2.5)F(-1.5,-2.5)=
 \begin{pmatrix}
@@ -354,4 +354,85 @@ n  p_n(1)  p_n(2)  f(p_n)        Norma 2       Norma inf
 \end{lstlisting}
 \normalsize
 \hyperlink{RetornoTeoremaRaices10}{\textcolor{cyan}{Raices de ecuaciones.}} 
+\end{frame}
+\begin{frame}[fragile]{Ejercicios}
+\begin{block}{Ejercicio (Cota de error interpolación de Lagrange)}
+\indent Considere la siguiente función $f(x)=\sin(\ln(x)).$ Encuentre una cota para el error de aproximación del polinomio interpolante de Lagrange en el intervalo $[2,2.6]$ con tres puntos; $x_0=2$, $x_1=2.4$ y $x_2=2.6$. 
+\end{block}
+\action<+->{\ }
+\begin{itemize}
+\item \action<+->{\textcolor{red}{\indent Por el teorema relacionado con el polinomio de Lagrange, se sabe que:
+$$|f(x)-P(x)|=\bigg|\dfrac{f^{(3)}(\xi(x))}{6}(x-2)(x-2.4)(x-2.6)\bigg|,$$
+para $x\in[2,2.6]$ y $\xi(x)\in(2,2.6)$}}
+\item \action<+->{\textcolor{red}{\indent Para encontrar las cotas sobre la tercera derivada se necesitan los siguientes cálculos:
+\begin{align*}
+f^{(3)}(z)=&\dfrac{3\sin(\ln(z))+\cos(\ln(z))}{z^3}\\
+f^{(4)}(z)=&-\dfrac{10\cos(\ln(z))}{z^4}\\
+\end{align*}}}
+\end{itemize}
+\end{frame}
+\begin{frame}{Ejercicios}
+\begin{itemize}
+\item\action<+->{\textcolor{red}{\indent Si se analizan los lugares donde la derivada de la tercera derivada se hacen cero, entonces se obtiene la ecuación:
+$$\sin(\ln(z))=0,$$
+esta ecuación tiene como solución $z=e^{n\pi}$ donde $n\in\mathbb{Z}$. Para todo $n\in\mathbb{Z}$, $e^{n\pi}\notin [2,2.6]$ y por lo tanto los únicos valores extremos de la tercera derivada son 2 y 2.6.\\
+\indent Evaluando la tercera derivada se obtiene que:
+$$f^{(3)}(2)\approx 0.335765$$
+$$f^{(3)}(2.6)\approx 0.1722$$
+y por lo tanto se puede garantizar que:
+$$|f^{(3)}(x)|\leq f^{(3)}(2)$$
+para todo $x\in[2,2.6].$
+}}
+\item \action<+->{\textcolor{red}{\indent Defina ahora la otra parte para la cota de error:
+$$g(x)\equiv(x-2)(x-2.4)(x-2.6)=\dfrac{25x^3-175x^2+406x-312}{25}$$
+}}
+\end{itemize}
+\end{frame}
+\begin{frame}{Ejercicios}
+\begin{itemize}
+\item \action<+->{\textcolor{red}{\indent Resolviendo para la ecuación de segundo grado:
+$$g'(x)=0.$$
+\indent Se obtiene que $x=\dfrac{35-\sqrt{7}}{15}$ (una de las dos raíces) es el lugar donde alcanza el valor más alto. Entonces:
+$$|g(x)|\leq g\bigg(\dfrac{35-\sqrt{7}}{15}\bigg)$$
+para toda $x\in[2,2.6]$.}}
+\item \action<+->{\textcolor{red}{Finalmente:
+\scriptsize
+$$|f(x)-P(x)|=\bigg|\dfrac{f^{(3)}(\xi(x))}{6}(x-2)(x-2.4)(x-2.6)\bigg|
+\leq g\bigg(\dfrac{35-\sqrt{7}}{15}\bigg)f^{(3)}(2)/6\approx 9.4574\times 10^{-4}$$
+\normalsize
+\indent La cota de error entonces es aproximadamente $9.5\times 10^{-4}$.}}
+\end{itemize}
+\end{frame}
+%===========================
+\begin{frame}{Ejercicios}
+\begin{block}{Ejercicio del examen del IIPA2023}
+Sea $f(x)=\sqrt{x-x^2}$ y $P_2(x)$ el polinomio interpolante de Lagrange en $x_0=0$, $x_1$ y $x_2=1$. Calcule el valor de $x_1$ más grande en el intervalo $(0,1)$ para el cual $f(0.5)-P_2(0.5)=-0.25$ 
+\end{block}
+\small
+Tip: evalúe en los puntos desde el inicio, así se sabe que términos se cancelaran.
+$$f(x_0)=f(0)=0 \quad f(x_1)=\sqrt{x_1-x_1^2}\quad f(x_2)=f(x_1)=0$$
+Parte I: Determine el polinomio de Lagrange
+\begin{align*}
+&P_2(x)\\
+&=L_0(x)f(x_0)+L_1(x)f(x_1)+L_2(x)f(x_2)\\
+&=\frac{(x-x_1)(x-x_2)}{(x_0-x_1)(x_0-x_2)}f(x_0)+\frac{(x-x_1)(x-x_2)}{(x_1-x_0)(x_1-x_2)}f(x_1)+\frac{(x-x_1)(x-x_2)}{(x_2-x_0)(x_2-x_1)}f(x_2)\\
+&=\frac{(x-0)(x-1)}{(x_1-0)(x_1-1)}\sqrt{x_1-x_1^2}\\
+&=\frac{x(x-1)}{x_1(x_1-1)}\sqrt{x_1-x_1^2}
+\end{align*}
+\end{frame}
+%===========================
+\begin{frame}{Ejercicios}
+\small
+Parte 2: Evalúe en 0.5
+$$P_2(0.5)=\frac{0.5(0.5-1)}{x_1(x_1-0.5)}\sqrt{x_1-x_1^2}=-\frac{0.25\sqrt{x_1-x_1^2}}{x_1(x_1-1)}$$
+Parte 3: Garantizar que $f(0.5)-P_2(0.5)=-0.25$ 
+\begin{align*}
+f(0.5)-P_2(0.5)&=-0.25\\
+0.5+\frac{0.25\sqrt{x_1-x_1^2}}{x_1(x_1-1)}&=-0.25\\
+\frac{0.5+0.25}{0.25}&=\frac{\sqrt{x_1-x_1^2}}{x_1(x_1-1)}\\
+-3&=\frac{\sqrt{x_1(1-x_1)}}{-x_1(1-x_1)}=-\frac{1}{\sqrt{x_1(1-x_1)}}\\
+9x_1(x_1-1)&=1\\
+-9x_1^2+9x_1-1&=0 \quad \implies x=\frac{1}{2}\pm\frac{\sqrt{5}}{6}
+\end{align*}
+Por lo tanto, \textcolor{blue}{$x_1=\frac{1}{2}+\frac{\sqrt{5}}{6}\approx 0.8726779$} 
 \end{frame}

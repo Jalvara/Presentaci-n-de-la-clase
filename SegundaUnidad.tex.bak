@@ -1,5 +1,85 @@
 %Segunda Unidad
-\section{Aproximación de funciones}
+\begin{frame}{Teoremas preliminares}
+\begin{block}{Teorema de Weierestrass}
+Suponga que $f$ está definida y es continua en $[a, b]$. Para cada $\epsilon>0$, existe un polinomio $P(x)$, con la propiedad de que 
+$$|f(x)-P(x)|<\epsilon, \quad \forall x \in [a, b]$$
+\end{block}
+\end{frame}
+
+%===========================
+\begin{frame}{Utilidad de los polinomios para aproximar funciones}
+Los polinomios son ampliamente utilizados para la interpolación numérica porque:
+\begin{itemize}
+\item Aproximan de manera uniforme a las funciones conitnuas. 
+\item Tienen derivadas e integrales fáciles de calcular. Además, sus integrales y derivadas también son polinomios. 
+\end{itemize}
+\end{frame}
+
+%===========================
+\begin{frame}{Limitaciones de los polinomios de Taylor para la interpolación}
+Las principales limitaciones de los polinomios de Taylor son:
+\begin{itemize}
+\item Generalmente no ofrecen una buena aproximación en todo un intervalo, sino que la aproximación se concentra alrededor de $x_0$.
+\item Aumentar el grado del polinomio de Taylor no necesariamente brindará una mejor aproximación.   
+\item No utilizan más que un único punto para definir el polonomio.  
+\end{itemize}
+
+Debido a las limitaciones expuestas, los polinomios de Taylor se usan principalmente para:
+\begin{enumerate}
+\item Derivación de otros métodos numéricos, como el método de diferencias finitas.
+\item Estimación del error
+\end{enumerate}
+\end{frame}
+
+%===========================
+\begin{frame}{Polinomio interpolante de Lagrange}
+\small
+\begin{block}{Teorema: polinomios de Lagrange}
+Si $x_0, x_1, x_2,..., x_n$ son $n+1$ números distintos y si $f$ es una función cuyos valores están dados en esos números, entonces existe un único polinomio $P(x)$ de grado a lo más $n$, con la propiedad:
+$$f(x_k)=P(x_k)\quad k=0, 1, \dots, n$$
+El polinomio $P(x)$ se define como sigue:
+\begin{align*}
+P(x)&=\sum_{k=0}^{n}f(x_k)L_{n,k}(x)\qquad k=0, 1, \dots, n\\
+    &=f(x_0)L_{n,0}+f(x_1)L_{n,2}+\dots+f(x_n)L_{n,n}
+\end{align*}
+donde
+$$L_{n,k}=\frac{(x-x_0)(x-x_1)\dots(x-x_{k+1})(x-x_{k+1})\dots (x-x_n)}{(x_k-x_0)(x_k-x_1)\dots(x_k-x_{k+1})(x_k-x_{k+1})\dots (x_k-x_n)}$$
+\end{block}
+\end{frame}
+%===========================
+\begin{frame}
+\begin{block}{Término del error del polinomio de Lagrange}
+Suponga que $x_0, x_1, \dots, x_n$ son números distintintos en el intervalo $[a,b]$ y que $f \in C^{n+1}[a,b]$. Entonces, para cada x en $[a,b]$ existe in número $\xi(x)$ en $(a,b)$ con 
+$$f(x)=P(x)+\frac{f^{(n+1)}(\xi(x))}{(n+1)!}(x-x_0)(x-x_1)\dots (x-x_n)$$
+donde $P(x)$ es el polinomio interpolante de Lagrange.
+\end{block}
+\end{frame}
+\begin{frame}[allowframebreaks]{Interpolación, Spline Cúbicos}
+\indent Considere el siguiente ajuste polinomial:
+\begin{figure}[H]
+\begin{center}
+\includegraphics[scale=0.7]{Imagen21}
+\end{center}
+\caption{En la figura se observa la interpolación por polinomios de Lagrange para $f(x)=\dfrac{1}{1+25x^2}$ para $x\in[-1,1]$ con 30 puntos equidistante comenzando en -1 y finalizando en 1.}
+\end{figure}
+\indent El ejemplo anterior demuestra que los polinomios de alto orden (en el ejemplo de la figura tendríamos un polinomio de orden 31)  pueden oscilar erráticamente. Evidentemente esta característica es indeseable en muchas situaciones; en este apartado se mostrará una técnica que puede evitar este problema siempre con la idea de hacer un ajuste polinomial. \\
+\indent Los ingredientes para construir un \textbf{spline} (esta palabra no tiene traducción al español, su significado es "larga tira flexible") \textbf{cúbico interpolante} $S$ de alguna función $f$ se basan en las siguiente consideraciones:
+\begin{itemize}
+\item Una función $f$ de variable real definida en el intervalo $[a,b]$.
+\item Una partición del intervalo $[a,b]$; $a=x_0<x_1<\cdots<x_n=b$.
+\item $S(x)$ restringido a $[x_j,x_{j+1}]$ es un polinomio cúbico para cada $j=0,\cdots, n-1$. A esta parte se le denota por $S_j(x)$.
+\item $S_j(x_j)=f(x_j)$ y $S_{j}(x_{j+1})=f(x_{j+1})$ para cada $j=0,\cdots, n-1$.
+\item $S'_{j+1}(x_{j+1})=S'_{j}(x_{j+1})$ para cada $j=0,\cdots, n-2$.
+\item $S''_{j+1}(x_{j+1})=S''_{j}(x_{j+1})$ para cada $j=0,\cdots, n-2$.
+\item Si $S''(x_0)=S''(x_n)=0$ se dice que es un \textbf{Spline de frontera natural}. Si $S'(x_0)=f'(x_0)$ y $S'(x_n)=f'(x_n)$ se dice que es un \textbf{Spline con frontera sujeta}. 
+\end{itemize}
+\begin{figure}
+\begin{center}
+\includegraphics[scale=0.4]{Imagen22}
+\end{center}
+\caption{Aquí se muestran algunas condiciones de los spline. La función que se ve arriba en azul es $f(x)=\dfrac{1}{1+25x^2}$. En verde se observan los splines cúbicos.}
+\end{figure}
+\end{frame}
 \begin{frame}[allowframebreaks]{Mínimos cuadrados}
 Considere el siguiente conjunto de datos $\{(x_i,y_i)\}_{i=1}^{N}$ asociados:
 \begin{displaymath}
