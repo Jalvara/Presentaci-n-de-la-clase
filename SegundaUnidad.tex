@@ -4,27 +4,21 @@
 Suponga que $f$ está definida y es continua en $[a, b]$. Para cada $\epsilon>0$, existe un polinomio $P(x)$, con la propiedad de que 
 $$|f(x)-P(x)|<\epsilon, \quad \forall x \in [a, b]$$
 \end{block}
-\end{frame}
-
-%===========================
-\begin{frame}{Utilidad de los polinomios para aproximar funciones}
-Los polinomios son ampliamente utilizados para la interpolación numérica porque:
+\indent Los polinomios son ampliamente utilizados para la interpolación numérica porque:
 \begin{itemize}
 \item Aproximan de manera uniforme a las funciones conitnuas. 
 \item Tienen derivadas e integrales fáciles de calcular. Además, sus integrales y derivadas también son polinomios. 
 \end{itemize}
-\end{frame}
-
-%===========================
-\begin{frame}{Limitaciones de los polinomios de Taylor para la interpolación}
-Las principales limitaciones de los polinomios de Taylor son:
+\indent Las principales limitaciones de los polinomios de Taylor son:
 \begin{itemize}
 \item Generalmente no ofrecen una buena aproximación en todo un intervalo, sino que la aproximación se concentra alrededor de $x_0$.
 \item Aumentar el grado del polinomio de Taylor no necesariamente brindará una mejor aproximación.   
 \item No utilizan más que un único punto para definir el polonomio.  
 \end{itemize}
-
-Debido a las limitaciones expuestas, los polinomios de Taylor se usan principalmente para:
+\end{frame}
+%===========================
+\begin{frame}{Limitaciones de los polinomios de Taylor para la interpolación}
+\indent Debido a las limitaciones expuestas, los polinomios de Taylor se usan principalmente para:
 \begin{enumerate}
 \item Derivación de otros métodos numéricos, como el método de diferencias finitas.
 \item Estimación del error
@@ -32,15 +26,14 @@ Debido a las limitaciones expuestas, los polinomios de Taylor se usan principalm
 \end{frame}
 
 %===========================
+\label{RetornoPolinomioLagrange}
 \begin{frame}{Polinomio interpolante de Lagrange}
-\small
 \begin{block}{Teorema: polinomios de Lagrange}
-Si $x_0, x_1, x_2,..., x_n$ son $n+1$ números distintos y si $f$ es una función cuyos valores están dados en esos números, entonces existe un único polinomio $P(x)$ de grado a lo más $n$, con la propiedad:
+\indent Si $f$ es una funcion definida en los diferentes valores $\{x_0,\cdots, x_n\}$, entonces existe un único polinomio $P(x)$ de grado a lo más $n$, con la propiedad:
 $$f(x_k)=P(x_k)\quad k=0, 1, \dots, n$$
 El polinomio $P(x)$ se define como sigue:
 \begin{align*}
-P(x)&=\sum_{k=0}^{n}f(x_k)L_{n,k}(x)\qquad k=0, 1, \dots, n\\
-    &=f(x_0)L_{n,0}+f(x_1)L_{n,2}+\dots+f(x_n)L_{n,n}
+P(x)&=\sum_{k=0}^{n}f(x_k)L_{n,k}(x)=f(x_0)L_{n,0}+\cdots+f(x_n)L_{n,n}
 \end{align*}
 donde
 $$L_{n,k}=\frac{(x-x_0)(x-x_1)\dots(x-x_{k+1})(x-x_{k+1})\dots (x-x_n)}{(x_k-x_0)(x_k-x_1)\dots(x_k-x_{k+1})(x_k-x_{k+1})\dots (x_k-x_n)}$$
@@ -53,6 +46,7 @@ Suponga que $x_0, x_1, \dots, x_n$ son números distintintos en el intervalo $[a
 $$f(x)=P(x)+\frac{f^{(n+1)}(\xi(x))}{(n+1)!}(x-x_0)(x-x_1)\dots (x-x_n)$$
 donde $P(x)$ es el polinomio interpolante de Lagrange.
 \end{block}
+\hyperlink{PolinomioLagrange}{\textcolor{cyan}{Enlace a ejercicio.}}
 \end{frame}
 \begin{frame}[allowframebreaks]{Interpolación, Spline Cúbicos}
 \indent Considere el siguiente ajuste polinomial:
@@ -79,6 +73,27 @@ donde $P(x)$ es el polinomio interpolante de Lagrange.
 \end{center}
 \caption{Aquí se muestran algunas condiciones de los spline. La función que se ve arriba en azul es $f(x)=\dfrac{1}{1+25x^2}$. En verde se observan los splines cúbicos.}
 \end{figure}
+\begin{block}{Fórmulas de recurrencia para los Splines Cúbicos}
+\small
+\indent Definanse los Splines Cúbicos de la función $f$ definida en $[x_0,x_n]$:
+\begin{center}
+$S(x)=S_j(x)\equiv a_j+b_j(x-x_j)+c_j(x-x_j)^2+d_j(x-x_j)^3$\\ para $x\in[x_j,x_{j+1}]$ donde $j=0,\cdots, n-1$.
+\end{center}
+\indent Por comodidad definanse los siguientes elementos:
+\begin{center}
+$a_n\equiv f(x_n)$, $b_n\equiv f'(x_n)$, $c_n\equiv f''(x_n)/2$, $h_j\equiv x_{j+1}-x_j$, $j=0,\cdots, n-1$.
+\end{center}
+\indent Las siguientes ecuaciones de recurrencia deben ser verificadas para que los $S_j$ cumplan con las condiciones de un Spline Cúbico.
+\begin{enumerate}
+\item $a_j\equiv f(x_j)$ para $j=0,\cdots, n-1$.
+\item $a_j+b_jh_j+c_jh_j^2+d_jh_j^3=a_{j+1}$ para $j=0,\cdots, n-1$.
+\item $b_j+2c_jh_j+3d_jh_j^2=b_{j+1}$ para $j=0,\cdots, n-1$.
+\item $c_j+3d_jh_j=c_{j+1}$ para $j=0,\cdots, n-1$.
+\item $\dfrac{3}{h_j}(a_{j+1}-a_j)-\dfrac{3}{h_{j-1}}(a_j-a_{j-1})=h_{j-1}c_{j-1}+2(h_{j-1}+h_j)c_j+h_jc_{j+1}$ para $j=1,\cdots, n-1$.
+\end{enumerate}
+\end{block}
+\indent Las ecuaciones en el numeral 5 permiten resolver para los $\{c_j\}$; luego en el numeral 4 se pueden resolver los $\{d_j\}$ y con el numeral 2 se pueden encontrar los $\{b_j\}$. Los $\{a_j\}$ son conocidos desde el principio y con ello se pueden encontrar los Splines Cúbicos. \\
+\indent Si se recuerda, $c_j$ está definido para $j=0,\cdots n$. Entonces es necesario encontrar $n+1$ valores. La ecuación en el numeral 5 solo provee de $n-1$ ecuaciones; por lo tanto faltan dos ecuaciones más que se podrán obtener de considerar las condiciones en la frontera (naturales o fijas). 
 \end{frame}
 \begin{frame}[allowframebreaks]{Mínimos cuadrados}
 Considere el siguiente conjunto de datos $\{(x_i,y_i)\}_{i=1}^{N}$ asociados:

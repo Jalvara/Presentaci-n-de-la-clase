@@ -183,7 +183,7 @@ entonces se dice que:
 \item La parte más relevante en la definición anterior es el orden de convergencia $\alpha$; entre más grande sea este, el método convergerá con mayor rapidez.
 \item El método de bisección tiene un orden de convergencia $\alpha=1$ (esto se denomina convergencia  lineal).
 \item Bajo ciertos supuestos razonables, el método de Newton posee una convergencia de al menos $\alpha=2$ (esto se denomina convergencia  cuadrática). Debido a su valor en el orden de convergencia, a este método se le considera de rápida convergencia.
-\item Usualemente se preferirá el método de Newton sobre el método de bisección; sin embargo hay que notar que la desventaja del método de Newton es la escogencia del valor inicial y una combinación de ambos métodos es en general la mejor opción.
+\item Usualmente se preferirá el método de Newton sobre el método de bisección; sin embargo hay que notar que la desventaja del método de Newton es la escogencia del valor inicial y una combinación de ambos métodos es en general la mejor opción.
 \end{itemize}
 \hyperlink{EjercicioNewton}{\textcolor{cyan}{Enlace a ejercicio}}
 \framebreak

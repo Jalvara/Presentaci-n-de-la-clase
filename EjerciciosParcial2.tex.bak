@@ -1,0 +1,131 @@
+\begin{frame}{Ejercicios}
+\label{PolinomioLagrange}
+\begin{block}{Ejercicio del examen del IIPA2023}
+Sea $f(x)=\sqrt{x-x^2}$ y $P_2(x)$ el polinomio interpolante de Lagrange en $x_0=0$, $x_1$ y $x_2=1$. Calcule el valor de $x_1$ más grande en el intervalo $(0,1)$ para el cual $f(0.5)-P_2(0.5)=-0.25$ 
+\end{block}
+\small
+Tip: evalúe en los puntos desde el inicio, así se sabe que términos se cancelaran.
+$$f(x_0)=f(0)=0 \quad f(x_1)=\sqrt{x_1-x_1^2}\quad f(x_2)=f(x_1)=0$$
+Parte I: Determine el polinomio de Lagrange
+\begin{align*}
+&P_2(x)\\
+&=L_0(x)f(x_0)+L_1(x)f(x_1)+L_2(x)f(x_2)\\
+&=\frac{(x-x_1)(x-x_2)}{(x_0-x_1)(x_0-x_2)}f(x_0)+\frac{(x-x_1)(x-x_2)}{(x_1-x_0)(x_1-x_2)}f(x_1)+\frac{(x-x_1)(x-x_2)}{(x_2-x_0)(x_2-x_1)}f(x_2)\\
+&=\frac{(x-0)(x-1)}{(x_1-0)(x_1-1)}\sqrt{x_1-x_1^2}\\
+&=\frac{x(x-1)}{x_1(x_1-1)}\sqrt{x_1-x_1^2}
+\end{align*}
+\end{frame}
+%===========================
+\begin{frame}{Ejercicios}
+\small
+Parte 2: Evalúe en 0.5
+$$P_2(0.5)=\frac{0.5(0.5-1)}{x_1(x_1-0.5)}\sqrt{x_1-x_1^2}=-\frac{0.25\sqrt{x_1-x_1^2}}{x_1(x_1-1)}$$
+Parte 3: Garantizar que $f(0.5)-P_2(0.5)=-0.25$ 
+\begin{align*}
+f(0.5)-P_2(0.5)&=-0.25\\
+0.5+\frac{0.25\sqrt{x_1-x_1^2}}{x_1(x_1-1)}&=-0.25\\
+\frac{0.5+0.25}{0.25}&=\frac{\sqrt{x_1-x_1^2}}{x_1(x_1-1)}\\
+-3&=\frac{\sqrt{x_1(1-x_1)}}{-x_1(1-x_1)}=-\frac{1}{\sqrt{x_1(1-x_1)}}\\
+9x_1(x_1-1)&=1\\
+-9x_1^2+9x_1-1&=0 \quad \implies x=\frac{1}{2}\pm\frac{\sqrt{5}}{6}
+\end{align*}
+Por lo tanto, \textcolor{blue}{$x_1=\frac{1}{2}+\frac{\sqrt{5}}{6}\approx 0.8726779$\\} 
+\hyperlink{RetornoPolinomioLagrange}{\textcolor{cyan}{Teoremas Preliminares.}}
+\end{frame}
+\begin{frame}{Ejercicios}
+\begin{block}{Ejercicio Spline Cúbico}
+Encuentre los splines cúbicos para la función $f(x)=\dfrac{1}{1+25x^2}$ en los puntos $\{x_0,\cdots,x_4\}=\{-1,-\dfrac{1}{2},0,\dfrac{1}{2},1\}$. Suponga condiciones naturales en -1 y fijas en 1.  
+\end{block}
+\begin{itemize}
+\item \action<+->{\textcolor{red}{\indent Note que $h_j=\dfrac{1}{2}$ para todo $j$. Del númeral 5 en las fórmulas de recurrencia se obtiene que: 
+\begin{align*}
+\dfrac{3}{h_1}(a_{2}-a_1)-\dfrac{3}{h_0}(a_1-a_{0})=&h_{0}c_{0}+2(h_{0}+h_1)c_1+h_1c_{2}\\
+\dfrac{3}{h_2}(a_{3}-a_2)-\dfrac{3}{h_1}(a_2-a_{1})=&h_{1}c_{1}+2(h_{1}+h_2)c_2+h_2c_{3}\\
+\dfrac{3}{h_3}(a_{4}-a_3)-\dfrac{3}{h_2}(a_3-a_{2})=&h_{2}c_{2}+2(h_{2}+h_3)c_3+h_3c_{4}\\
+\end{align*}}}
+\end{itemize}
+\end{frame}
+\begin{frame}{Ejercicios}
+\begin{itemize}
+\item \action<+->{\textcolor{blue}{\indent Sustituyendo los valores conocidos: 
+\begin{align*}
+6(f(0)-f(-1/2))-6(f(-1/2)-f(-1))=&c_{0}/2+2c_1+c_{2}/2\\
+6(f(1/2)-f(0))-6(f(0)-f(-1/2))=&c_{1}/2+2c_2+c_{3}/2\\
+6(f(1)-f(1/2))-6(f(1/2)-f(0))=&c_{2}/2+2c_3+c_{4}/2\\
+\end{align*}}}
+\item \action<+->{\textcolor{red}{\indent Simplificando: 
+\begin{align*}
+\dfrac{3450}{377}=&c_{0}+4c_1+c_{2}\\
+-\dfrac{600}{29}=&c_{1}+4c_2+c_{3}\\
+\dfrac{3450}{377}=&c_{2}+4c_4+c_{4}\\
+\end{align*}}}
+\item \action<+->{\textcolor{blue}{\indent En este punto se necesitan agregar las condiciones de frontera. Si se empieza por las naturales se tendría que $S''(-1)=S_0''(-1)=2c_0=0$, lo cuál implica que $c_0=0$.}}
+\end{itemize}
+\end{frame}
+\begin{frame}{Ejercicios}
+\begin{itemize}
+\item \action<+->{\textcolor{red}{\indent La condición en el extremo derecho exige que $f'(1)=-\dfrac{25}{338}=b_4$. Si se agrupan las últimas ecuaciones en las fórmulas de recurrencia, se obtendría:
+\begin{align*}
+a_{n}=&a_{n-1}+b_{n-1}h_{n-1}+c_{n-1}h_{n-1}^2+d_{n-1}h_{n-1}^3\\
+b_n=&b_{n-1}+2c_{n-1}h_{n-1}+3d_{n-1}h_{n-1}^2\\
+c_n=&c_{n-1}+3d_{n-1}h_{n-1}\\
+\end{align*}
+\indent Si se despeja $b_{n-1}$ y $d_{n-1}$ desde la segunda y tercera ecuación respectivamente y luego se sustituye y se simplifica en la primera ecuación, se obtiene que:
+\begin{center}
+$2h_{n-1}c_n+h_{n-1}c_{n-1}=\dfrac{3}{h_{n-1}}(a_{n-1}-a_{n})$\\
+$2h_{3}c_4+h_{3}c_{3}=\dfrac{3}{h_{3}}(a_{3}-a_{4})$\\
+\end{center}
+Sustituyendo los valores conocidos se obtiene que:
+$$c_4+c_3/2=6(f(1/2)-f(1))$$
+$$2c_4+c_3=\dfrac{450}{377}$$
+}}
+\end{itemize}
+\end{frame}
+\begin{frame}{Ejercicios}
+\begin{itemize}
+\item \action<+->{\textcolor{blue}{\small\indent Juntando las condiciones de frontera obtenemos que: 
+\begin{align*}
+0=&c_0\\
+\dfrac{450}{377}=&2c_4+c_3\\
+\dfrac{3450}{377}=&c_{0}+4c_1+c_{2}\\
+-\dfrac{600}{29}=&c_{1}+4c_2+c_{3}\\
+\dfrac{3450}{377}=&c_{2}+4c_3+c_{4}
+\end{align*}}}
+\item \action<+->{\textcolor{red}{\small\indent Resolviendo el sistema anterior se obtiene que: 
+\begin{align*}
+[a_0,a_1,a_2,a_3,a_4]=&\bigg[\dfrac{1}{26},\dfrac{4}{29},1,\dfrac{4}{29},\dfrac{1}{26}\bigg]\\
+[b_0,b_1,b_2,b_3]=&\bigg[-{{17850}\over{36569}},{{4425}\over{2813}},-{{1275}\over{36569}},-{{52425}\over{36569}}\bigg]\\
+[c_0,c_1,c_2,c_3,c_4]=&\bigg[0,{{150750}\over{36569}},-{{268350}\over{36569}},{{166050}\over{36569}},-{{61200}\over{36569}}\bigg]\\
+[d_0,d_1,d_2,d_3]=&\bigg[{{100500}\over{36569}},-{{279400}\over{36569}},{{289600}\over{36569}},-{{151500}\over{36569}}\bigg]\\
+\end{align*}}}
+\end{itemize}
+\end{frame}
+\begin{frame}{Ejercicios}
+\begin{block}{Ejercicio de Richard Burden, Sección de trazadores cúbicos}
+Un trazador cúbico sujeto $S$ de la función $f$ está definido por:
+\begin{displaymath}
+S(x)=
+\left\{
+\begin{matrix}
+S_0(x)=1+Bx+2x^2-2x^3 & x\in[0,1]\\
+S_1(x)=1+b(x-1)-4(x-1)^2+7(x-1)^3 & x\in[1,2]
+\end{matrix}
+\right.
+\end{displaymath} 
+Obtenga $f'(0)$ y $f'(2)$. 
+\end{block}
+\action<+->{\textcolor{blue}{\indent}}
+\begin{itemize}
+\item \action<+->{\textcolor{blue}{\indent Dado que estos representa trazadores cúbicos entonces se cumplen las siguientes condiciones:
+$$S_0(1)=S_1(1)$$
+$$S'_0(1)=S'_1(1)$$
+}}
+\action<+->{\textcolor{blue}{\indent}}
+\item \action<+->{\textcolor{red}{\indent La primera ecuación deja como resultado:
+$$1+B=S_0(1)=S_1(1)=1\Longrightarrow B=0.$$
+La segunda ecuación dá como resultado:
+$$-2=S'_0(1)=S'_1(1)=b\Longrightarrow b=-2.$$
+Con esto se puede calcular $f'(0)=S'_0(0)=0$ y $f'(2)=S'_1(2)=11$.
+}}
+\end{itemize}
+\end{frame}
