@@ -116,6 +116,7 @@ Obtenga $f'(0)$ y $f'(2)$.
 \end{block}
 \action<+->{\textcolor{blue}{\indent}}
 \begin{itemize}
+\small
 \item \action<+->{\textcolor{blue}{\indent Dado que estos representa trazadores cúbicos entonces se cumplen las siguientes condiciones:
 $$S_0(1)=S_1(1)$$
 $$S'_0(1)=S'_1(1)$$
@@ -128,4 +129,118 @@ $$-2=S'_0(1)=S'_1(1)=b\Longrightarrow b=-2.$$
 Con esto se puede calcular $f'(0)=S'_0(0)=0$ y $f'(2)=S'_1(2)=11$.
 }}
 \end{itemize}
+\end{frame}
+\begin{frame}[fragile]{Ejercicios}
+\begin{block}{Ejercicio (Cota de error interpolación de Lagrange)}
+\indent Considere la siguiente función $f(x)=\sin(\ln(x)).$ Encuentre una cota para el error de aproximación del polinomio interpolante de Lagrange en el intervalo $[2,2.6]$ con tres puntos; $x_0=2$, $x_1=2.4$ y $x_2=2.6$. 
+\end{block}
+\action<+->{\ }
+\begin{itemize}
+\item \action<+->{\textcolor{red}{\indent Por el teorema relacionado con el polinomio de Lagrange, se sabe que:
+$$|f(x)-P(x)|=\bigg|\dfrac{f^{(3)}(\xi(x))}{6}(x-2)(x-2.4)(x-2.6)\bigg|,$$
+para $x\in[2,2.6]$ y $\xi(x)\in(2,2.6)$}}
+\item \action<+->{\textcolor{red}{\indent Para encontrar las cotas sobre la tercera derivada se necesitan los siguientes cálculos:
+\begin{align*}
+f^{(3)}(z)=&\dfrac{3\sin(\ln(z))+\cos(\ln(z))}{z^3}\\
+f^{(4)}(z)=&-\dfrac{10\sin(\ln(z))}{z^4}\\
+\end{align*}}}
+\end{itemize}
+\end{frame}
+\begin{frame}{Ejercicios}
+\begin{itemize}
+\item\action<+->{\textcolor{red}{\indent Si se analizan los lugares donde la derivada de la tercera derivada se hacen cero, entonces se obtiene la ecuación:
+$$\sin(\ln(z))=0,$$
+esta ecuación tiene como solución $z=e^{n\pi}$ donde $n\in\mathbb{Z}$. Para todo $n\in\mathbb{Z}$, $e^{n\pi}\notin [2,2.6]$ y por lo tanto los únicos valores extremos de la tercera derivada son 2 y 2.6.\\
+\indent Evaluando la tercera derivada se obtiene que:
+$$f^{(3)}(2)\approx 0.335765$$
+$$f^{(3)}(2.6)\approx 0.1722$$
+y por lo tanto se puede garantizar que:
+$$|f^{(3)}(x)|\leq f^{(3)}(2)$$
+para todo $x\in[2,2.6].$
+}}
+\item \action<+->{\textcolor{red}{\indent Defina ahora la otra parte para la cota de error:
+$$g(x)\equiv(x-2)(x-2.4)(x-2.6)=\dfrac{25x^3-175x^2+406x-312}{25}$$
+}}
+\end{itemize}
+\end{frame}
+\begin{frame}{Ejercicios}
+\begin{itemize}
+\item \action<+->{\textcolor{red}{\indent Resolviendo para la ecuación de segundo grado:
+$$g'(x)=0.$$
+\indent Se obtiene que $x=\dfrac{35-\sqrt{7}}{15}$ (una de las dos raíces) es el lugar donde alcanza el valor más alto. Entonces:
+$$|g(x)|\leq g\bigg(\dfrac{35-\sqrt{7}}{15}\bigg)$$
+para toda $x\in[2,2.6]$.}}
+\item \action<+->{\textcolor{red}{Finalmente:
+\scriptsize
+$$|f(x)-P(x)|=\bigg|\dfrac{f^{(3)}(\xi(x))}{6}(x-2)(x-2.4)(x-2.6)\bigg|
+\leq g\bigg(\dfrac{35-\sqrt{7}}{15}\bigg)f^{(3)}(2)/6\approx 9.4574\times 10^{-4}$$
+\normalsize
+\indent La cota de error entonces es aproximadamente $9.5\times 10^{-4}$.}}
+\end{itemize}
+\end{frame}
+\begin{frame}{Ejercicios}
+\begin{block}{Ejercicio (Ajuste lineal)}
+Considere el siguiente conjunto de datos:
+\begin{center}
+\begin{tabular}{ll}
+\hline
+$x_i$ & $y_i$\\\hline
+1&6.612\\
+2& 9.742\\
+3& 10.455\\
+4& 14.545\\
+5& 17.293\\
+6& 19.544\\
+7& 21.279\\
+8& 26.167\\
+9& 28.341\\
+10& 29.158\\\hline
+\end{tabular}
+\end{center}
+Por medio del método de mínimos cuadrados encuentre la pendiente ($a_1$) y el intercepto ($a_0$) del ajuste lineal.
+\end{block}
+\end{frame}
+\begin{frame}{Ejercicios}
+\textcolor{red}{Después de plantear el problema con los datos anteriores se obtiene la siguiente gráfica:}
+\begin{figure}
+\centering
+\includegraphics[scale=0.8]{Imagen23}
+\caption{\textcolor{red}{En el ajuste se obtubieron los coeficientes $a_1=2.631$, $a_0=3.843$.}} 
+\end{figure}
+\end{frame}
+\begin{frame}{Ejercicios}
+\small
+\begin{block}{Ejercicio (Derivación de fórmula numérica)}
+Derive una fórmula de cinco puntos $O(h^4)$ para aproximar $f'(x)$ que utilice $f(x-h),f(x+h),f(x+2h),f(x+3h)$.  
+\end{block}
+\textcolor{red}{\indent El problema se puede plantear de la siguiente forma; encontrar constantes $A,B,C$ y $D$ tales que:
+\begin{equation}\label{EjercicioAproximacionDerivada}
+f'(x)= Af(x-h)+Bf(x+h)+Cf(x+2h)+Df(x+3h)+Ef(x).
+\end{equation}
+\indent Dado que se requiere una fórmula de orden 4, entonces se usará la fórmula de Taylor hasta el orden 5. Dejando de lado los residuos (estos tendrán como factor común a $h^5$), al hacer la suma y agrupar la parte derecha \eqref{EjercicioAproximacionDerivada} como un polinomio cuártico en términos de $h$, se obtienen los siguientes coeficientes:
+\begin{itemize}
+\item Coeficiente independiente: $(A+B+C+D+E)f(x)$.
+\item Coeficiente de $h$: $(3D+2C+B-A)f'(x)$.
+\item Coeficiente de $h^2$: $(9D+4C+B+A)/2f''(x)$.
+\item Coeficiente de $h^3$: $(27D+8C+B-A)/6f^{(3)}(x)$.
+\item Coeficiente de $h^4$: $(81D+16C+B+A)/24f^{(4)}(x)$.
+\end{itemize}
+\indent Para que se cumpla \eqref{EjercicioAproximacionDerivada} (salvo por los residuos producto del polinomio de Taylor) se impondrá que todos los coeficientes del polinomio cuártico sean cero con excepción de el coeficiente de $h$ y $h^0$ (ya que se desea que sea igual a $f'(x)$).}
+\end{frame}
+\begin{frame}{Ejercicios}
+\textcolor{red}{
+\indent 
+El coeficiente de $h$, convenientemente se hace igual a  $\frac{1}{h}$ para que sea igual a $f'(x)$ en lado izquierdo de\eqref{EjercicioAproximacionDerivada}. El sistema que resulta de los planteamientos que se hicieron antes, queda expresado de la siguiente forma:
+\begin{align*}
+0=&E+D+C+B+A\\
+\dfrac{1}{h}=&3D+2C+B-A\\
+0=&9D+4C+B+A\\
+0=&27D+8C+B-A\\
+0=&81D+16C+B+A
+\end{align*}
+\indent Después de resolver el sistema obtenemos.
+$$A=-\dfrac{1}{4h},B=\dfrac{3}{2h},C=-\dfrac{1}{2h},D=\dfrac{1}{12h},E=-\dfrac{5}{6h}.$$
+\indent Sustituyendo se obtiene:
+$$f'(x)\approx\dfrac{-3f(x-h)+18f(x+h)-6f(x+2h)+f(x+3h)-10f(x)}{12h}$$
+}
 \end{frame}

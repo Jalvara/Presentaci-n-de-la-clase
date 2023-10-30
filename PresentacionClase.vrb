@@ -10,6 +10,6 @@ para $x\in[2,2.6]$ y $\xi(x)\in(2,2.6)$}}
 \item \action<+->{\textcolor{red}{\indent Para encontrar las cotas sobre la tercera derivada se necesitan los siguientes cálculos:
 \begin{align*}
 f^{(3)}(z)=&\dfrac{3\sin(\ln(z))+\cos(\ln(z))}{z^3}\\
-f^{(4)}(z)=&-\dfrac{10\cos(\ln(z))}{z^4}\\
+f^{(4)}(z)=&-\dfrac{10\sin(\ln(z))}{z^4}\\
 \end{align*}}}
 \end{itemize}

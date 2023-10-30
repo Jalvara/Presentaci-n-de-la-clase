@@ -1,4 +1,5 @@
 %Segunda Unidad
+\section{Aproximación de funciones}
 \begin{frame}{Teoremas preliminares}
 \begin{block}{Teorema de Weierestrass}
 Suponga que $f$ está definida y es continua en $[a, b]$. Para cada $\epsilon>0$, existe un polinomio $P(x)$, con la propiedad de que 
@@ -258,4 +259,25 @@ U^TY
 \end{array}
 \right)
 \end{displaymath}
+\end{frame}
+\begin{frame}{Derivación Numérica}
+\small
+\indent Aquí se mostrará una manera estándar de deducir la fórmula numérica para la aproximación de la segunda derivada por medio de la fórmula de Taylor:
+\begin{displaymath}
+\scriptsize
+\begin{array}{rl}
+\renewcommand{\arraystretch}{1.5}
+f(x+h)= &\textcolor{red}{f(x)+f'(x)h+\dfrac{f''(x)}{2}h^2+\dfrac{f^{(3)}(x)}{6}h^3+\dfrac{f^{(4)}(\xi)}{24}h^4}.\\\pause
+f(x-h)=&\textcolor{red}{f(x)+f'(x)(-h)+\dfrac{f''(x)}{2}(-h)^2+\dfrac{f^{(3)}(x)}{6}(-h)^3+\dfrac{f^{(4)}(\eta)}{24}(-h)^4}\\\pause
+=&\textcolor{red}{f(x)-f'(x)h+\dfrac{f''(x)}{2}h^2-\dfrac{f^{(3)}(x)}{6}h^3+\dfrac{f^{(4)}(\eta)}{24}h^4}\\\pause
+&\rule{7cm}{0.01cm}\\
+f(x+h)+f(x-h)=&\textcolor{cyan}{2f(x)+f''(x)h^2+\dfrac{f^{(4)}(\eta)}{24}h^4+\dfrac{f^{(4)}(\xi)}{24}h^4}\\\pause
+=&\textcolor{cyan}{2f(x)+f''(x)h^2+\dfrac{f^{(4)}(\eta)+f^{(4)}(\xi)}{2}\dfrac{1}{12}h^4}\\\pause
+=&\textcolor{cyan}{2f(x)+f''(x)h^2+f^{(4)}(\theta)\dfrac{1}{12}h^4}\\
+\end{array}
+\end{displaymath}
+Despejando finalmente para $f''(x)$ se obtiene una aproximación a la segunda deriva:
+\begin{block}{Aproximación de la segunda derivada}
+$$f''(x)\approx\dfrac{f(x+h)-2f(x)+f(x-h)}{h^2}$$
+\end{block}
 \end{frame}
