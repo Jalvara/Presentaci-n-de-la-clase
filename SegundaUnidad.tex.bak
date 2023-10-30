@@ -1,7 +1,7 @@
 %Segunda Unidad
 \section{Aproximación de funciones}
 \begin{frame}{Teoremas preliminares}
-\begin{block}{Teorema de Weierestrass}
+\begin{block}{Teorema (Weierestrass)}
 Suponga que $f$ está definida y es continua en $[a, b]$. Para cada $\epsilon>0$, existe un polinomio $P(x)$, con la propiedad de que 
 $$|f(x)-P(x)|<\epsilon, \quad \forall x \in [a, b]$$
 \end{block}
@@ -24,12 +24,22 @@ $$|f(x)-P(x)|<\epsilon, \quad \forall x \in [a, b]$$
 \item Derivación de otros métodos numéricos, como el método de diferencias finitas.
 \item Estimación del error
 \end{enumerate}
+\label{TeoremaTaylor}
+\begin{block}{Teorema de Taylor}
+Suponga que $f\in C^n[a,b]$, $f^{(n+1)}$ esta definida en $[a,b]$ y $x_0\in[a,b]$. Entonces, para cada $x\in[a,b]$, existe $\xi(x)\in (x_0,x)$ (si $x>x_0$ y $\xi(x)\in(x,x_0)$ en el otro caso)  tal que: 
+\begin{itemize}
+\item $f(x)=P_n(x)+R_n(x)$ donde
+\item $P_n(x)=\displaystyle \sum_{k=0}^{n}\dfrac{f^{(k)}(x_0)}{k!}(x-x_0)^k$ y
+\item $R_n(x)=\dfrac{f^{(n+1)}(\xi(x))}{(n+1)!}(x-x_0)^{(n+1)}$.
+\end{itemize}
+\hyperlink{DeduccionFormulaSegundoOrden}{\textcolor{cyan}{Regreso a fórmula de segundo orden.}}
+\end{block}
 \end{frame}
 
 %===========================
 \label{RetornoPolinomioLagrange}
 \begin{frame}{Polinomio interpolante de Lagrange}
-\begin{block}{Teorema: polinomios de Lagrange}
+\begin{block}{Teorema (Polinomios de Lagrange)}
 \indent Si $f$ es una funcion definida en los diferentes valores $\{x_0,\cdots, x_n\}$, entonces existe un único polinomio $P(x)$ de grado a lo más $n$, con la propiedad:
 $$f(x_k)=P(x_k)\quad k=0, 1, \dots, n$$
 El polinomio $P(x)$ se define como sigue:
@@ -42,7 +52,7 @@ $$L_{n,k}=\frac{(x-x_0)(x-x_1)\dots(x-x_{k+1})(x-x_{k+1})\dots (x-x_n)}{(x_k-x_0
 \end{frame}
 %===========================
 \begin{frame}
-\begin{block}{Término del error del polinomio de Lagrange}
+\begin{block}{Teorema (Error del polinomio de Lagrange)}
 Suponga que $x_0, x_1, \dots, x_n$ son números distintintos en el intervalo $[a,b]$ y que $f \in C^{n+1}[a,b]$. Entonces, para cada x en $[a,b]$ existe in número $\xi(x)$ en $(a,b)$ con 
 $$f(x)=P(x)+\frac{f^{(n+1)}(\xi(x))}{(n+1)!}(x-x_0)(x-x_1)\dots (x-x_n)$$
 donde $P(x)$ es el polinomio interpolante de Lagrange.
@@ -262,6 +272,8 @@ U^TY
 \end{frame}
 \begin{frame}{Derivación Numérica}
 \small
+\label{DeduccionFormulaSegundoOrden}
+\hyperlink{TeoremaTaylor}{\textcolor{cyan}{Enlace al teorema de Taylor.}}
 \indent Aquí se mostrará una manera estándar de deducir la fórmula numérica para la aproximación de la segunda derivada por medio de la fórmula de Taylor:
 \begin{displaymath}
 \scriptsize
@@ -279,5 +291,140 @@ f(x+h)+f(x-h)=&\textcolor{cyan}{2f(x)+f''(x)h^2+\dfrac{f^{(4)}(\eta)}{24}h^4+\df
 Despejando finalmente para $f''(x)$ se obtiene una aproximación a la segunda deriva:
 \begin{block}{Aproximación de la segunda derivada}
 $$f''(x)\approx\dfrac{f(x+h)-2f(x)+f(x-h)}{h^2}$$
+\end{block}
+\end{frame}
+%------------Copiado Pegado-------------------------------------
+\begin{frame}[allowbreakframes]{Integración Numérica}
+\begin{block}{Motivación}
+¿Puedes encontrar el valor de esta integral usando los métodos vistos en la clase de cálculo (integración por partes, cambio de variables,...etc)?
+$$\int_{0}^{a}\sqrt{1+\cos^2(x)}dx$$\pause
+\textcolor{red}{Respuesta:¡NO!}
+\end{block}
+\end{frame}
+\begin{frame}{Cuadratura}
+\begin{block}{Técnica de cuadratura}
+Suponga que se desea encontrar $\displaystyle \int_{a}^{b}f(x)dx$. Se necesitan encontrar $\{x_0,\cdots, x_n\}$ en el intervalo $[a,b]$ y unos pesos $\{a_0,\cdots,a_n\}$ de manera que $$\sum_{k=0}^{n}a_kf(x_k)$$
+\end{block}
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.4]{Imagen6}
+\end{figure}
+\end{frame}
+\begin{frame}{Cuadratura, Polinomios de Lagrange}
+\begin{displaymath}
+\begin{array}{rl}
+\int_a^b f(x)dx=&\textcolor{red}{\int_a^b\sum_{k=0}^n f(x_k)L_k(x)dx+\int_a^b\prod_{k=0}^{n}(x-x_k)\dfrac{f^{(n+1)}(\xi(x))}{(n+1)!}}\\\pause
+=&\textcolor{cyan}{\sum_{k=0}^n f(x_k)\int_a^b L_k(x)dx+\int_a^b\prod_{k=0}^{n}(x-x_k)\dfrac{f^{(n+1)}(\xi(x))}{(n+1)!}}\\\pause
+\end{array}
+\end{displaymath}
+Comparando con la ténica de cuadratura, se observa que se pueden escoger los $a_k$ de manera tal que: 
+$$\textcolor{red}{a_k=\int_a^b L_k(x)dx}$$\\\pause
+El error como se puede ver es igual a:
+$$\textcolor{cyan}{E(f)=\int_a^b\prod_{k=0}^{n}(x-x_k)\dfrac{f^{(n+1)}(\xi(x))}{(n+1)!}}$$
+\end{frame}
+\begin{frame}{Teorema del valor medio}
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.5]{Imagen7}
+\end{figure}
+\begin{block}{Ejercicio}
+Utilice el teorema del valor encontrar una expresión equivalente de la siguiente integral:
+$$\int_{x_0}^{x_1}f''(\xi(x))(x-x_0)(x-x_1)dx$$
+\end{block}
+\end{frame}
+\begin{frame}{Teorema del valor medio}
+\begin{displaymath}
+\begin{array}{rl}
+\int_{x_0}^{x_1}f''(\xi(x))(x-x_0)(x-x_1)dx=&\textcolor{red}{f''(\xi)\int_{x_0}^{x_1}(x-x_0)(x-x_1)dx}\\\pause
+=&\textcolor{cyan}{-\dfrac{(x_1-x_0)^3}{6}f''(\xi)}.
+\end{array}
+\end{displaymath}
+\end{frame}
+\begin{frame}{Regla del trapecio}
+\begin{displaymath}
+\begin{array}{rl}
+\int_a^b f(x)dx=&\textcolor{cyan}{\int_{x_0}^{x_1} \dfrac{x-x_1}{x_0-x_1}f(x_0)+\dfrac{x-x_0}{x_1-x_0}f(x_1)dx}\\
+&\textcolor{red}{+\dfrac{1}{2}\int_{x_0}^{x_1}f''(\xi(x))(x-x_0)(x-x_1)dx}\\\pause
+=&\dfrac{x_1-x_0}{2}[f(x_0)+f(x_1)]-\dfrac{h^3}{12}f''(\xi).
+\end{array}
+\end{displaymath}
+\begin{block}{Regla del trapecio}
+\centering $\int_a^b f(x)dx\approx \dfrac{x_1-x_0}{2}[f(x_0)+f(x_1)]$
+\end{block}
+\end{frame}
+\begin{frame}{Fórmula de tres puntos}
+\small
+\begin{displaymath}
+\begin{array}{rl}
+\int_{x_0}^{x_2} f(x)dx=&\bigg[f(x_1)(x-x_1)+\dfrac{f'(x_1)}{2}(x-x_1)^2+\dfrac{f''(x_1)}{6}(x-x_1)^3\bigg]\\
+&+\dfrac{f^{(3)}(x_1)}{24}(x-x_1)^4+\dfrac{1}{24}\int_{x_0}^{x_2}f^{(4)}(\xi(x))(x-x_1)^4dx\\\pause
+=&\bigg[f(x_1)(x-x_1)+\dfrac{f'(x_1)}{2}(x-x_1)^2+\dfrac{f''(x_1)}{6}(x-x_1)^3\bigg]\\
+&+\dfrac{f^{(3)}(x_1)}{24}(x-x_1)^4+f^{(4)}(\xi)\dfrac{1}{24}\int_{x_0}^{x_2}(x-x_1)^4dx\\\pause
+=&2hf(x_1)+\dfrac{h^3}{3}f''(x_1)+\dfrac{f^{(4)}(\xi)}{60}h^5\\\pause
+=&2hf(x_1)+\dfrac{h^3}{3}(\textcolor{red}{\dfrac{1}{h^2}[f(x_0)-2f(x_1)+f(x_2)]-\dfrac{h^{2}}{12}f^{(4)}(\theta)})+\dfrac{f^{(4)}(\xi)}{60}h^5\\
+\approx & \dfrac{h}{3}[f(x_0)+4f(x_1)+f(x_2)]
+\end{array}
+\end{displaymath}
+\begin{block}{Regla de Simpson}
+\centering $\int_{x_0}^{x_2} f(x)dx\approx \dfrac{h}{3}[f(x_0)+4f(x_1)+f(x_2)]$
+\end{block}
+\end{frame}
+\begin{frame}{Grado de precisión de cuadratura}
+\small
+\begin{block}{Grado de Precisión}
+Se dice que una fórmula de cuadratura tiene \textbf{grado de precisión $n$} si $n$ es el entero positivo más grande tal que esta fórmula es exacta para $x^k$ para $k=0,1,\cdots, n$.  
+\end{block}\pause
+\begin{block}{Ejemplo}
+¿Cuál es el grado de precisión de la regla de Simpson?
+\end{block}\pause
+Se puede verificar que:\pause
+\vspace*{-0.5cm}
+\begin{displaymath}
+\textcolor{red}{
+\begin{array}{rll}
+\int_{x-h}^{x+h}s^0ds=&\dfrac{h}{3}((x-h)^0+4x^0+(x+h)^0)=&2h\\\pause
+\int_{x-h}^{x+h}sds=&\dfrac{h}{3}((x-h)+4x+(x+h))=&2hx\\\pause
+\int_{x-h}^{x+h}s^2ds=&\dfrac{h}{3}((x-h)^2+4x^2+(x+h)^2)=&\dfrac{6hx^2+2h^3}{3}\\\pause
+\int_{x-h}^{x+h}s^3ds=&\dfrac{h}{3}((x-h)^3+4x^3+(x+h)^3)=&\dfrac{6hx^2+2h^3}{3}\\\pause
+\int_{x-h}^{x+h}s^4ds=&\dfrac{10hx^4+20h^3x^2+2h^5}{5}&\neq\\\pause
+\dfrac{h}{3}((x-h)^4+4x^4+(x+h)^4)=&\dfrac{6hx^4+12h^3x^2+2h^5}{3}&
+\end{array}}
+\end{displaymath} 
+\scriptsize
+Como se puede apreciar, el grado de precisión de la regla de Simpson es de 3.
+\end{frame}
+\begin{frame}{Fórmulas de Newton-Cotes}
+\scriptsize
+\begin{block}{Error de cuadratura}
+Sea $\displaystyle \sum_{k=0}^{n}a_kf(x_k)$ una fórmula de cuadratura para $\displaystyle \int_{a}^{b}f(x)dx$. Se define el error de la fórmula de cuadratura por $$\displaystyle E(f(x))=\bigg|\sum_{k=0}^{n}a_kf(x_k)-\int_{a}^{b}f(x)dx\bigg|$$
+\end{block}
+\begin{block}{Caracterización de exactitud}
+Una fórmula de cuadratura tiene precisión $n$ si y solo si $E(f(x))=0$ para todo polinomio $f(x)$ de grado $n$ y $E(x^{n+1})\neq 0$.
+\end{block}
+\begin{block}{Teorema(Fórmula cerrada de Newton-Cotes)}
+Suponga que se divide el intervalor $[a,b]$ en los nodos $x_k$ para $k=0,\cdots, n$. Donde $a=x_0$, $b=x_n$ y $x_i=x_{i-1}+h$ para $h=\dfrac{b-a}{n}$. Entonces existe un $\xi\in(a,b)$ de manera tal que:
+$$\int_a^b f(x)dx=\sum_{k=0}^{n}a_kf(x_k)dx+\dfrac{h^{n+c+1}f^{(n+c)}(\xi)}{(n+c)!}\int_{0}^{n}t^c(t-1)\cdots(t-n)dt$$
+donde $f\in C^{n+c}[a,b]$, $c=2-n\ mod\ 2$ y $\displaystyle a_k=\int_{a}^{b}L_k)(x)dx$.
+\end{block}
+\end{frame}
+\begin{frame}{Fórmulas de Newton-Cotes}
+\small
+\begin{block}{Teorema(Fórmula cerrada de Newton-Cotes)}
+Suponga que se divide el intervalor $[a,b]$ en los nodos $x_k$ para $k=0,\cdots, n$. Donde $a=x_0$, $b=x_n$ y $x_i=x_{i-1}+h$ para $h=\dfrac{b-a}{n}$. Entonces existe un $\xi\in(a,b)$ de manera tal que:
+$$\int_a^b f(x)dx=\sum_{k=0}^{n}a_kf(x_k)dx+\dfrac{h^{n+c+1}f^{(n+c)}(\xi)}{(n+c)!}\int_{0}^{n}t^c(t-1)\cdots(t-n)dt$$
+donde $f\in C^{n+c}[a,b]$, $c=2-n\ mod\ 2$ y $\displaystyle a_k=\int_{a}^{b}L_k)(x)dx$.
+\end{block}\pause
+\textcolor{red}{Combinando los dos últimos resultados se puede argumentar que la regla de Simpson tiene grado de precisión 3 de una manera más sencilla.\\\pause
+La regla de Simpson se deduce del teorema con $n=2$; en este caso $c=2-2mod2=2$. De esta forma se tendría que:\\\pause
+$$\int_a^b f(x)dx=\sum_{k=0}^{2}a_kf(x_k)dx+\dfrac{h^{5}f^{(4)}(\xi)}{4!}\int_{0}^{2}t^2(t-1)(t-2)dt$$}\pause
+\end{frame}
+\begin{frame}{Fórmulas de Newton-Cotes}
+\small
+\textcolor{cyan}{Se deduce que $E(f(x))=|\dfrac{h^{5}f^{(4)}(\xi)}{4!}\int_{0}^{2}t^2(t-1)(t-2)dt|$, por lo tanto $E(f(x))=0$ para cualquier polinomio $f(x)$ de grado 3 ya que $f^{(4)}(\xi)=0$ en este caso, y además $f^{(4)}(\xi)=4!$ para $f(x)=x^4$ y por lo tanto $E(x^4)\neq 0$.}\\
+\textcolor{cyan}{Finalmente por la caracterización de la precisión se tendría que el grado de exactitud de la regla de Simpson es 3.}\pause
+\begin{block}{Teorema(Fórmula abierta de Newton-Cotes)}
+Suponga que se divide el intervalor $[a,b]$ en los nodos $x_k$ para $k=0,\cdots, n$. Donde $a+h=x_0$, $b-h=x_n$ y $x_i=x_{i-1}+h$ para $h=\dfrac{b-a}{n+2}$. Entonces existe un $\xi\in(a,b)$ de manera tal que:
+$$\int_a^b f(x)dx=\sum_{k=0}^{n}a_kf(x_k)dx+\dfrac{h^{n+c+1}f^{(n+c)}(\xi)}{(n+c)!}\int_{-1}^{n+1}t^c(t-1)\cdots(t-n)dt$$
+donde $f\in C^{n+c}[a,b]$, $c=2-n\ mod\ 2$ y $\displaystyle a_k=\int_{a}^{b}L_k)(x)dx$.
 \end{block}
 \end{frame}

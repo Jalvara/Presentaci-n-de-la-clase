@@ -3,4 +3,4 @@
 \defcounter {refsection}{0}\relax 
 \beamer@sectionintoc {1}{Aproximación de funciones}{3}{0}{1}
 \defcounter {refsection}{0}\relax 
-\beamer@sectionintoc {2}{Ejercicios}{24}{0}{2}
+\beamer@sectionintoc {2}{Ejercicios}{56}{0}{2}

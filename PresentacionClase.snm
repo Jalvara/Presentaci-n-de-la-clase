@@ -1,6 +1,10 @@
 \defcounter {refsection}{0}\relax 
+\beamer@slide {TeoremaTaylor}{4}
+\defcounter {refsection}{0}\relax 
 \beamer@slide {RetornoPolinomioLagrange}{5}
 \defcounter {refsection}{0}\relax 
-\beamer@slide {PolinomioLagrange}{24}
+\beamer@slide {DeduccionFormulaSegundoOrden}{18}
 \defcounter {refsection}{0}\relax 
-\beamer@slide {EjercicioAproximacionDerivada}{46}
+\beamer@slide {PolinomioLagrange}{56}
+\defcounter {refsection}{0}\relax 
+\beamer@slide {EjercicioAproximacionDerivada}{78}
