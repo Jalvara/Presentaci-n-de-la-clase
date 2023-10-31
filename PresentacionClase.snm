@@ -3,8 +3,12 @@
 \defcounter {refsection}{0}\relax 
 \beamer@slide {RetornoPolinomioLagrange}{5}
 \defcounter {refsection}{0}\relax 
-\beamer@slide {DeduccionFormulaSegundoOrden}{18}
+\beamer@slide {DeduccionFormulaSegundoOrden}{17}
 \defcounter {refsection}{0}\relax 
-\beamer@slide {PolinomioLagrange}{56}
+\beamer@slide {CuadraturaTeoremaValorMedio}{23}
 \defcounter {refsection}{0}\relax 
-\beamer@slide {EjercicioAproximacionDerivada}{78}
+\beamer@slide {PolinomioLagrange}{54}
+\defcounter {refsection}{0}\relax 
+\beamer@slide {EjercicioAproximacionDerivada}{76}
+\defcounter {refsection}{0}\relax 
+\beamer@slide {EjercicioCuadraturaError}{78}

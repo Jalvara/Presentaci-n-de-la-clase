@@ -244,3 +244,127 @@ $$A=-\dfrac{1}{4h},B=\dfrac{3}{2h},C=-\dfrac{1}{2h},D=\dfrac{1}{12h},E=-\dfrac{5
 $$f'(x)\approx\dfrac{-3f(x-h)+18f(x+h)-6f(x+2h)+f(x+3h)-10f(x)}{12h}$$
 }
 \end{frame}
+\begin{frame}{Ejercicios}
+\label{EjercicioCuadraturaError}
+\begin{block}{Ejercicio (Regla del trapecio)}
+Por medio del teorema del valor medio y la cuadratura con polinomios de Lagrange, pruebe la regla del trapecio:
+$$\int_a^b f(x)dx=\dfrac{h}{2}[f(b)+f(a)]-\dfrac{h^3}{12}f''(\xi)$$
+Donde $h=b-a$, $\xi\in(a,b).$
+\end{block}
+\begin{displaymath}
+\begin{array}{rl}
+\displaystyle \int_a^b f(x)dx=&\textcolor{blue}{\displaystyle \int_{a}^{b} \dfrac{x-b}{a-b}f(a)+\dfrac{x-a}{b-a}f(b)dx}\\
+&\displaystyle +\textcolor{red}{\dfrac{1}{2}\int_{a}^{b}f''(\xi(x))(x-a)(x-b)dx}\\\pause
+=&\textcolor{blue}{\dfrac{b-a}{2}[f(a)+f(b)]}-\textcolor{red}{f''(\xi)\int_{a}^{b}(x-a)(x-b)dx}\\
+=&\textcolor{blue}{\dfrac{b-a}{2}[f(a)+f(b)]}-\textcolor{red}{\dfrac{(b-a)^3}{6}f''(\xi)}.
+\end{array}
+\end{displaymath}
+\hyperlink{CuadraturaTeoremaValorMedio}{\textcolor{cyan}{Regreso a Técnicas de Cuadraturas.}}
+\end{frame}
+\begin{frame}{Ejercicios}
+\begin{block}{Ejercicio 2}
+Encuentre la fórmula de cuadratura Gaussiana para $n=2$.
+\end{block}
+\textcolor{red}{Incialmente calculamos el polinomio de Legendre $P_2(x)$
+\begin{displaymath}
+\begin{array}{rl}
+P_2(x)=&\dfrac{1}{2^2}\sum_{k=0}^{2}\binom{2}{k}^2(x+1)^{2-k}(x-1)^k\\\pause
+=&\dfrac{1}{4}(\binom{2}{0}^2(x+1)^2(x-1)^0+\binom{2}{1}^2(x+1)(x-1)+\binom{2}{2}^2(x+1)^0(x-1)^2)\\\pause
+=&\dfrac{1}{4}((x+1)^2+4(x+1)(x-1)+(x-1)^2)\\\pause
+=&\dfrac{1}{4}(x^2+2x+1+4(x^2-1)+x^2-2x+1)\\\pause
+=&\dfrac{1}{4}(6x^2-2)\\\pause
+=&\dfrac{3}{2}x^2-\dfrac{1}{2}\\\pause
+\end{array}
+\end{displaymath}
+De aquí se deduce que $x_1=\dfrac{1}{\sqrt{3}}$ y $x_2=-\dfrac{1}{\sqrt{3}}$.
+}
+\end{frame}
+\begin{frame}{Ejercicios}
+\textcolor{red}{
+Por otro lado se deben calcular los $c_i$.
+\begin{displaymath}
+\begin{array}{rl}
+c_1=&\int_{-1}^{1}\prod_{j=1,j\neq 1}^{2}\dfrac{x-x_j}{x_1-x_j}dx\\\pause
+=&\int_{-1}^{1}\dfrac{x-x_2}{x_1-x_2}dx\\\pause
+=&\int_{-1}^{1}\dfrac{x+\frac{1}{\sqrt{3}}}{\frac{1}{\sqrt{3}}+\frac{1}{\sqrt{3}}}dx\\\pause
+=&\dfrac{\sqrt{3}}{2}[\dfrac{x^2}{2}+\dfrac{x}{\sqrt{3}}]_{-1}^{1}\\\pause
+=&1.
+\end{array}
+\end{displaymath}
+De forma similar se puede encontrar que $c_2=1$. De esta forma se obtiene la fórmula:
+$$f\bigg(\dfrac{1}{\sqrt{3}}\bigg)+f\bigg(-\dfrac{1}{\sqrt{3}}\bigg)$$\pause
+}
+\textcolor{cyan}{Según el teorema, esta fórmula de cuadratura tiene precisión 3. En este sentido tiene el mismo grado de precisión que la regla de simpson con menos puntos.}
+\end{frame}
+\begin{frame}{Ejercicios}
+\begin{block}{Ejercicio 3}
+Utilice la fórmula de cuadratura anterior para encontrar:
+$$\int_{0}^{\pi/4}\cos^2(x)dx$$
+\end{block}
+\textcolor{red}{Primero se necesita hacer el cambio de variable para que la integral quede definida en el intervalo de [-1,1]. Es bien conocido que el cambio de variable necesesario es:
+$$x=\dfrac{1}{2}[(b-a)t+a+b]=\dfrac{1}{2}[\dfrac{\pi}{4}t+\dfrac{\pi}{4}]=\dfrac{\pi}{8}t+\dfrac{\pi}{8}$$
+Con la fórmula anterior se obtiene lo siguiente:\pause
+\begin{displaymath}
+\begin{array}{rl}
+\int_{0}^{\pi/4}\cos^2(x)dx=&\int_{-1}^{1}\cos^2(\dfrac{\pi}{8}t+\dfrac{\pi}{8})\dfrac{\pi}{8}dt\\\pause
+\approx &\dfrac{\pi}{8}(\cos^2(\dfrac{\pi}{8\sqrt{3}}+\dfrac{\pi}{8})+\cos^2(-\dfrac{\pi}{8\sqrt{3}}+\dfrac{\pi}{8}))= 0.642317
+\end{array}
+\end{displaymath}
+}
+\end{frame}
+\begin{frame}{Ejercicios}
+\textcolor{red}{Por otro lado:
+$$\int_{0}^{\pi/4}\cos^2(x)dx=[\dfrac{\sin(2x)}{4}+\dfrac{x}{2}]_{0}^{\pi/4}\approx 0.6426990816987241$$\pause
+El error de aproximación se cálcula acontinuación:
+$$E(cos^{2}(x))=3.8184610^{-4}$$
+}
+\begin{block}{Ejercicio 4}
+Determine las constantes $a,b,c,d$ y $e$ que producirán una fórmula de cuadratura:
+$$\int_{-1}^{1}f(x)dx=af(-1)+bf(0)+cf(1)+df'(-1)+ef'(1)$$
+cuya precisión es 4.
+\end{block}
+\end{frame}
+\begin{frame}{Ejercicios}
+\textcolor{red}{
+\begin{displaymath}
+\begin{array}{rl}
+\int_{-1}^{1}1dx=2=&a+b+c\\\pause
+\int_{-1}^{1}xdx=0=&-a+c+d+e\\\pause
+\int_{-1}^{1}x^2dx=\dfrac{2}{3}=&a+c-2d+2e\\\pause
+\int_{-1}^{1}x^3dx=0=&-a+c+3d+3e\\\pause
+\int_{-1}^{1}x^4dx=\dfrac{2}{5}=&a+c-4d+4e\\\pause
+\end{array}
+\end{displaymath}
+}
+\textcolor{cyan}{Resolviendo este sistema se obtiene:\\
+$$a=\dfrac{7}{15},b=\dfrac{16}{15},c=\dfrac{7}{15},d=\dfrac{1}{15},e=-\dfrac{1}{15}$$
+}
+\end{frame}
+\begin{frame}{Ejercicios}
+\small
+\begin{block}{Ejercicio 1}
+Determine los valores de $n$ y $h$ de manera que la integral:
+$$\int_{0}^{2}\dfrac{1}{x+4}dx,$$ 
+se pueda aproximar con una excatitud de $10^{-5}$ y calcule la aproximación. Aplique la regla compuesta del trapecio. 
+\end{block}
+\textcolor{cyan}{
+\begin{displaymath}
+\begin{array}{lrl}
+&E(f)=\bigg|\dfrac{b-a}{12}h^2f''(\mu)\bigg|=&\bigg|\dfrac{2-0}{12}h^2\dfrac{2}{(\mu+4)^3}\bigg|\ \textcolor{red}{\bigg(f''(x)=\dfrac{2}{(x+4)^3}\bigg)}\\\pause
+&=&\bigg|\dfrac{1}{3}h^2\dfrac{1}{(\mu+4)^3}\bigg|\ \textcolor{red}{\bigg(\dfrac{1}{(x+4)^3}\leq\dfrac{1}{4^3} \bigg)}\\\pause
+&\leq &\bigg|\dfrac{1}{3}h^2\dfrac{1}{(4)^3}\bigg|\\\pause
+&\leq &10^{-5}.\\\pause
+\Rightarrow& h\leq & 10^{-5/2}2^3\sqrt{3}\\\pause
+\Rightarrow& \dfrac{2}{n}=\dfrac{b-a}{n}=h\leq & 10^{-5/2}2^3\sqrt{3}\\\pause
+\Rightarrow& 45.64354\leq & n\Rightarrow n=46.
+\pause
+\end{array}
+\end{displaymath}
+}
+\end{frame}
+\begin{frame}{Ejercicios}
+\small
+\textcolor{cyan}{
+$$0.40546510810\approx \ln(6)-\ln(4)=\int_{0}^{2}\dfrac{dx}{x+4}\approx\textcolor{red}{(R.C.T.\ con\ n=46)} 0.405470577804$$
+}
+\end{frame}

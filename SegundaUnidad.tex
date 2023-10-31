@@ -131,13 +131,13 @@ Abajo se aprecian los pares ordenados correspondientes a cada par asociado:
 \begin{block}{Problema de mínimos cuadrados}
 \centering $\displaystyle \min_{a_0,a_1}\sum_{i=1}^{10}|y_i-(a_1x_i-a_0)|^2=\displaystyle \min_{a_0,a_1}\sum_{i=1}^{10}(y_i-(a_1x_i-a_0))^2$
 \end{block}
-\end{frame}
-\begin{frame}{Deducción del método de mínimos cuadrados}
-Defina los siguientes vectores:
-$$X=[x_1,\cdots,x_n]^T$$
-$$Y=[y_1,\cdots,y_n]^T$$
-$$U=[1,\cdots,1]^T$$
-Entonces podemos pensar en el problema de ajuste de la siguiente manera: Deseamos encontrar $a_0$ y $a_1$ tales que
+\indent A continuación se mostrará una forma muy conocida para la deducción del método de mínimos cuadrados; para ello defina los siguientes vectores:
+\begin{align*}
+X=&[x_1,\cdots,x_n]^T\\
+Y=&[y_1,\cdots,y_n]^T\\
+U=&[1,\cdots,1]^T
+\end{align*}
+\indent Entonces podemos pensar en el problema de ajuste de la siguiente manera: Deseamos encontrar $a_0$ y $a_1$ tales que
 $$a_1X+a_0U=Y$$
 De forma matricial esto sería:
 \begin{displaymath}
@@ -149,9 +149,7 @@ a_0
 \end{array}
 \right)=Y
 \end{displaymath}
-\end{frame}
-\begin{frame}{Deducción del método de mínimos cuadrados}
-Si ahora se multiplica por la transpuesta de la primer matriz, se obtine:
+\indent Si ahora se multiplica por la transpuesta de la primer matriz, se obtine:
 \begin{displaymath}
 \left(
 \begin{array}{c}
@@ -174,7 +172,7 @@ U^T
 \right)
 Y
 \end{displaymath}
-Esto es equivalente a lo siguiente:
+\indent Esto es equivalente a lo siguiente:
 \begin{displaymath}
 \left(
 \begin{array}{cc}
@@ -195,12 +193,10 @@ U^TY
 \end{array}
 \right)
 \end{displaymath}
-Como se puede apreciar, resolviendo este sistema podemos encontrar las soluciones para los coeficientes de la regresión lineal.
-\end{frame}
-\begin{frame}{Generalización a ajustes de tipo polinomial.}
-Ahora considere le problema siguiente: Se desan encontrar los valores $[a_m,a_{m-1},\cdots,a_0]$ de manera tal que:
-$$a_mX^m+\cdots+a_1X+a_0U=Y$$
-Donde $X^k=[x_1^k,\cdots,x_n^k]^T$. Nuevamente esto se puede escribir como el siguiente sistema:
+\indent Como se puede apreciar, resolviendo este sistema podemos encontrar las soluciones para los coeficientes de la regresión lineal. \\
+\indent Ahora considere le problema siguiente: Se desan encontrar los valores $[a_m,a_{m-1},\cdots,a_0]$ de manera tal que:
+$$a_mX^m+\cdots+a_1X+a_0U=Y,$$
+\indent donde $X^k=[x_1^k,\cdots,x_n^k]^T$. Nuevamente esto se puede escribir como el siguiente sistema:
 \textcolor{red}{
 \begin{displaymath}
 (X^m|X^{m-1}|\cdots X|U)
@@ -213,9 +209,7 @@ a_0
 \right)=Y
 \end{displaymath}
 }
-Multiplicando por la transpuesta...
-\end{frame}
-\begin{frame}{Generalización de ajuste  de tipo polinomial}
+\indent Multiplicando por la transpuesta:
 \begin{displaymath}
 \left(
 \begin{array}{c}
@@ -299,54 +293,37 @@ $$f''(x)\approx\dfrac{f(x+h)-2f(x)+f(x-h)}{h^2}$$
 $$\int_{0}^{a}\sqrt{1+\cos^2(x)}dx$$
 \indent Si se intentara hacer, nos daríamos cuenta de que es un problema bastante complicado; de hecho se puede demostrar formalmente que el problema es irresoluble planteado en estos términos. 
 \begin{block}{Técnica de cuadratura}
-Suponga que se desea encontrar $\displaystyle \int_{a}^{b}f(x)dx$. Se necesitan encontrar $\{x_0,\cdots, x_n\}$ en el intervalo $[a,b]$ y unos pesos $\{a_0,\cdots,a_n\}$ de manera que $$\sum_{k=0}^{n}a_kf(x_k)$$
+La \textit{técnica de cuadratura}  consiste en encontrar unos valores (denominados pesos) $\{a_0,\cdots,a_n\}$ correspondientes a los puntos $\{x_0,\cdots, x_n\}$ en el intervalo $[a,b]$  de manera que: 
+$$\int_{a}^{b}f(x)dx\approx \sum_{k=0}^{n}a_kf(x_k)$$
 \end{block}
 \begin{figure}[H]
 \centering
-\includegraphics[scale=0.4]{Imagen62}
+\includegraphics[scale=0.6]{Imagen62}
 \end{figure}
-\end{frame}
-\begin{frame}{Cuadratura, Polinomios de Lagrange}
 \begin{displaymath}
 \begin{array}{rl}
-\int_a^b f(x)dx=&\textcolor{red}{\int_a^b\sum_{k=0}^n f(x_k)L_k(x)dx+\int_a^b\prod_{k=0}^{n}(x-x_k)\dfrac{f^{(n+1)}(\xi(x))}{(n+1)!}}\\\pause
-=&\textcolor{cyan}{\sum_{k=0}^n f(x_k)\int_a^b L_k(x)dx+\int_a^b\prod_{k=0}^{n}(x-x_k)\dfrac{f^{(n+1)}(\xi(x))}{(n+1)!}}\\\pause
+\int_a^b f(x)dx=&\textcolor{red}{\int_a^b\sum_{k=0}^n f(x_k)L_k(x)dx+\int_a^b\prod_{k=0}^{n}(x-x_k)\dfrac{f^{(n+1)}(\xi(x))}{(n+1)!}}\\
+=&\textcolor{cyan}{\sum_{k=0}^n f(x_k)\int_a^b L_k(x)dx+\int_a^b\prod_{k=0}^{n}(x-x_k)\dfrac{f^{(n+1)}(\xi(x))}{(n+1)!}}
 \end{array}
 \end{displaymath}
-Comparando con la ténica de cuadratura, se observa que se pueden escoger los $a_k$ de manera tal que: 
-$$\textcolor{red}{a_k=\int_a^b L_k(x)dx}$$\\\pause
+\indent Comparando con la ténica de cuadratura, se observa que se pueden escoger los $a_k$ de manera tal que: 
+$$\textcolor{red}{a_k=\int_a^b L_k(x)dx}$$\\
 El error como se puede ver es igual a:
 $$\textcolor{cyan}{E(f)=\int_a^b\prod_{k=0}^{n}(x-x_k)\dfrac{f^{(n+1)}(\xi(x))}{(n+1)!}}$$
-\end{frame}
-\begin{frame}{Teorema del valor medio}
-\begin{figure}[H]
-\centering
-\includegraphics[scale=0.5]{Imagen7}
-\end{figure}
-\begin{block}{Ejercicio}
-Utilice el teorema del valor encontrar una expresión equivalente de la siguiente integral:
-$$\int_{x_0}^{x_1}f''(\xi(x))(x-x_0)(x-x_1)dx$$
+\begin{block}{Teorema (Valor medio para integrales)}
+Suponga que $f\in C[a,b]$, $g$ es Riemann integrable en $[a,b]$ y que $g$ no cambia de signo en $[a,b]$. Entonces existe un número $c\in (a,b)$ tal que:
+$$\int_{a}^{b}f(x)g(x)dx=f(c)\int_a^bg(x)dx.$$
 \end{block}
-\end{frame}
-\begin{frame}{Teorema del valor medio}
-\begin{displaymath}
-\begin{array}{rl}
-\int_{x_0}^{x_1}f''(\xi(x))(x-x_0)(x-x_1)dx=&\textcolor{red}{f''(\xi)\int_{x_0}^{x_1}(x-x_0)(x-x_1)dx}\\\pause
-=&\textcolor{cyan}{-\dfrac{(x_1-x_0)^3}{6}f''(\xi)}.
-\end{array}
-\end{displaymath}
-\end{frame}
-\begin{frame}{Regla del trapecio}
-\begin{displaymath}
-\begin{array}{rl}
-\int_a^b f(x)dx=&\textcolor{cyan}{\int_{x_0}^{x_1} \dfrac{x-x_1}{x_0-x_1}f(x_0)+\dfrac{x-x_0}{x_1-x_0}f(x_1)dx}\\
-&\textcolor{red}{+\dfrac{1}{2}\int_{x_0}^{x_1}f''(\xi(x))(x-x_0)(x-x_1)dx}\\\pause
-=&\dfrac{x_1-x_0}{2}[f(x_0)+f(x_1)]-\dfrac{h^3}{12}f''(\xi).
-\end{array}
-\end{displaymath}
+\label{CuadraturaTeoremaValorMedio}
+\hyperlink{EjercicioCuadraturaError}{\textcolor{cyan}{Ejercicio de estimación del error.}}
 \begin{block}{Regla del trapecio}
 \centering $\int_a^b f(x)dx\approx \dfrac{x_1-x_0}{2}[f(x_0)+f(x_1)]$
 \end{block}
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.6]{Imagen24}
+\caption{Como se puede apreciar en la figura, el nombre de la regla proviene de la fórmula del área de un trapecio de altura $b-a$ y bases $f(a)$, $f(b)$.}
+\end{figure}
 \end{frame}
 \begin{frame}{Fórmula de tres puntos}
 \small
@@ -357,7 +334,8 @@ $$\int_{x_0}^{x_1}f''(\xi(x))(x-x_0)(x-x_1)dx$$
 =&\bigg[f(x_1)(x-x_1)+\dfrac{f'(x_1)}{2}(x-x_1)^2+\dfrac{f''(x_1)}{6}(x-x_1)^3\bigg]\\
 &+\dfrac{f^{(3)}(x_1)}{24}(x-x_1)^4+f^{(4)}(\xi)\dfrac{1}{24}\int_{x_0}^{x_2}(x-x_1)^4dx\\\pause
 =&2hf(x_1)+\dfrac{h^3}{3}f''(x_1)+\dfrac{f^{(4)}(\xi)}{60}h^5\\\pause
-=&2hf(x_1)+\dfrac{h^3}{3}(\textcolor{red}{\dfrac{1}{h^2}[f(x_0)-2f(x_1)+f(x_2)]-\dfrac{h^{2}}{12}f^{(4)}(\theta)})+\dfrac{f^{(4)}(\xi)}{60}h^5\\
+=&2hf(x_1)+\dfrac{h^3}{3}(\textcolor{red}{\dfrac{1}{h^2}[f(x_0)-2f(x_1)+f(x_2)]-\dfrac{h^{2}}{12}f^{(4)}(\theta)})\\
+&+\dfrac{f^{(4)}(\xi)}{60}h^5\\
 \approx & \dfrac{h}{3}[f(x_0)+4f(x_1)+f(x_2)]
 \end{array}
 \end{displaymath}
@@ -422,5 +400,45 @@ $$\int_a^b f(x)dx=\sum_{k=0}^{2}a_kf(x_k)dx+\dfrac{h^{5}f^{(4)}(\xi)}{4!}\int_{0
 Suponga que se divide el intervalor $[a,b]$ en los nodos $x_k$ para $k=0,\cdots, n$. Donde $a+h=x_0$, $b-h=x_n$ y $x_i=x_{i-1}+h$ para $h=\dfrac{b-a}{n+2}$. Entonces existe un $\xi\in(a,b)$ de manera tal que:
 $$\int_a^b f(x)dx=\sum_{k=0}^{n}a_kf(x_k)dx+\dfrac{h^{n+c+1}f^{(n+c)}(\xi)}{(n+c)!}\int_{-1}^{n+1}t^c(t-1)\cdots(t-n)dt$$
 donde $f\in C^{n+c}[a,b]$, $c=2-n\ mod\ 2$ y $\displaystyle a_k=\int_{a}^{b}L_k)(x)dx$.
+\end{block}
+\end{frame}
+\begin{frame}{Reglas compuestas}
+\centering
+\includegraphics[scale=0.5]{Imagen10}
+\includegraphics[scale=0.5]{Imagen12}
+\end{frame}
+\begin{frame}{Reglas Compuestas}
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.4]{Imagen9}
+\begin{tabular}{|c|}
+\hline
+\includegraphics[scale=0.2]{Imagen11}\\
+\hline
+\end{tabular}
+\end{figure}\pause
+\textcolor{red}{¿Cuál es la diferencia del error entre la regla de Simpson y la regla compuesta de simpson?}
+\end{frame}
+\begin{frame}{Polinomios Ortogonales}
+\begin{block}{Definición 1(Polinomios de Legendre)}
+Se define el conjunto de polinomios de Legendre $\{P_k(x)\}$, $k \in \{0,1,2,...\}$ a través de las siguientes propiedades:
+\begin{itemize}
+\item Para cada $k$, $P_k(x)$ es un polinomio de grado $k$.
+\item $\displaystyle \int_{-1}^{1}P(x)P_k(x)dx=0 $ para todo polinomio $P(x)$ de grado menor que $k$. 
+\end{itemize}
+\end{block}\pause
+\textcolor{red}{Si el coeficiente principal del polinomio de Legendre es 1, entonces este es único; de lo contratrio podrían variar por algún factor real. }
+\begin{block}{Definición 2(Polinomios de Legendre)}
+Los polinomios de Legendre se definen explícitamente como:
+$$P_n(x)=\dfrac{1}{2^n}\sum_{k=0}^{n}\binom{n}{k}^2(x+1)^{n-k}(x-1)^k$$
+\end{block}
+\end{frame}
+\begin{frame}{Cuadratura Gaussiana}
+\begin{block}{Fórmula de cuadratura Gaussiana}
+Sean ${x_i}_{i=1}^{n}$ las raíces del polinomio de Legendre $P_n(x)$. Defina los $c_i$ de la siguiente forma:
+$$c_i=\int_{-1}^{1}\prod _{j=1,j\neq i}^{n}\dfrac{x-x_j}{x_i-x_j}dx$$
+La fórmula de cuadratura Gaussiana es:
+$$\int_{-1}^{1}f(x)\approx\sum_{i=1}^{n}c_if(x_i).$$
+Si $f(x)$ es cualquier polinomio de grado menor que $2n$, entonces la aproximación es exacta y por lo tanto el grado de precisión es de $2n-1$.
 \end{block}
 \end{frame}
