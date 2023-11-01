@@ -17,7 +17,7 @@ $$|f(x)-P(x)|<\epsilon, \quad \forall x \in [a, b]$$
 \item No utilizan más que un único punto para definir el polonomio.  
 \end{itemize}
 \end{frame}
-%===========================
+%===========================================================================
 \begin{frame}{Limitaciones de los polinomios de Taylor para la interpolación}
 \indent Debido a las limitaciones expuestas, los polinomios de Taylor se usan principalmente para:
 \begin{enumerate}
@@ -317,33 +317,30 @@ $$\int_{a}^{b}f(x)g(x)dx=f(c)\int_a^bg(x)dx.$$
 \label{CuadraturaTeoremaValorMedio}
 \hyperlink{EjercicioCuadraturaError}{\textcolor{cyan}{Ejercicio de estimación del error.}}
 \begin{block}{Regla del trapecio}
-\centering $\int_a^b f(x)dx\approx \dfrac{x_1-x_0}{2}[f(x_0)+f(x_1)]$
+\centering $\displaystyle \int_a^b f(x)dx\approx \dfrac{b-a}{2}[f(a)+f(b)]$
 \end{block}
 \begin{figure}[H]
 \centering
 \includegraphics[scale=0.6]{Imagen24}
 \caption{Como se puede apreciar en la figura, el nombre de la regla proviene de la fórmula del área de un trapecio de altura $b-a$ y bases $f(a)$, $f(b)$.}
 \end{figure}
-\end{frame}
-\begin{frame}{Fórmula de tres puntos}
 \small
+\vspace*{-0.5cm}
+\indent Se deducirá la regla de Simpson, donde $x_0,x_1$ y $x_2$ son puntos equidistantes en $[a,b]$ con $x_0=a$ y $x_2=b$.
 \begin{displaymath}
 \begin{array}{rl}
-\int_{x_0}^{x_2} f(x)dx=&\bigg[f(x_1)(x-x_1)+\dfrac{f'(x_1)}{2}(x-x_1)^2+\dfrac{f''(x_1)}{6}(x-x_1)^3\bigg]\\
-&+\dfrac{f^{(3)}(x_1)}{24}(x-x_1)^4+\dfrac{1}{24}\int_{x_0}^{x_2}f^{(4)}(\xi(x))(x-x_1)^4dx\\\pause
-=&\bigg[f(x_1)(x-x_1)+\dfrac{f'(x_1)}{2}(x-x_1)^2+\dfrac{f''(x_1)}{6}(x-x_1)^3\bigg]\\
-&+\dfrac{f^{(3)}(x_1)}{24}(x-x_1)^4+f^{(4)}(\xi)\dfrac{1}{24}\int_{x_0}^{x_2}(x-x_1)^4dx\\\pause
-=&2hf(x_1)+\dfrac{h^3}{3}f''(x_1)+\dfrac{f^{(4)}(\xi)}{60}h^5\\\pause
+\displaystyle \int_{x_0}^{x_2} f(x)dx=&\bigg[f(x_1)x+\dfrac{f'(x_1)}{2}(x-x_1)^2+\dfrac{f''(x_1)}{6}(x-x_1)^3\\
+&+\dfrac{f^{(3)}(x_1)}{24}(x-x_1)^4\bigg]_{x_0}^{x_2}+\dfrac{1}{24}\displaystyle \int_{x_0}^{x_2}f^{(4)}(\xi(x))(x-x_1)^4dx\\
+=&\bigg[f(x_1)x+\dfrac{f'(x_1)}{2}(x-x_1)^2+\dfrac{f''(x_1)}{6}(x-x_1)^3\\
+&+\dfrac{f^{(3)}(x_1)}{24}(x-x_1)^4\bigg]_{x_0}^{x_2}+\displaystyle f^{(4)}(\xi)\dfrac{1}{24}\int_{x_0}^{x_2}(x-x_1)^4dx\\
+=&2hf(x_1)+\dfrac{h^3}{3}f''(x_1)+\dfrac{f^{(4)}(\xi)}{60}h^5\\
 =&2hf(x_1)+\dfrac{h^3}{3}(\textcolor{red}{\dfrac{1}{h^2}[f(x_0)-2f(x_1)+f(x_2)]-\dfrac{h^{2}}{12}f^{(4)}(\theta)})\\
-&+\dfrac{f^{(4)}(\xi)}{60}h^5\\
-\approx & \dfrac{h}{3}[f(x_0)+4f(x_1)+f(x_2)]
+&+\dfrac{f^{(4)}(\xi)}{60}h^5\approx \dfrac{h}{3}[f(x_0)+4f(x_1)+f(x_2)]
 \end{array}
 \end{displaymath}
 \begin{block}{Regla de Simpson}
-\centering $\int_{x_0}^{x_2} f(x)dx\approx \dfrac{h}{3}[f(x_0)+4f(x_1)+f(x_2)]$
+\centering $\displaystyle \int_{x_0}^{x_2} f(x)dx\approx \dfrac{h}{3}[f(x_0)+4f(x_1)+f(x_2)]$
 \end{block}
-\end{frame}
-\begin{frame}{Grado de precisión de cuadratura}
 \small
 \begin{block}{Grado de Precisión}
 Se dice que una fórmula de cuadratura tiene \textbf{grado de precisión $n$} si $n$ es el entero positivo más grande tal que esta fórmula es exacta para $x^k$ para $k=0,1,\cdots, n$.  
@@ -366,8 +363,6 @@ Se puede verificar que:\pause
 \end{displaymath} 
 \scriptsize
 Como se puede apreciar, el grado de precisión de la regla de Simpson es de 3.
-\end{frame}
-\begin{frame}{Fórmulas de Newton-Cotes}
 \scriptsize
 \begin{block}{Error de cuadratura}
 Sea $\displaystyle \sum_{k=0}^{n}a_kf(x_k)$ una fórmula de cuadratura para $\displaystyle \int_{a}^{b}f(x)dx$. Se define el error de la fórmula de cuadratura por $$\displaystyle E(f(x))=\bigg|\sum_{k=0}^{n}a_kf(x_k)-\int_{a}^{b}f(x)dx\bigg|$$
@@ -378,7 +373,7 @@ Una fórmula de cuadratura tiene precisión $n$ si y solo si $E(f(x))=0$ para to
 \begin{block}{Teorema(Fórmula cerrada de Newton-Cotes)}
 Suponga que se divide el intervalor $[a,b]$ en los nodos $x_k$ para $k=0,\cdots, n$. Donde $a=x_0$, $b=x_n$ y $x_i=x_{i-1}+h$ para $h=\dfrac{b-a}{n}$. Entonces existe un $\xi\in(a,b)$ de manera tal que:
 $$\int_a^b f(x)dx=\sum_{k=0}^{n}a_kf(x_k)dx+\dfrac{h^{n+c+1}f^{(n+c)}(\xi)}{(n+c)!}\int_{0}^{n}t^c(t-1)\cdots(t-n)dt$$
-donde $f\in C^{n+c}[a,b]$, $c=2-n\ mod\ 2$ y $\displaystyle a_k=\int_{a}^{b}L_k)(x)dx$.
+donde $f\in C^{n+c}[a,b]$, $c=2-n\%2$ y $\displaystyle a_k=\int_{a}^{b}L_k(x)dx$.
 \end{block}
 \end{frame}
 \begin{frame}{Fórmulas de Newton-Cotes}
@@ -386,10 +381,10 @@ donde $f\in C^{n+c}[a,b]$, $c=2-n\ mod\ 2$ y $\displaystyle a_k=\int_{a}^{b}L_k)
 \begin{block}{Teorema(Fórmula cerrada de Newton-Cotes)}
 Suponga que se divide el intervalor $[a,b]$ en los nodos $x_k$ para $k=0,\cdots, n$. Donde $a=x_0$, $b=x_n$ y $x_i=x_{i-1}+h$ para $h=\dfrac{b-a}{n}$. Entonces existe un $\xi\in(a,b)$ de manera tal que:
 $$\int_a^b f(x)dx=\sum_{k=0}^{n}a_kf(x_k)dx+\dfrac{h^{n+c+1}f^{(n+c)}(\xi)}{(n+c)!}\int_{0}^{n}t^c(t-1)\cdots(t-n)dt$$
-donde $f\in C^{n+c}[a,b]$, $c=2-n\ mod\ 2$ y $\displaystyle a_k=\int_{a}^{b}L_k)(x)dx$.
+donde $f\in C^{n+c}[a,b]$, $c=2-n\%2$ y $\displaystyle a_k=\int_{a}^{b}L_k(x)dx$.
 \end{block}\pause
-\textcolor{red}{Combinando los dos últimos resultados se puede argumentar que la regla de Simpson tiene grado de precisión 3 de una manera más sencilla.\\\pause
-La regla de Simpson se deduce del teorema con $n=2$; en este caso $c=2-2mod2=2$. De esta forma se tendría que:\\\pause
+\textcolor{red}{\indent Combinando los dos últimos resultados se puede argumentar que la regla de Simpson tiene grado de precisión 3 de una manera más sencilla.\\\pause
+\indent La regla de Simpson se deduce del teorema con $n=2$; en este caso $c=2-2\%2=2$. De esta forma se tendría que:\\\pause
 $$\int_a^b f(x)dx=\sum_{k=0}^{2}a_kf(x_k)dx+\dfrac{h^{5}f^{(4)}(\xi)}{4!}\int_{0}^{2}t^2(t-1)(t-2)dt$$}\pause
 \end{frame}
 \begin{frame}{Fórmulas de Newton-Cotes}
@@ -416,8 +411,7 @@ donde $f\in C^{n+c}[a,b]$, $c=2-n\ mod\ 2$ y $\displaystyle a_k=\int_{a}^{b}L_k)
 \includegraphics[scale=0.2]{Imagen11}\\
 \hline
 \end{tabular}
-\end{figure}\pause
-\textcolor{red}{¿Cuál es la diferencia del error entre la regla de Simpson y la regla compuesta de simpson?}
+\end{figure}
 \end{frame}
 \begin{frame}{Polinomios Ortogonales}
 \begin{block}{Definición 1(Polinomios de Legendre)}
